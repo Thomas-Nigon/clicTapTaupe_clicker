@@ -18,7 +18,7 @@
     font-family: 'Lemon', cursive;
     font-size: 16px;
     margin: 0px;
-    padding: 2px;
+    padding: 0px;
     box-sizing: border-box;
 
 }
@@ -73,7 +73,7 @@
 /* SHOP ET STATS STYLE (branche XXX) */
 
 
-@media screen and (min-width: 390px) {
+@media screen and (max-width: 390px) {
 
 
 
@@ -81,5 +81,31 @@
 
 
     /* SHOP ET STATS STYLE (branche XXX) */
+    h2{
+        background-color: var(--mainColor);
+        color: black;
+        font-size: 2rem;
+        -webkit-text-stroke-color: var(--secondaryColor) ;
+        -webkit-text-stroke-width: 0.2px;
+        -webkit-text-stroke-color: rgb(255, 255, 255);
+    }
+    .shopIcon{
+        width: 5vh;
+    }
+    .div1, .div2, .div3, .div4, .div5, .div6, .div7, .div8, .div9 {
+        background-color: var(--MenuBGColor);
+    }
+    section{
+        background-color: antiquewhite;
+        display: flex;
+        flex-direction: column;
+    }
+    .shop{
+        display: flex;
+        flex-direction: column;
+    }
+    .stats h2{
+        display: none;
+    }
 
 }
