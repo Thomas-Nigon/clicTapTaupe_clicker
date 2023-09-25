@@ -87,18 +87,18 @@
     nav {
         background-color: var(--mainColor);
         display: flex;
-        height: 3em;
-        border-radius: 10px;
+        height: 4em;
+        border-radius: 20px;
         width: 80%;
+        justify-content: center;
+        border: solid black;
+        align-items: center;
 
     }
-
 
     .gameName {
         color: white;
         display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
     #help {
