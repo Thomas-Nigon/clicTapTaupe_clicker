@@ -81,31 +81,103 @@
 
 
     /* SHOP ET STATS STYLE (branche XXX) */
-    h2{
+    h2 {
         background-color: var(--mainColor);
         color: black;
         font-size: 2rem;
-        -webkit-text-stroke-color: var(--secondaryColor) ;
+        -webkit-text-stroke-color: var(--secondaryColor);
         -webkit-text-stroke-width: 0.2px;
         -webkit-text-stroke-color: rgb(255, 255, 255);
     }
-    .shopIcon{
+
+    .shopIcon {
         width: 5vh;
     }
-    .div1, .div2, .div3, .div4, .div5, .div6, .div7, .div8, .div9 {
+
+    .div1,
+    .div2,
+    .div3,
+    .div4,
+    .div5,
+    .div6,
+    .div7,
+    .div8,
+    .div9 {
         background-color: var(--MenuBGColor);
+        border: 3px solid black;
+        border-radius: 15px;
     }
-    section{
-        background-color: antiquewhite;
+
+    section {
+
+        background-color: var(--secondaryColor);
         display: flex;
         flex-direction: column;
+        border-radius: 15px 0 0 0;
     }
-    .shop{
+
+    nav {
+        height: 8vh;
+    }
+
+    main {
+        background-color: red;
+        min-height: 50vh;
+    }
+
+    .shop {
+        overflow: hidden;
         display: flex;
-        flex-direction: column;
+        flex-direction: row-reverse;
+        position: absolute;
+        height: 30vh;
+        top: 50%;
     }
-    .stats h2{
+
+    .stats h2,
+    #shopTitle {
         display: none;
+    }
+
+    #menuBtn {
+        position: absolute;
+        bottom: 50%;
+        left: 40%;
+        height: 26px;
+        width: 20%;
+        margin: 0 auto;
+
+        background-color: var(--secondaryColor);
+        border-radius: 8px 8px 0 0;
+    }
+
+    h2 img {
+        width: 11vh;
+    }
+
+    .grid {
+        padding: 15px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        width: 67vw;
+        gap: 15px;
+
+    }
+
+    #goldTitle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        -webkit-text-stroke-color: black;
+        -webkit-text-stroke-width: 0.2px;
+        color: var(--tertiaryColor);
+        background-color: var(--mainColor);
+        border-radius: 0 15px 0 0;
+        width: 33vw;
     }
 
 }
