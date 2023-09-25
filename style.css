@@ -74,8 +74,17 @@
 
 
 @media screen and (min-width: 390px) {
+nav{
+    background-color:rgba(56, 68, 84, 1) ;
+    color: rgba(212, 211, 220, 1);
+}
+  
 
-
+main{
+   
+    background-image: url("./Assets/Background.png") ;
+    color: rgba(212, 211, 220, 1);
+}
 
     /* NAV BAR ET MAIN STYLE (branche XXX) */
 
