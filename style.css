@@ -115,14 +115,20 @@
         flex-direction: column;
         border-radius: 15px 0 0 0;
     }
-
+    body {
+        display: flex;
+        flex-direction: column;
+        background-color: aqua;
+        min-height: 100vh;
+        overflow: hidden;
+      }
     nav {
         height: 8vh;
     }
 
     main {
         background-color: red;
-        min-height: 50vh;
+        min-height: 83vh;
     }
 
     .shop {
@@ -138,9 +144,8 @@
     #shopTitle {
         display: none;
     }
-    #test{
-        overflow: hidden;
-    }
+   
+    
 
     #menuBtn {
         position: absolute;
