@@ -76,12 +76,14 @@
 @media screen and (min-width: 390px) {
 
     main {
-        background-image: url(./Assets/Background.png);
+        background: url(./Assets/Background.png);
+        background-size: cover;
         display: flex;
         height: 100vh;
         width: 66dvw;
         justify-content: center;
     }
+
 
     nav {
         background-color: var(--mainColor);
