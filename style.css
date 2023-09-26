@@ -34,8 +34,9 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
+    grid-column-gap: 3%;
+    grid-row-gap: 3%;
+    margin: 3% 3% 8% 3%;
 }
 
 .div1 {
@@ -96,31 +97,31 @@
     height: 33vh;
     background-color: var(--secondaryColor);
     border-radius: 15px;
-    margin: 7px;
+    margin: 3%;
 }
 
 .shop {
     background-color: var(--secondaryColor);
     border-radius: 15px;
-    margin: 7px;
+    margin: 3%;
 }
 
 .gold {
     background-color: var(--mainColor);
     border-radius: 15px;
-    margin: 10px;
+    margin: 3%;
     height: 10vh;
     display: flex;
     align-items: center;
     padding: 22px;
     justify-content: space-between;
-    color: white;
+    color: var(--tertiaryColor);
     -webkit-text-stroke-color: black;
     -webkit-text-stroke-width: 1px;
     font-size: 20px;
 }
 
-#trésor {
+.trésor {
     width: 50px;
     height: 50px;
 }
@@ -141,7 +142,22 @@ h4 {
     font-size: 20px;
 }
 
-#axe {
+.pioche {
+    width: 57px;
+    height: 57px;
+}
+
+.perce {
+    width: 57px;
+    height: 57px;
+}
+
+.sword {
+    width: 57px;
+    height: 57px;
+}
+
+.masse {
     width: 57px;
     height: 57px;
 }
@@ -157,6 +173,7 @@ h4 {
 .div9 {
     background-color: var(--MenuBGColor);
     border-radius: 15px;
+    border: 3% 3% 8% 3%;
 }
 
 @media screen and (min-width: 390px) {
