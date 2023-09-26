@@ -14,11 +14,18 @@
 
 }
 
+.rightMenu {
+    display: flex;
+    justify-content: right;
+    width: 77%;
+    border: solid 4px black;
+}
+
 * {
     font-family: 'Lemon', cursive;
     font-size: 16px;
     margin: 0px;
-    padding: 0px;
+    padding: 0;
     box-sizing: border-box;
 
 }
@@ -27,8 +34,9 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    grid-column-gap: 3%;
+    grid-row-gap: 3%;
+    margin: 3% 3% 8% 3%;
 }
 
 .div1 {
@@ -67,17 +75,149 @@
     grid-area: 3 / 3 / 4 / 4;
 }
 
+
+
 /* NAV BAR ET MAIN STYLE (branche XXX) */
 
 
 /* SHOP ET STATS STYLE (branche XXX) */
 
+.rightMenu {
+    display: flex;
+    justify-content: space-around;
+    float: right;
+    flex-direction: column;
+    width: 33%;
+    border: solid 4px black;
+    border-radius: 15px;
+    background-color: var(--mainColor);
+}
+
+.stats {
+    height: 33vh;
+    background-color: var(--secondaryColor);
+    border-radius: 15px;
+    margin: 3%;
+}
+
+.shop {
+    background-color: var(--secondaryColor);
+    border-radius: 15px;
+    margin: 3%;
+}
+
+.gold {
+    background-color: var(--mainColor);
+    border-radius: 15px;
+    margin: 3%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    padding: 22px;
+    justify-content: space-between;
+    color: var(--tertiaryColor);
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 1px;
+    font-size: 20px;
+}
+
+.trésor {
+    width: 50px;
+    height: 50px;
+}
+
+h3 {
+    text-align: center;
+    color: white;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 0.5px;
+    font-size: 20px;
+}
+
+h4 {
+    text-align: center;
+    color: white;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 0.5px;
+    font-size: 20px;
+}
+
+.pioche {
+    width: 57px;
+    height: 57px;
+}
+
+.perce {
+    width: 57px;
+    height: 57px;
+}
+
+.sword {
+    width: 57px;
+    height: 57px;
+}
+
+.masse {
+    width: 57px;
+    height: 57px;
+}
+
+.div1,
+.div2,
+.div3,
+.div4,
+.div5,
+.div6,
+.div7,
+.div8,
+.div9 {
+    background-color: var(--MenuBGColor);
+    border-radius: 15px;
+    border: 3% 3% 8% 3%;
+}
 
 @media screen and (max-width: 390px) {
 
+    main {
+        background: url(./Assets/Background.png);
+        background-size: cover;
+        display: flex;
+        height: 100vh;
+        width: 66vw;
+        justify-content: center;
+    }
 
 
-    /* NAV BAR ET MAIN STYLE (branche XXX) */
+    nav {
+        background-color: var(--mainColor);
+        display: flex;
+        height: 4em;
+        border-radius: 20px;
+        width: 80%;
+        justify-content: space-between;
+        border: solid black;
+        align-items: center;
+        margin-top: 1.5em;
+
+    }
+
+    .gameName {
+        color: white;
+        display: flex;
+        font-size: 2em;
+        width: 80%;
+        justify-content: center;
+
+    }
+
+    .Logo {
+        height: 6.5em;
+        width: 5.5em;
+        margin-left: 3px;
+        background-color: #D4D3DC;
+        
+    }
+
 
 
     /* SHOP ET STATS STYLE (branche XXX) */
@@ -115,13 +255,15 @@
         flex-direction: column;
         border-radius: 15px 0 0 0;
     }
+
     body {
         display: flex;
         flex-direction: column;
         background-color: aqua;
         min-height: 100vh;
         overflow: hidden;
-      }
+    }
+
     nav {
         height: 8vh;
     }
@@ -144,8 +286,8 @@
     #shopTitle {
         display: none;
     }
-   
-    
+
+
 
     #menuBtn {
         position: absolute;
@@ -188,5 +330,4 @@
         border-radius: 0 15px 0 0;
         width: 33vw;
     }
-
 }
