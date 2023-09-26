@@ -14,6 +14,15 @@
 
 }
 
+* {
+    font-family: 'Lemon', cursive;
+    font-size: 16px;
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
 main {
     background: url(./Assets/Background.png);
     background-size: cover;
@@ -70,14 +79,6 @@ nav {
     border: solid 4px black;
 }
 
-* {
-    font-family: 'Lemon', cursive;
-    font-size: 16px;
-    margin: 0px;
-    padding: 0;
-    box-sizing: border-box;
-
-}
 
 .grid {
     display: grid;
