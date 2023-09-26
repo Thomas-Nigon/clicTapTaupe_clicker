@@ -14,13 +14,6 @@
 
 }
 
-.rightMenu {
-    display: flex;
-    justify-content: right;
-    width: 77%;
-    border: solid 4px black;
-}
-
 * {
     font-family: 'Lemon', cursive;
     font-size: 16px;
@@ -29,6 +22,63 @@
     box-sizing: border-box;
 
 }
+
+main {
+    background: url(./Assets/Background.png);
+    background-size: cover;
+    display: flex;
+    height: 100vh;
+    width: 66vw;
+    justify-content: center;
+}
+
+
+nav {
+    background-color: var(--mainColor);
+    display: flex;
+    height: 4em;
+    border-radius: 20px;
+    width: 80%;
+    justify-content: space-between;
+    border: solid black;
+    align-items: center;
+    margin-top: 1.5em;
+
+}
+
+.gameName {
+    color: white;
+    display: flex;
+    font-size: 2em;
+    width: 80%;
+    justify-content: center;
+
+}
+
+.Logo {
+    height: 6.5em;
+    width: 5.5em;
+    margin-left: 3px;
+    background-color: #D4D3DC;
+
+}
+
+
+#help {
+    display: flex;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 50%;
+    justify-content: center;
+}
+
+.rightMenu {
+    display: flex;
+    justify-content: right;
+    width: 77%;
+    border: solid 4px black;
+}
+
 
 .grid {
     display: grid;
@@ -176,54 +226,4 @@ h4 {
     border: 3% 3% 8% 3%;
 }
 
-@media screen and (min-width: 390px) {
-
-    main {
-        background: url(./Assets/Background.png);
-        background-size: cover;
-        display: flex;
-        height: 100vh;
-        width: 66vw;
-        justify-content: center;
-    }
-
-
-    nav {
-        background-color: var(--mainColor);
-        display: flex;
-        height: 4em;
-        border-radius: 20px;
-        width: 80%;
-        justify-content: space-between;
-        border: solid black;
-        align-items: center;
-        margin-top: 1.5em;
-
-    }
-
-    .gameName {
-        color: white;
-        display: flex;
-        font-size: 2em;
-        width: 80%;
-        justify-content: center;
-
-    }
-
-    .Logo {
-        height: 6.5em;
-        width: 5.5em;
-        margin-left: 3px;
-        background-color: #D4D3DC;
-        bac
-    }
-
-
-    #help {
-        display: flex;
-        height: 1.5em;
-        width: 1.5em;
-        border-radius: 50%;
-        justify-content: center;
-    }
-}
+@media screen and (min-width: 390px) {}
