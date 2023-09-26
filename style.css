@@ -14,6 +14,13 @@
 
 }
 
+.rightMenu {
+    display: flex;
+    justify-content: right;
+    width: 77%;
+    border: solid 4px black;
+}
+
 * {
     font-family: 'Lemon', cursive;
     font-size: 16px;
@@ -27,8 +34,8 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
 }
 
 .div1 {
@@ -67,11 +74,90 @@
     grid-area: 3 / 3 / 4 / 4;
 }
 
+
+
 /* NAV BAR ET MAIN STYLE (branche XXX) */
 
 
 /* SHOP ET STATS STYLE (branche XXX) */
 
+.rightMenu {
+    display: flex;
+    justify-content: space-around;
+    float: right;
+    flex-direction: column;
+    width: 33%;
+    border: solid 4px black;
+    border-radius: 15px;
+    background-color: var(--mainColor);
+}
+
+.stats {
+    height: 33vh;
+    background-color: var(--secondaryColor);
+    border-radius: 15px;
+    margin: 7px;
+}
+
+.shop {
+    background-color: var(--secondaryColor);
+    border-radius: 15px;
+    margin: 7px;
+}
+
+.gold {
+    background-color: var(--mainColor);
+    border-radius: 15px;
+    margin: 10px;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    padding: 22px;
+    justify-content: space-between;
+    color: white;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 1px;
+    font-size: 20px;
+}
+
+#trésor {
+    width: 50px;
+    height: 50px;
+}
+
+h3 {
+    text-align: center;
+    color: white;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 0.5px;
+    font-size: 20px;
+}
+
+h4 {
+    text-align: center;
+    color: white;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 0.5px;
+    font-size: 20px;
+}
+
+#axe {
+    width: 57px;
+    height: 57px;
+}
+
+.div1,
+.div2,
+.div3,
+.div4,
+.div5,
+.div6,
+.div7,
+.div8,
+.div9 {
+    background-color: var(--MenuBGColor);
+    border-radius: 15px;
+}
 
 @media screen and (min-width: 390px) {
 
