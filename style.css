@@ -207,3 +207,147 @@ h4 {
 
 
 @media screen and (min-width: 390px) {}
+@media screen and (max-width: 393px) {
+    * {
+        text-shadow: 2px 0 0 black, 0 2px 0 black, -2px 0 0 black, 0 -2px 0 black;
+        color: rgba(212, 211, 220, 1);
+
+    }
+    main{
+        min-height: 85vh;
+        /* background-color: red; */
+    }
+
+    body {
+        margin: 5px 5px 5px 5px;
+        /* background-image: url("./Assets/BackgroundTwo.png"); */
+        overflow: hidden;
+
+    }
+
+    nav {
+        background-color: rgba(56, 68, 84, 1);
+
+        height: 15vh;
+        width: 96vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 2vw;
+        box-shadow: 2px 0 0 black, 0 2px 0 black, -2px 0 0 black, 0 -2px 0 black;
+    }
+
+    #logo {
+        width: 20vw;
+        border: black 2px solid;
+        background-color: rgba(212, 211, 220, 1);
+        width: 26vw;
+        height: 26vw;
+        border-radius: 50%;
+    }
+
+    h1 {
+        font-size: 6vw;
+        text-shadow: 2px 0 0 black, 0 2px 0 black, -2.5px 0 0 black, 0 -2.5px 0 black;
+
+    }
+
+    main {
+        display: flex;
+        justify-content: end;
+    }
+
+    button {
+
+        background-color: rgba(56, 68, 84, 1);
+        border: black 1px solid;
+        margin: 8%;
+        font-size: 7vw;
+        cursor: pointer;
+        width: 10vw;
+        height: 10vw;
+        border-radius: 50%;
+        font-family: 'bodoni';
+        box-shadow: 1px 0 0 white, 0 1px 0 white, -1px 0 0 white, 0 -1px 0 white;
+    }
+
+    /* menu Burger */
+    .sideNav {
+        margin-top: 27vw;
+        margin-left: 56vw;
+        height: 40vw;
+        width: 40vw;
+        /* right: -60vw; */
+        background-color: transparent;
+        position: fixed;
+        top: 4vw;
+        z-index: 2;
+        transition: right 0.5s ease;
+
+    }
+
+    .sideNav a {
+
+        padding: 8px 8px 8px 32px;
+        display: flex;
+        justify-content: flex-start;
+        text-decoration: none;
+        transition: 0.3s;
+        background-color: rgba(212, 211, 220, 1);
+        padding: 0;
+        color: #317AC1;
+    }
+
+    .sideNav ul {
+
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        background-color: rgba(212, 211, 220, 1);
+        box-shadow: 2px 0 0 black, 0 2px 0 black, -2px 0 0 black, 0 -2px 0 black;
+        border-radius: 2vw;
+    }
+
+    .sideNav a:hover {
+        color: rgba(225, 166, 36, 1);
+    }
+
+    .sideNav.active {
+        right: 0;
+    }
+
+    .sideNav.close {
+        position: absolute;
+        top: 0;
+        right: 5vw;
+        font-size: 5vw;
+    }
+
+    .burgerIcone span {
+        display: block;
+        width: 8vw;
+        height: 1vw;
+        background-color: rgba(212, 211, 220, 1);
+        box-shadow: 1px 0 0 black, 0 1px 0 black, -1px 0 0 black, 0 -1px 0 black;
+        margin: 0.8vw 0;
+    }
+
+    .shop {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    /* fin menu Burger */
+    #roc{
+        align-items: center;
+    }
+
+    /* NAV BAR ET MAIN STYLE (branche XXX) */
+
+    /* SHOP ET STATS STYLE (branche XXX) */
+
+    /* SHOP ET STATS STYLE (branche XXX) */
+
+}
