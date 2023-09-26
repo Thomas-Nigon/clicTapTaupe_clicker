@@ -131,12 +131,15 @@
         flex-direction: row-reverse;
         position: absolute;
         height: 30vh;
-        top: 50%;
+        top: 90%;
     }
 
     .stats h2,
     #shopTitle {
         display: none;
+    }
+    #test{
+        overflow: hidden;
     }
 
     #menuBtn {
@@ -164,6 +167,7 @@
         grid-row-gap: 0px;
         width: 67vw;
         gap: 15px;
+        overflow: hidden;
 
     }
 
