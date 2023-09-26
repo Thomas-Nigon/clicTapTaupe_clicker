@@ -72,14 +72,6 @@ nav {
     justify-content: center;
 }
 
-.rightMenu {
-    display: flex;
-    justify-content: right;
-    width: 77%;
-    border: solid 4px black;
-}
-
-
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
