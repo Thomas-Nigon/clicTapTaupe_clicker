@@ -22,6 +22,11 @@
     box-sizing: border-box;
 
 }
+body{
+    background-color: var(--mainColor);
+    min-height: 100vh;
+    overflow: hidden;
+}
 
 main {
     background: url(./Assets/Background.png);
@@ -129,7 +134,7 @@ nav {
 .rightMenu {
     display: flex;
     justify-content: space-around;
-    float: right;
+ /*    float: right; */
     flex-direction: column;
     width: 33%;
     border: solid 4px black;
@@ -207,21 +212,57 @@ h4 {
 
 
 @media screen and (max-width: 390px) {
-     .shop {
+    
+    body{
+        min-height: 100vh;
         overflow: hidden;
+    }
+    main {
+        background: url(./Assets/Background.png);
+        background-size: cover;
+        display: flex;
+        height: 50vh;
+        width: 100vw;
+        justify-content: center;
+    }
+    .rightMenu {
+        display: flex;
+        justify-content: space-around;
+        /* float: right; */
+        flex-direction: column;
+        width: 100vw;
+        border: solid 4px black;
+        border-radius: 0px 15px 15px 0px;
+        background-color: var(--mainColor);
+    }
+    
+    .stats {
+        height: 33vh;
+        background-color: var(--secondaryColor);
+        border-radius: 15px;
+        margin: 3%;
+    }
+    
+    .shop {
+        background-color: var(--secondaryColor);
+        border-radius: 15px 0 0 0;
+        margin: 0;
+        height: 33vh;
         display: flex;
         flex-direction: row-reverse;
         position: absolute;
-        height: 30vh;
-        top: 90%;
+        top: 50%;
+        left: 0%;
+    }
+    .gold{
+        margin: 0;
+        height: 100%;
     }
 
-    .stats h2,
+    .stats h4,
     #shopTitle {
         display: none;
     }
-
-
 
     #menuBtn {
         position: absolute;
@@ -229,8 +270,6 @@ h4 {
         left: 40%;
         height: 26px;
         width: 20%;
-        margin: 0 auto;
-
         background-color: var(--secondaryColor);
         border-radius: 8px 8px 0 0;
     }
@@ -248,7 +287,6 @@ h4 {
         grid-row-gap: 0px;
         width: 67vw;
         gap: 15px;
-        overflow: hidden;
 
     }
 
