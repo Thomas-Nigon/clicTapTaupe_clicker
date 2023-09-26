@@ -23,8 +23,12 @@
 
 }
 
+body {
+    background-color: var(--mainColor);
+}
+
 main {
-    background: url(./Assets/Background.png);
+    background: url(./Assets/BackgroundDesktop.png);
     background-size: cover;
     display: flex;
     height: 100vh;
@@ -119,10 +123,8 @@ nav {
 
 .shopNav {
     display: flex;
+    height: 100vh;
 }
-
-/* NAV BAR ET MAIN STYLE (branche XXX) */
-
 
 /* SHOP ET STATS STYLE (branche XXX) */
 
@@ -165,6 +167,10 @@ nav {
     font-size: 20px;
 }
 
+#menuButton {
+    display: none;
+}
+
 .trésor {
     width: 50px;
     height: 50px;
@@ -205,15 +211,14 @@ h4 {
     border: 3% 3% 8% 3%;
 }
 
-
-@media screen and (min-width: 390px) {}
-@media screen and (max-width: 393px) {
+@media screen and (max-width: 390px) {
     * {
         text-shadow: 2px 0 0 black, 0 2px 0 black, -2px 0 0 black, 0 -2px 0 black;
         color: rgba(212, 211, 220, 1);
 
     }
-    main{
+
+    main {
         min-height: 85vh;
         /* background-color: red; */
     }
@@ -340,7 +345,7 @@ h4 {
     }
 
     /* fin menu Burger */
-    #roc{
+    #roc {
         align-items: center;
     }
 
