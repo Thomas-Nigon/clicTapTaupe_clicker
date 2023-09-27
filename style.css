@@ -89,7 +89,8 @@ nav {
     justify-content: center;
 }
 
-/* Roc clicker and pickaxe */
+/* ROC CLICKER & PICKAXE*/
+
 .pickAndRoc {
     position: relative;
   display: flex;
@@ -106,14 +107,26 @@ nav {
     height: 17vw;
     left: 22.5vw;
     margin-left: -5vw;
+    transform: rotate(-45deg);
     /* background: blue; */
 }
 
+/* FOR ACTIVE PICKAXE*/
+.active{
+    transform: rotate(0deg);
+    transition: 0.5s;
+}
 .roc {
     height: 25vw;
     margin: auto;
      /* background: yellow; */
 
+}
+.explose{
+    position: fixed;
+    height: 10vw;
+    margin-top: 6vw;
+    left: 31vw;
 }
 
 .grid {
