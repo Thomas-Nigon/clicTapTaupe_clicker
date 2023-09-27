@@ -5,42 +5,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>click tap taupe</title>
+    <title>ClickTapTaupe</title>
 </head>
 
 <body>
-    <nav>
-        logo
-        <h1>Click Tap Taupe</h1>
-        menu burger
-    </nav>
-    <main>
-        <button> ? </button>
-        picture mole and stones and all
-    </main>
-    <section>
-        <button >menu mobile/Full screen</button>
-        <aside class="shop">
-            <h2>gold: <span id="gold"></span></h2>
-            <h2>Shop</h2>
-            <section class="grid">
-                <button class="div1">1</button>
-                <button class="div2">2</button>
-                <button class="div3">3</button>
-                <button class="div4">4</button>
-                <button class="div5">5</button>
-                <button class="div6">6</button>
-                <button class="div7">7</button>
-                <button class="div8">8</button>
-                <button class="div9">9</button>
+    <section class="shopNav">
+        <main>
+            <nav>
+                <Div class="fondLogo">
 
-            </section>
-        </aside>
-        <aside class="stats">
-            <h2>Stats</h2>
-        </aside>
+                    <img class="Logo" src="./Assets/LogoCTT.png" alt="Logo ClicTapTaupe">
+                </Div>
+                <h1 class="gameName"> Click Tap Taupe </h1>
+            </nav>
+
+            <button id="help" title="aides et règles du jeu"> ? </button>
+
+        </main>
+
+        <section class="rightMenu">
+            <button id="menuButton">menu</button>
+
+            <aside class="shop">
+                <h2 class="gold">gold : <img src="Assets/ImageTreasure.png" alt="trésor" class="trésor"> </h2>
+                <h2 id="shopTitle">Shop :</h3>
+                    <section class="grid">
+                        <button class="div1"> <img src="./Assets/ImagePickaxe.png" alt="pickage" class="item"> </button>
+                        <button class="div2"><img src="Assets/item2.png" alt="marteau" class="item"> </button>
+                        <button class="div3"> <img src="Assets/item3.png" alt="épée" class="item"> </button>
+                        <button class="div4">4</button>
+                        <button class="div5">5</button>
+                        <button class="div6"> <img src="./Assets/item6.png" alt="Masse" class="item"> </button>
+                        <button class="div7">7</button>
+                        <button class="div8"> <img src="Assets/ImageRoc.png" alt="roc" class="item"> </button>
+                        <button class="div9">9</button>
+                    </section>
+            </aside>
+            <aside class="stats">
+                <h4>Stats :</h4>
+            </aside>
+        </section>
     </section>
     <script src="./scripts.js"></script>
+
 </body>
 
+
 </html>
+
+
+
+<!-- menu Burger 
+            <div id="mySidenav" class="sideNav">
+                <a id="closeButton" href="#" class="close"></a>
+                <ul>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Stats</a></li>
+                <li><a href="#">*</a></li>
+                <li><a href="#">*</a></li>
+                </ul>
+            </div>
+            <a href="#" id="openButton">
+            <span class="burgerIcone">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+            </a>
+fin menu Burger -->
