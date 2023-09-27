@@ -27,7 +27,6 @@ body {
     background-color: var(--mainColor);
     min-height: 100vh;
     overflow: hidden;
-
 }
 
 main {
@@ -38,8 +37,24 @@ main {
     height: 100vh;
     width: 69vw;
     flex-direction: column;
+    flex-wrap: nowrap;
     align-items: center;
 }
+
+
+
+#help {
+    display: flex;
+    align-self: flex-end;
+    height: 3em;
+    width: 1.5em;
+    border-radius: 50%;
+    position: relative;
+    right: 10%;
+    top: 5%;
+    justify-content: center;
+}
+
 
 nav {
     background-color: var(--mainColor);
@@ -50,13 +65,17 @@ nav {
     border: solid black;
     align-items: center;
     margin-top: 1.7em;
+    justify-content: space-between;
 }
+
 
 .gameName {
     color: white;
     display: flex;
-    font-size: 1em;
-    background-color: #D4D3DC;
+    font-size: 2em;
+    justify-content: center;
+    margin-right: 10%;
+    width: 70%;
 }
 
 .fondLogo {
@@ -80,16 +99,8 @@ nav {
     bottom: 0.4em;
 }
 
+/* ROC CLICKER & PICKAXE*/
 
-#help {
-    display: flex;
-    height: 1.5em;
-    width: 1.5em;
-    border-radius: 50%;
-    justify-content: center;
-}
-
-/* Roc clicker and pickaxe */
 .pickAndRoc {
     position: relative;
     display: flex;
@@ -107,7 +118,14 @@ nav {
     height: 17vw;
     left: 22.5vw;
     margin-left: -5vw;
+    transform: rotate(-45deg);
     /* background: blue; */
+}
+
+/* FOR ACTIVE PICKAXE*/
+.active {
+    transform: rotate(0deg);
+    transition: 0.5s;
 }
 
 .roc {
@@ -115,6 +133,13 @@ nav {
     margin: auto;
     /* background: yellow; */
 
+}
+
+.explose {
+    position: fixed;
+    height: 10vw;
+    margin-top: 6vw;
+    left: 31vw;
 }
 
 .grid {
@@ -287,6 +312,7 @@ ul li {
     font-size: 1.2rem;
     -webkit-text-stroke-color: var(--secondaryColor);
     -webkit-text-stroke-width: 0.5px;
+    list-style: none;
 }
 
 .item {
@@ -313,119 +339,92 @@ ul li {
     * {
         text-shadow: 2px 0 0 black, 0 2px 0 black, -2px 0 0 black, 0 -2px 0 black;
         color: rgba(212, 211, 220, 1);
-
     }
 
     body {
-        margin: 5px 5px 5px 5px;
+        margin: 0;
         /* background-image: url("./Assets/BackgroundTwo.png"); */
         overflow: hidden;
         min-height: 100vh;
     }
 
     main {
-        min-height: 85vh;
-        /* background-color: red; */
+        height: 100vh;
+        width: 100vw;
         background: url(./Assets/Background.png);
         background-size: cover;
-        display: flex;
-        width: 100vw;
-        justify-content: center;
     }
 
-    nav {
-        background-color: rgba(56, 68, 84, 1);
-
-        height: 15vh;
-        width: 96vw;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-radius: 2vw;
-        box-shadow: 2px 0 0 black, 0 2px 0 black, -2px 0 0 black, 0 -2px 0 black;
+    .gameName {
+        font-size: 1em;
+        width: 50%;
     }
 
-    #logo {
-        width: 20vw;
-        border: black 2px solid;
-        background-color: rgba(212, 211, 220, 1);
-        width: 26vw;
-        height: 26vw;
-        border-radius: 50%;
-    }
-
-    h1 {
-        font-size: 6vw;
-        text-shadow: 2px 0 0 black, 0 2px 0 black, -2.5px 0 0 black, 0 -2.5px 0 black;
-
-    }
-
-
-
-    button {
-
-        background-color: rgba(56, 68, 84, 1);
-        border: black 1px solid;
-        margin: 8%;
-        font-size: 7vw;
-        cursor: pointer;
-        width: 10vw;
-        height: 10vw;
-        border-radius: 50%;
-        font-family: 'bodoni';
-        box-shadow: 1px 0 0 white, 0 1px 0 white, -1px 0 0 white, 0 -1px 0 white;
-    }
-
-    .rightMenu {
-        display: flex;
-        justify-content: space-around;
-        flex-direction: column;
-        width: 100vw;
-        border: solid 4px black;
-        border-radius: 0px 15px 15px 0px;
-        background-color: var(--mainColor);
-    }
-
-    .stats {
-        background-color: var(--secondaryColor);
-        border-radius: 15px;
-
-
-
-
-
-    }
-
-    .shop {
-        background-color: var(--secondaryColor);
-        border-radius: 15px 0 0 0;
-        margin: 0;
-        height: 33vh;
-        display: flex;
-        flex-direction: row-reverse;
-        position: absolute;
-        top: 50%;
-        left: 0%;
-    }
-
-    .gold {
-        margin: 0;
-        height: 100%;
-    }
-
-    .stats h4,
-    #shopTitle {
-        display: none;
+    #help {
+        height: 1.5em;
+        width: 1.5em;
     }
 
     #menuButton {
+        display: flex;
         position: absolute;
-        bottom: 50%;
+        bottom: 80%;
         left: 40%;
         height: 26px;
         width: 20%;
         background-color: var(--secondaryColor);
         border-radius: 8px 8px 0 0;
+    }
+
+    .rightMenu {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        padding: 0;
+        height: 66vh;
+        width: 100%;
+        border: solid 4px black;
+        border-radius: 0px 15px 15px 0px;
+        background-color: aqua;
+        position: absolute;
+        top: 90%;
+        left: 0%;
+    }
+
+    .stats {
+        background-color: var(--secondaryColor);
+        border-radius: 15px;
+        height: 33vh;
+    }
+
+    .shop {
+        background-color: red;
+        border-radius: 15px 15px 0 0;
+        margin: 0;
+        height: 33vh;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .gold {
+        background-color: var(--mainColor);
+        border-radius: 0 15px 0 0;
+        margin: 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        justify-content: center;
+        color: var(--tertiaryColor);
+        -webkit-text-stroke-color: black;
+        -webkit-text-stroke-width: 1px;
+        font-size: 20px;
+    }
+
+    .stats h2,
+    #shopTitle {
+        display: none;
     }
 
     h2 img {
