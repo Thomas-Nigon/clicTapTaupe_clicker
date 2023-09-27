@@ -285,6 +285,7 @@ ul li {
     font-size: 1.2rem;
     -webkit-text-stroke-color: var(--secondaryColor);
     -webkit-text-stroke-width: 0.5px;
+    list-style: none;
 }
 
 .item {
@@ -311,11 +312,10 @@ ul li {
     * {
         text-shadow: 2px 0 0 black, 0 2px 0 black, -2px 0 0 black, 0 -2px 0 black;
         color: rgba(212, 211, 220, 1);
-
     }
 
     body {
-        margin: 5px 5px 5px 5px;
+        margin: 0;
         /* background-image: url("./Assets/BackgroundTwo.png"); */
         overflow: hidden;
         min-height: 100vh;
@@ -372,48 +372,12 @@ ul li {
         border-radius: 50%;
         font-family: 'bodoni';
         box-shadow: 1px 0 0 white, 0 1px 0 white, -1px 0 0 white, 0 -1px 0 white;
-    } */
-
-    .rightMenu {
-        display: flex;
-        justify-content: space-around;
-        flex-direction: column;
-        width: 100vw;
-        border: solid 4px black;
-        border-radius: 0px 15px 15px 0px;
-        background-color: var(--mainColor);
-    }
-
-    .stats {
-        background-color: var(--secondaryColor);
-        border-radius: 15px;
-    }
-
-    .shop {
-        background-color: var(--secondaryColor);
-        border-radius: 15px 0 0 0;
-        margin: 0;
-        height: 33vh;
-        display: flex;
-        flex-direction: row-reverse;
-        position: absolute;
-        top: 5 0%;
-        left: 0%;
-    }
-
-    .gold {
-        margin: 0;
-        height: 100%;
-    }
-
-    .stats h4,
-    #shopTitle {
-        display: none;
     }
 
     #menuButton {
+        display: flex;
         position: absolute;
-        bottom: 50%;
+        bottom: 80%;
         left: 40%;
         height: 26px;
         width: 20%;
@@ -421,6 +385,56 @@ ul li {
         border-radius: 8px 8px 0 0;
     }
 
+    .rightMenu {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        padding: 0;
+        height: 66vh;
+        width: 100%;
+        border: solid 4px black;
+        border-radius: 0px 15px 15px 0px;
+        background-color: aqua;
+        position: absolute;
+        top: 90%;
+        left: 0%;
+    }
+
+    .stats {
+        background-color: var(--secondaryColor);
+        border-radius: 15px;
+        height: 33vh;
+    }
+
+    .shop {
+        background-color: red;
+        border-radius: 15px 15px 0 0;
+        margin: 0;
+        height: 33vh;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .gold {
+        background-color: var(--mainColor);
+        border-radius: 0 15px 0 0;
+        margin: 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        justify-content: center;
+        color: var(--tertiaryColor);
+        -webkit-text-stroke-color: black;
+        -webkit-text-stroke-width: 1px;
+        font-size: 20px;
+    }
+
+    .stats h2,
+    #shopTitle {
+        display: none;
+    }
     h2 img {
         width: 11vh;
     }
