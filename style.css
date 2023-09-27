@@ -41,8 +41,6 @@ main {
     align-items: center;
 }
 
-
-
 #help {
     display: flex;
     align-self: flex-end;
@@ -55,7 +53,6 @@ main {
     justify-content: center;
 }
 
-
 nav {
     background-color: var(--mainColor);
     display: flex;
@@ -67,7 +64,6 @@ nav {
     margin-top: 1.7em;
     justify-content: space-between;
 }
-
 
 .gameName {
     color: white;
@@ -525,4 +521,24 @@ ul li {
         align-items: center;
     }
 
+}
+
+/* bouton help */
+
+.rulesActif {
+    border: 5px solid black;
+    background-color: var(--secondaryColor);
+    position: absolute;
+    top: 32vh;
+    z-index: 1;
+    width: 96vw;
+    padding: 5vw;
+    transition: 0.5s;
+    opacity: 1;
+}
+
+.croix {
+    width: 4vw;
+    position: absolute;
+    margin: -4vw 1vw 0vw 83vw;
 }
