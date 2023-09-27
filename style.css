@@ -41,8 +41,6 @@ main {
     align-items: center;
 }
 
-
-
 #help {
     display: flex;
     align-self: flex-end;
@@ -55,7 +53,6 @@ main {
     justify-content: center;
 }
 
-
 nav {
     background-color: var(--mainColor);
     display: flex;
@@ -67,7 +64,6 @@ nav {
     margin-top: 1.7em;
     justify-content: space-between;
 }
-
 
 .gameName {
     color: white;
