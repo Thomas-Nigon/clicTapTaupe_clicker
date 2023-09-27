@@ -44,10 +44,12 @@ main {
 
 #help {
     align-self: flex-end;
-    height: 2em;
-    width: 2em;
+    height: 3em;
+    width: 3em;
     border-radius: 50%;
-    margin-right: 10%;
+    position: relative;
+    right: 10%;
+    top: 5%;
 }
 
 nav {
@@ -343,7 +345,6 @@ ul li {
     h1 {
         font-size: 6vw;
         text-shadow: 2px 0 0 black, 0 2px 0 black, -2.5px 0 0 black, 0 -2.5px 0 black;
-
     }
 
 
@@ -375,11 +376,6 @@ ul li {
     .stats {
         background-color: var(--secondaryColor);
         border-radius: 15px;
-
-
-
-
-
     }
 
     .shop {
