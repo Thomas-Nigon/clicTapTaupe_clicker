@@ -34,7 +34,7 @@ main {
     background-size: cover;
     display: flex;
     height: 100vh;
-    width: 66vw;
+    width: 69vw;
     justify-content: center;
 }
 
@@ -82,9 +82,11 @@ nav {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 3%;
-    grid-row-gap: 3%;
-    margin: 3% 3% 8% 3%;
+    grid-column-gap: 1vw;
+    grid-row-gap: 2vh;
+
+    margin: 2vh 2vh 2vh 2vh;
+    width: 0vh;
 }
 
 .div1 {
@@ -135,47 +137,66 @@ nav {
     justify-content: space-around;
     /*    float: right; */
     flex-direction: column;
-    width: 33%;
+    width: 31vw;
     border: solid 4px black;
     border-radius: 0px 15px 15px 0px;
     background-color: var(--mainColor);
+    padding-left: 1vw;
+    padding-right: 1vw;
+    height: 100vh;
 }
 
 .stats {
     height: 33vh;
     background-color: var(--secondaryColor);
     border-radius: 15px;
-    margin: 3%;
 }
 
 .shop {
     background-color: var(--secondaryColor);
     border-radius: 15px;
-    margin: 3%;
 }
 
 .gold {
     background-color: var(--mainColor);
     border-radius: 15px;
-    margin: 3%;
+    margin: 1vw;
     height: 10vh;
     display: flex;
     align-items: center;
-    padding: 22px;
+    padding: 1vw;
     justify-content: space-between;
     color: var(--tertiaryColor);
     -webkit-text-stroke-color: black;
     -webkit-text-stroke-width: 1px;
-    font-size: 20px;
+    font-size: 3vh;
 }
 
 #menuButton {
     display: none;
 }
 
+#shopTitle {
+    font-size: 3vh;
+    margin-left: 2vw;
+    color: white;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 0.5px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin-top: 3vh;
+    margin-left: 2vw;
+    font-size: 2vh;
+}
+
 .trésor {
-    width: 50px;
-    height: 50px;
+    width: 3vw;
+    height: 5vh;
 }
 
 h3 {
@@ -186,17 +207,18 @@ h3 {
     font-size: 20px;
 }
 
-h4 {
-    text-align: center;
+#infos {
+
     color: white;
     -webkit-text-stroke-color: black;
     -webkit-text-stroke-width: 0.5px;
-    font-size: 20px;
+    font-size: 3vh;
+    margin-left: 2vw;
 }
 
 .item {
-    width: 100%;
-    height: 100%;
+    width: 6vw;
+    height: 5vw;
 }
 
 .div1,
@@ -210,7 +232,8 @@ h4 {
 .div9 {
     background-color: var(--MenuBGColor);
     border-radius: 15px;
-    border: 3% 3% 8% 3%;
+    height: 6vw;
+    width: 8vw;
 }
 
 @media screen and (max-width: 390px) {
@@ -291,10 +314,13 @@ h4 {
     }
 
     .stats {
-        height: 33vh;
         background-color: var(--secondaryColor);
         border-radius: 15px;
-        margin: 3%;
+
+
+
+
+
     }
 
     .shop {
@@ -342,6 +368,7 @@ h4 {
         grid-row-gap: 0px;
         width: 67vw;
         gap: 15px;
+
 
     }
 
