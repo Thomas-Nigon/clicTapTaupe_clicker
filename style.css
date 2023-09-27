@@ -104,9 +104,8 @@ nav {
 .pickAndRoc {
     position: relative;
     display: flex;
-    margin-top: 20vw;
-    margin-bottom: 10vw;
-    /* background-color:red; */
+    top: 20vw;
+    bottom: 10vw;
     height: 40vw;
     width: 66vw;
     justify-content: center;
@@ -119,7 +118,7 @@ nav {
     left: 22.5vw;
     margin-left: -5vw;
     transform: rotate(-45deg);
-    /* background: blue; */
+ 
 }
 
 /* FOR ACTIVE PICKAXE*/
@@ -316,15 +315,11 @@ ul li {
 
     body {
         margin: 0;
-        /* background-image: url("./Assets/BackgroundTwo.png"); */
-        overflow: hidden;
-        min-height: 100vh;
     }
 
     main {
-        height: 100vh;
+        height: 100;
         width: 100vw;
-        background: url(./Assets/Background.png);
         background-size: cover;
     }
 
@@ -338,6 +333,24 @@ ul li {
         width: 1.5em;
     }
 
+    /* ROC CLICKER & PICKAXE*/
+    .pickAndRoc {
+        top: 70vw;
+        height: 70vw;
+        width: 75vw;
+        justify-content: center;
+    }
+    .pickaxe{
+        left: 15vw;
+        height: 28vw;
+    }
+    .roc{
+        height: 50vw;
+    }
+    .explose{
+        top: 108vw;
+        left: 45vw;
+    }
     #menuButton {
         display: flex;
         position: absolute;
