@@ -27,7 +27,6 @@ body {
     background-color: var(--mainColor);
     min-height: 100vh;
     overflow: hidden;
-
 }
 
 main {
@@ -332,9 +331,10 @@ ul li {
         justify-content: center;
     }
 
-    nav {
-        background-color: rgba(56, 68, 84, 1);
 
+
+    /* nav {
+        background-color: rgba(56, 68, 84, 1);
         height: 15vh;
         width: 96vw;
         display: flex;
@@ -372,7 +372,7 @@ ul li {
         border-radius: 50%;
         font-family: 'bodoni';
         box-shadow: 1px 0 0 white, 0 1px 0 white, -1px 0 0 white, 0 -1px 0 white;
-    }
+    } */
 
     .rightMenu {
         display: flex;
