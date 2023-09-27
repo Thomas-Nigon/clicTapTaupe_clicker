@@ -102,11 +102,11 @@ nav {
 /* ROC CLICKER & PICKAXE*/
 
 .pickAndRoc {
+   
     position: relative;
     display: flex;
-    top: 20vw;
-    bottom: 10vw;
-    height: 40vw;
+    top: 26%;
+    height: 35vw;
     width: 66vw;
     justify-content: center;
 
@@ -136,9 +136,9 @@ nav {
 
 .explose {
     position: fixed;
-    height: 10vw;
-    margin-top: 6vw;
-    left: 31vw;
+    height: 12vw;
+    margin-top: 5vw;
+    left: 30vw;
 }
 
 .grid {
@@ -335,7 +335,7 @@ ul li {
 
     /* ROC CLICKER & PICKAXE*/
     .pickAndRoc {
-        top: 70vw;
+        top: 30%;
         height: 70vw;
         width: 75vw;
         justify-content: center;
@@ -348,8 +348,9 @@ ul li {
         height: 50vw;
     }
     .explose{
-        top: 108vw;
-        left: 45vw;
+        height: 21vw;
+        margin-top: 10vw;
+        left: 41vw;
     }
     #menuButton {
         display: flex;
