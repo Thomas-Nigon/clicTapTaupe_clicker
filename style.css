@@ -42,15 +42,20 @@ main {
     align-items: center;
 }
 
+
+
 #help {
+    display: flex;
     align-self: flex-end;
     height: 3em;
-    width: 3em;
+    width: 1.5em;
     border-radius: 50%;
     position: relative;
     right: 10%;
     top: 5%;
+    justify-content: center;
 }
+
 
 nav {
     background-color: var(--mainColor);
@@ -95,16 +100,8 @@ nav {
     bottom: 0.4em;
 }
 
+/* ROC CLICKER & PICKAXE*/
 
-#help {
-    display: flex;
-    height: 1.5em;
-    width: 1.5em;
-    border-radius: 50%;
-    justify-content: center;
-}
-
-/* Roc clicker and pickaxe */
 .pickAndRoc {
     position: relative;
     display: flex;
@@ -122,7 +119,14 @@ nav {
     height: 17vw;
     left: 22.5vw;
     margin-left: -5vw;
+    transform: rotate(-45deg);
     /* background: blue; */
+}
+
+/* FOR ACTIVE PICKAXE*/
+.active {
+    transform: rotate(0deg);
+    transition: 0.5s;
 }
 
 .roc {
@@ -130,6 +134,13 @@ nav {
     margin: auto;
     /* background: yellow; */
 
+}
+
+.explose {
+    position: fixed;
+    height: 10vw;
+    margin-top: 6vw;
+    left: 31vw;
 }
 
 .grid {
