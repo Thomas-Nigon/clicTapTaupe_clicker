@@ -23,8 +23,14 @@
 
 }
 
+body {
+    background-color: var(--mainColor);
+    min-height: 100vh;
+    overflow: hidden;
+}
+
 main {
-    background: url(./Assets/Background.png);
+    background: url(./Assets/BackgroundDesktop.png);
     background-size: cover;
     display: flex;
     height: 100vh;
@@ -119,17 +125,15 @@ nav {
 
 .shopNav {
     display: flex;
+    height: 100vh;
 }
-
-/* NAV BAR ET MAIN STYLE (branche XXX) */
-
 
 /* SHOP ET STATS STYLE (branche XXX) */
 
 .rightMenu {
     display: flex;
     justify-content: space-around;
-    float: right;
+    /*    float: right; */
     flex-direction: column;
     width: 33%;
     border: solid 4px black;
@@ -163,6 +167,10 @@ nav {
     -webkit-text-stroke-color: black;
     -webkit-text-stroke-width: 1px;
     font-size: 20px;
+}
+
+#menuButton {
+    display: none;
 }
 
 .trésor {
@@ -205,24 +213,28 @@ h4 {
     border: 3% 3% 8% 3%;
 }
 
-
-@media screen and (min-width: 390px) {}
-@media screen and (max-width: 393px) {
+@media screen and (max-width: 390px) {
     * {
         text-shadow: 2px 0 0 black, 0 2px 0 black, -2px 0 0 black, 0 -2px 0 black;
         color: rgba(212, 211, 220, 1);
 
-    }
-    main{
-        min-height: 85vh;
-        /* background-color: red; */
     }
 
     body {
         margin: 5px 5px 5px 5px;
         /* background-image: url("./Assets/BackgroundTwo.png"); */
         overflow: hidden;
+        min-height: 100vh;
+    }
 
+    main {
+        min-height: 85vh;
+        /* background-color: red; */
+        background: url(./Assets/Background.png);
+        background-size: cover;
+        display: flex;
+        width: 100vw;
+        justify-content: center;
     }
 
     nav {
@@ -252,10 +264,7 @@ h4 {
 
     }
 
-    main {
-        display: flex;
-        justify-content: end;
-    }
+
 
     button {
 
@@ -269,6 +278,84 @@ h4 {
         border-radius: 50%;
         font-family: 'bodoni';
         box-shadow: 1px 0 0 white, 0 1px 0 white, -1px 0 0 white, 0 -1px 0 white;
+    }
+
+    .rightMenu {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        width: 100vw;
+        border: solid 4px black;
+        border-radius: 0px 15px 15px 0px;
+        background-color: var(--mainColor);
+    }
+
+    .stats {
+        height: 33vh;
+        background-color: var(--secondaryColor);
+        border-radius: 15px;
+        margin: 3%;
+    }
+
+    .shop {
+        background-color: var(--secondaryColor);
+        border-radius: 15px 0 0 0;
+        margin: 0;
+        height: 33vh;
+        display: flex;
+        flex-direction: row-reverse;
+        position: absolute;
+        top: 50%;
+        left: 0%;
+    }
+
+    .gold {
+        margin: 0;
+        height: 100%;
+    }
+
+    .stats h4,
+    #shopTitle {
+        display: none;
+    }
+
+    #menuButton {
+        position: absolute;
+        bottom: 50%;
+        left: 40%;
+        height: 26px;
+        width: 20%;
+        background-color: var(--secondaryColor);
+        border-radius: 8px 8px 0 0;
+    }
+
+    h2 img {
+        width: 11vh;
+    }
+
+    .grid {
+        padding: 15px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        width: 67vw;
+        gap: 15px;
+
+    }
+
+    #goldTitle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        -webkit-text-stroke-color: black;
+        -webkit-text-stroke-width: 0.2px;
+        color: var(--tertiaryColor);
+        background-color: var(--mainColor);
+        border-radius: 0 15px 0 0;
+        width: 33vw;
     }
 
     /* menu Burger */
@@ -332,22 +419,11 @@ h4 {
         margin: 0.8vw 0;
     }
 
-    .shop {
-        margin: 0;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column-reverse;
-    }
+
 
     /* fin menu Burger */
-    #roc{
+    #roc {
         align-items: center;
     }
-
-    /* NAV BAR ET MAIN STYLE (branche XXX) */
-
-    /* SHOP ET STATS STYLE (branche XXX) */
-
-    /* SHOP ET STATS STYLE (branche XXX) */
 
 }
