@@ -525,24 +525,25 @@ ul li {
         align-items: center;
     }
 
-}
+    /* bouton help */
+    /* voir les valeurs pq ils prend les mêmes pour le desktop */
 
-/* bouton help */
+    .rulesActif {
+        border: 5px solid black;
+        background-color: var(--secondaryColor);
+        position: absolute;
+        top: 32vh;
+        z-index: 1;
+        width: 96vw;
+        padding: 5vw;
+        transition: 0.5s;
+        opacity: 1;
+    }
 
-.rulesActif {
-    border: 5px solid black;
-    background-color: var(--secondaryColor);
-    position: absolute;
-    top: 32vh;
-    z-index: 1;
-    width: 96vw;
-    padding: 5vw;
-    transition: 0.5s;
-    opacity: 1;
-}
+    .croix {
+        width: 4vw;
+        position: absolute;
+        margin: -4vw 1vw 0vw 83vw;
+    }
 
-.croix {
-    width: 4vw;
-    position: absolute;
-    margin: -4vw 1vw 0vw 83vw;
 }
