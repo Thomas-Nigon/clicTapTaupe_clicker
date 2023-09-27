@@ -233,7 +233,11 @@ nav {
     color: var(--tertiaryColor);
     -webkit-text-stroke-color: black;
     -webkit-text-stroke-width: 1px;
-    font-size: 3vh;
+    font-size: 2rem;
+}
+
+#userGold {
+    font-size: 2rem;
 }
 
 #menuButton {
@@ -241,7 +245,7 @@ nav {
 }
 
 #shopTitle {
-    font-size: 3vh;
+    font-size: 2rem;
     margin-left: 2vw;
     color: white;
     -webkit-text-stroke-color: black;
@@ -250,13 +254,10 @@ nav {
 
 ul {
     list-style-type: none;
-    line-height: 1vh;
 }
 
 li {
-    margin-top: 3vh;
     margin-left: 2vw;
-    font-size: 2vh;
 }
 
 .trésor {
@@ -277,7 +278,7 @@ h3 {
     color: white;
     -webkit-text-stroke-color: black;
     -webkit-text-stroke-width: 0.5px;
-    font-size: 3vh;
+    font-size: 2rem;
     margin-left: 2vw;
 }
 
@@ -309,10 +310,10 @@ ul li {
 }
 
 @media screen and (max-width: 390px) {
-    * {
+    /* * {
         text-shadow: 2px 0 0 black, 0 2px 0 black, -2px 0 0 black, 0 -2px 0 black;
         color: rgba(212, 211, 220, 1);
-    }
+    } */
 
     body {
         margin: 0;
@@ -360,7 +361,7 @@ ul li {
 
 
     button {
-        background-color: rgba(56, 68, 84, 1);
+        background-color: var(--MenuBGColor);
         border: black 1px solid;
         margin: 0;
         font-size: 7vw;
@@ -376,13 +377,25 @@ ul li {
         display: flex;
         justify-content: center;
         position: absolute;
-        bottom:100%;
+        /* bottom:100%; */
         left: 40%;
         height: 26px;
         width: 20%;
         font-size: 1.2rem;
         background-color: var(--secondaryColor);
         border-radius: 8px 8px 0 0;
+        transition: 0.2s;
+    }
+    #menuButton:hover{
+        transform: scale(1.1);
+    }
+
+    .openBtn {
+        bottom: 100%
+    }
+
+    .closedBtn {
+        bottom: 100%
     }
 
     .rightMenu {
@@ -396,8 +409,15 @@ ul li {
         border-radius: 15px 15px 0px 0px;
         background-color: var(--mainColor);
         position: absolute;
-        top: 10%;
-        left: 0%;
+       transition: 0.4s;
+    }
+
+    .openMenu {
+        top: 20%
+    }
+
+    .closedMenu {
+        top: 86%
     }
 
     .stats {
@@ -419,6 +439,7 @@ ul li {
 
     .gold {
         background-color: var(--mainColor);
+        font-size: 1.8rem;
         border-radius: 0 0 0 0;
         margin: 0;
         height: 100%;
@@ -426,21 +447,17 @@ ul li {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 0;
+        padding: 1vh;
         justify-content: center;
         color: var(--tertiaryColor);
         -webkit-text-stroke-color: black;
         -webkit-text-stroke-width: 1px;
-        font-size: 20px;
     }
 
     #shopTitle {
         display: none;
     }
 
-    h2 img {
-        width: 11vh;
-    }
     .trésor {
         width: 100%;
         height: auto;
@@ -452,10 +469,10 @@ ul li {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);
         border-radius: 15px;
-        gap: 1px;
+        gap: 1rem;
         margin: 0;
         padding: 1vh;
-        width: 100%;
+        width: 85vw;
         height: 100%;
     }
 
@@ -468,13 +485,13 @@ ul li {
     .div7,
     .div8,
     .div9 {
-        width: 80%;
-        height: 85%;
+        width: 100%;
+        height: 100%;
     }
 
     .item {
-        width: 80%;
-        height: 85%;
+        width: 100%;
+        height: auto;
     }
 
     #goldTitle {
@@ -488,6 +505,21 @@ ul li {
         background-color: var(--mainColor);
         border-radius: 0 15px 0 0;
         width: 33vw;
+    }
+
+    #infos {
+        color: white;
+        -webkit-text-stroke-color: black;
+        -webkit-text-stroke-width: 0.5px;
+        font-size: 2rem;
+        margin-left: 2vw;
+    }
+
+    ul li {
+        font-size: 1.2rem;
+        -webkit-text-stroke-color: var(--secondaryColor);
+        -webkit-text-stroke-width: 0.5px;
+        list-style: none;
     }
 
     /* menu Burger */
