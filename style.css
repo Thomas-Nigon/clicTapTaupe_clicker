@@ -322,57 +322,18 @@ ul li {
     }
 
     main {
-        min-height: 85vh;
-        /* background-color: red; */
+        height: 100vh;
+        width: 100vw;
         background: url(./Assets/Background.png);
         background-size: cover;
-        display: flex;
-        width: 100vw;
-        justify-content: center;
+    }
+
+    .gameName {
+        font-size: 1em;
+        width: 50%;
     }
 
 
-
-    /* nav {
-        background-color: rgba(56, 68, 84, 1);
-        height: 15vh;
-        width: 96vw;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-radius: 2vw;
-        box-shadow: 2px 0 0 black, 0 2px 0 black, -2px 0 0 black, 0 -2px 0 black;
-    }
-
-    #logo {
-        width: 20vw;
-        border: black 2px solid;
-        background-color: rgba(212, 211, 220, 1);
-        width: 26vw;
-        height: 26vw;
-        border-radius: 50%;
-    }
-
-    h1 {
-        font-size: 6vw;
-        text-shadow: 2px 0 0 black, 0 2px 0 black, -2.5px 0 0 black, 0 -2.5px 0 black;
-    }
-
-
-
-    button {
-
-        background-color: rgba(56, 68, 84, 1);
-        border: black 1px solid;
-        margin: 8%;
-        font-size: 7vw;
-        cursor: pointer;
-        width: 10vw;
-        height: 10vw;
-        border-radius: 50%;
-        font-family: 'bodoni';
-        box-shadow: 1px 0 0 white, 0 1px 0 white, -1px 0 0 white, 0 -1px 0 white;
-    }
 
     #menuButton {
         display: flex;
@@ -435,6 +396,7 @@ ul li {
     #shopTitle {
         display: none;
     }
+
     h2 img {
         width: 11vh;
     }
