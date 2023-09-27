@@ -149,7 +149,6 @@ nav {
     grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 1vw;
     grid-row-gap: 2vh;
-
     margin: 2vh 2vh 2vh 2vh;
     width: 0vh;
 }
@@ -361,26 +360,27 @@ ul li {
 
 
     button {
-
         background-color: rgba(56, 68, 84, 1);
         border: black 1px solid;
-        margin: 8%;
+        margin: 0;
         font-size: 7vw;
         cursor: pointer;
-        width: 10vw;
-        height: 10vw;
-        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
         font-family: 'bodoni';
         box-shadow: 1px 0 0 white, 0 1px 0 white, -1px 0 0 white, 0 -1px 0 white;
     }
 
     #menuButton {
         display: flex;
+        justify-content: center;
         position: absolute;
-        bottom: 80%;
+        bottom:100%;
         left: 40%;
         height: 26px;
         width: 20%;
+        font-size: 1.2rem;
         background-color: var(--secondaryColor);
         border-radius: 8px 8px 0 0;
     }
@@ -390,36 +390,39 @@ ul li {
         justify-content: flex-start;
         flex-direction: column;
         padding: 0;
-        height: 66vh;
+        height: 80vh;
         width: 100%;
-        border: solid 4px black;
-        border-radius: 0px 15px 15px 0px;
-        background-color: aqua;
+        border: solid 0px black;
+        border-radius: 15px 15px 0px 0px;
+        background-color: var(--mainColor);
         position: absolute;
-        top: 90%;
+        top: 10%;
         left: 0%;
     }
 
     .stats {
         background-color: var(--secondaryColor);
         border-radius: 15px;
-        height: 33vh;
+        height: 35vh;
+        margin-bottom: 1vh;
     }
 
     .shop {
-        background-color: red;
-        border-radius: 15px 15px 0 0;
-        margin: 0;
-        height: 33vh;
+        background-color: var(--mainColor);
+        border-radius: 15px;
+        margin: 1vh 0 2vh 0;
+        height: 43vh;
         display: flex;
+        width: 100%;
         flex-direction: row-reverse;
     }
 
     .gold {
         background-color: var(--mainColor);
-        border-radius: 0 15px 0 0;
+        border-radius: 0 0 0 0;
         margin: 0;
         height: 100%;
+        width: 35vw;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -431,25 +434,47 @@ ul li {
         font-size: 20px;
     }
 
-    .stats h2,
     #shopTitle {
         display: none;
     }
+
     h2 img {
         width: 11vh;
     }
+    .trésor {
+        width: 100%;
+        height: auto;
+    }
 
     .grid {
-        padding: 15px;
+        background-color: var(--secondaryColor);
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-        width: 67vw;
-        gap: 15px;
+        border-radius: 15px;
+        gap: 1px;
+        margin: 0;
+        padding: 1vh;
+        width: 100%;
+        height: 100%;
+    }
 
+    .div1,
+    .div2,
+    .div3,
+    .div4,
+    .div5,
+    .div6,
+    .div7,
+    .div8,
+    .div9 {
+        width: 80%;
+        height: 85%;
+    }
 
+    .item {
+        width: 80%;
+        height: 85%;
     }
 
     #goldTitle {
