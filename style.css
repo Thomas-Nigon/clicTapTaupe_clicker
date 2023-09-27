@@ -27,11 +27,13 @@ body {
     background-color: var(--mainColor);
     min-height: 100vh;
     overflow: hidden;
+
 }
 
 main {
     background: url(./Assets/BackgroundDesktop.png);
     background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     height: 100vh;
     width: 69vw;
@@ -85,6 +87,33 @@ nav {
     width: 1.5em;
     border-radius: 50%;
     justify-content: center;
+}
+
+/* Roc clicker and pickaxe */
+.pickAndRoc {
+    position: relative;
+  display: flex;
+  margin-top: 20vw;
+  margin-bottom: 10vw;
+    /* background-color:red; */
+    height: 40vw;
+    width: 66vw;
+ justify-content: center;
+   
+}
+.pickaxe {
+    position: absolute;
+    height: 17vw;
+    left: 22.5vw;
+    margin-left: -5vw;
+    /* background: blue; */
+}
+
+.roc {
+    height: 25vw;
+    margin: auto;
+     /* background: yellow; */
+
 }
 
 .grid {
