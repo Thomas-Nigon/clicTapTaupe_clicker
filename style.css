@@ -98,7 +98,7 @@ nav {
 /* ROC CLICKER & PICKAXE*/
 
 .pickAndRoc {
-   
+
     position: relative;
     display: flex;
     top: 26%;
@@ -114,7 +114,7 @@ nav {
     left: 22.5vw;
     margin-left: -5vw;
     transform: rotate(-45deg);
- 
+
 }
 
 /* FOR ACTIVE PICKAXE*/
@@ -363,18 +363,21 @@ ul li {
         width: 75vw;
         justify-content: center;
     }
-    .pickaxe{
+
+    .pickaxe {
         left: 15vw;
         height: 28vw;
     }
-    .roc{
+
+    .roc {
         height: 50vw;
     }
-    .explose{
+
+    .explose {
         height: 21vw;
         margin-top: 10vw;
         left: 41vw;
-
+    }
 
 
     button {
@@ -389,6 +392,7 @@ ul li {
         font-family: 'bodoni';
         box-shadow: 1px 0 0 white, 0 1px 0 white, -1px 0 0 white, 0 -1px 0 white;
     }
+
     #menuButton {
         display: flex;
         justify-content: center;
@@ -402,7 +406,8 @@ ul li {
         border-radius: 8px 8px 0 0;
         transition: 0.2s;
     }
-    #menuButton:hover{
+
+    #menuButton:hover {
         transform: scale(1.1);
     }
 
@@ -425,7 +430,7 @@ ul li {
         border-radius: 15px 15px 0px 0px;
         background-color: var(--mainColor);
         position: absolute;
-       transition: 0.4s;
+        transition: 0.4s;
     }
 
     .openMenu {
@@ -476,6 +481,7 @@ ul li {
 
     h2 img {
         width: 11vh;
+    }
 
     .trésor {
         width: 100%;
