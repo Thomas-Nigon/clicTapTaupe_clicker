@@ -47,15 +47,4 @@ closeCroix.addEventListener("click", function () {
 
 
 // début de l'autoClick
-const autoClick1 = document.querySelector(".div4");
-const userGold = document.getElementById("userGold");
-
-function
-
-    autoClick1.addEventListener("click", function () {
-
-        setInterval()
-    })
-
-
 // fin de l'autoClick
