@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // FUNCTION OPEN AND CLOSE MENU MOBILE
 const menuBtn = document.getElementById('menuButton')
 const rightMenu = document.querySelector('.rightMenu')
@@ -22,3 +23,22 @@ if (open == true){
 }
 menuBtn.addEventListener('click', openMenu)
 
+=======
+const trueRules = document.querySelector("#help")
+const sectRules = document.querySelector(".rules")
+
+trueRules.addEventListener("click", function () {
+    sectRules.classList.remove("rules");
+    sectRules.classList.add("rulesActif");
+});
+
+
+const closeCroix = document.querySelector(".croix")
+
+closeCroix.addEventListener("click", function () {
+
+    sectRules.classList.remove("rulesActif")
+    sectRules.classList.add("rules")
+    console.log("hello");
+})
+>>>>>>> 5aaf2298b675bb526330fd84290cdc7e9a81cd2f

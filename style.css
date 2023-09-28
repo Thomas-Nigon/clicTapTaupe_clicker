@@ -27,7 +27,6 @@ body {
     background-color: var(--mainColor);
     min-height: 100vh;
     overflow: hidden;
-
 }
 
 main {
@@ -42,8 +41,6 @@ main {
     align-items: center;
 }
 
-
-
 #help {
     display: flex;
     align-self: flex-end;
@@ -56,7 +53,6 @@ main {
     justify-content: center;
 }
 
-
 nav {
     background-color: var(--mainColor);
     display: flex;
@@ -68,7 +64,6 @@ nav {
     margin-top: 1.7em;
     justify-content: space-between;
 }
-
 
 .gameName {
     color: white;
@@ -103,12 +98,11 @@ nav {
 /* ROC CLICKER & PICKAXE*/
 
 .pickAndRoc {
+   
     position: relative;
     display: flex;
-    margin-top: 20vw;
-    margin-bottom: 10vw;
-    /* background-color:red; */
-    height: 40vw;
+    top: 26%;
+    height: 35vw;
     width: 66vw;
     justify-content: center;
 
@@ -120,7 +114,7 @@ nav {
     left: 22.5vw;
     margin-left: -5vw;
     transform: rotate(-45deg);
-    /* background: blue; */
+ 
 }
 
 /* FOR ACTIVE PICKAXE*/
@@ -138,9 +132,9 @@ nav {
 
 .explose {
     position: fixed;
-    height: 10vw;
-    margin-top: 6vw;
-    left: 31vw;
+    height: 12vw;
+    margin-top: 5vw;
+    left: 30vw;
 }
 
 .grid {
@@ -219,6 +213,33 @@ nav {
 .shop {
     background-color: var(--secondaryColor);
     border-radius: 15px;
+}
+
+.rules {
+    opacity: 0;
+    transform: scale(0);
+    /* pas besoin de scale a 1 sur rules actif car c'est la valeur de base d'une page internet */
+    position: absolute;
+    z-index: 1;
+
+}
+
+.rulesActif {
+    border: 5px solid black;
+    background-color: var(--secondaryColor);
+    position: absolute;
+    top: 12vw;
+    z-index: 1;
+    width: 25vw;
+    padding: 5vw;
+    transition: 0.5s;
+    opacity: 1;
+}
+
+.croix {
+    width: 1vw;
+    position: absolute;
+    margin: -4vw 1vw 0vw 18vw;
 }
 
 .gold {
@@ -317,46 +338,42 @@ ul li {
 
     body {
         margin: 0;
-        /* background-image: url("./Assets/BackgroundTwo.png"); */
-        overflow: hidden;
-        min-height: 100vh;
     }
 
     main {
-        min-height: 85vh;
-        /* background-color: red; */
-        background: url(./Assets/Background.png);
-        background-size: cover;
-        display: flex;
+        height: 100;
         width: 100vw;
+        background-size: cover;
+    }
+
+    .gameName {
+        font-size: 1em;
+        width: 50%;
+    }
+
+    #help {
+        height: 1.5em;
+        width: 1.5em;
+    }
+
+    /* ROC CLICKER & PICKAXE*/
+    .pickAndRoc {
+        top: 30%;
+        height: 70vw;
+        width: 75vw;
         justify-content: center;
     }
-
-    nav {
-        background-color: rgba(56, 68, 84, 1);
-
-        height: 15vh;
-        width: 96vw;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-radius: 2vw;
-        box-shadow: 2px 0 0 black, 0 2px 0 black, -2px 0 0 black, 0 -2px 0 black;
+    .pickaxe{
+        left: 15vw;
+        height: 28vw;
     }
-
-    #logo {
-        width: 20vw;
-        border: black 2px solid;
-        background-color: rgba(212, 211, 220, 1);
-        width: 26vw;
-        height: 26vw;
-        border-radius: 50%;
+    .roc{
+        height: 50vw;
     }
-
-    h1 {
-        font-size: 6vw;
-        text-shadow: 2px 0 0 black, 0 2px 0 black, -2.5px 0 0 black, 0 -2.5px 0 black;
-    }
+    .explose{
+        height: 21vw;
+        margin-top: 10vw;
+        left: 41vw;
 
 
 
@@ -372,7 +389,6 @@ ul li {
         font-family: 'bodoni';
         box-shadow: 1px 0 0 white, 0 1px 0 white, -1px 0 0 white, 0 -1px 0 white;
     }
-
     #menuButton {
         display: flex;
         justify-content: center;
@@ -457,6 +473,9 @@ ul li {
     #shopTitle {
         display: none;
     }
+
+    h2 img {
+        width: 11vh;
 
     .trésor {
         width: 100%;
@@ -589,5 +608,24 @@ ul li {
     #roc {
         align-items: center;
     }
+}
 
+/* bouton help */
+
+.rulesActif {
+    border: 5px solid black;
+    background-color: var(--secondaryColor);
+    position: absolute;
+    top: 32vh;
+    z-index: 1;
+    width: 96vw;
+    padding: 5vw;
+    transition: 0.5s;
+    opacity: 1;
+}
+
+.croix {
+    width: 4vw;
+    position: absolute;
+    margin: -4vw 1vw 0vw 83vw;
 }
