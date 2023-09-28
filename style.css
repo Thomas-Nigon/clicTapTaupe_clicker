@@ -144,8 +144,8 @@ nav {
     grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 1vw;
     grid-row-gap: 2vh;
-    margin: 2vh 2vh 2vh 2vh;
-    width: 0vh;
+    padding: 1vh;
+    width: 100%;
 }
 
 .div1 {
@@ -193,7 +193,7 @@ nav {
 
 .rightMenu {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     /*    float: right; */
     flex-direction: column;
     width: 31vw;
@@ -202,7 +202,7 @@ nav {
     background-color: var(--mainColor);
     padding-left: 1vw;
     padding-right: 1vw;
-    height: 100vh;
+    height: 100%;
 }
 
 .stats {
@@ -363,7 +363,7 @@ ul li {
     }
 
     .gameName {
-        font-size: 1.6em;
+        font-size: 1.4em;
         width: 70%;
     }
 
@@ -452,7 +452,7 @@ ul li {
     .openMenu {
         top: 20%;
         justify-content: center;
-        
+
     }
 
     .closedMenu {

@@ -50,14 +50,4 @@ closeCroix.addEventListener("click", function () {
 const autoClick1 = document.querySelector(".div4");
 const userGold = document.getElementById("userGold");
 let gold = 1
-
-
-
-function autoClick("click"; autoClick1) {
-    for (let i = 0; i > gold; gold++) {
-        userGold.innerHTML = gold
-    }
-
-}
-
 // fin de l'autoClick
