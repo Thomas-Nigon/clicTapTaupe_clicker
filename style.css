@@ -98,12 +98,11 @@ nav {
 /* ROC CLICKER & PICKAXE*/
 
 .pickAndRoc {
+   
     position: relative;
     display: flex;
-    margin-top: 20vw;
-    margin-bottom: 10vw;
-    /* background-color:red; */
-    height: 40vw;
+    top: 26%;
+    height: 35vw;
     width: 66vw;
     justify-content: center;
 
@@ -115,7 +114,7 @@ nav {
     left: 22.5vw;
     margin-left: -5vw;
     transform: rotate(-45deg);
-    /* background: blue; */
+ 
 }
 
 /* FOR ACTIVE PICKAXE*/
@@ -133,9 +132,9 @@ nav {
 
 .explose {
     position: fixed;
-    height: 10vw;
-    margin-top: 6vw;
-    left: 31vw;
+    height: 12vw;
+    margin-top: 5vw;
+    left: 30vw;
 }
 
 .grid {
@@ -339,15 +338,11 @@ ul li {
 
     body {
         margin: 0;
-        /* background-image: url("./Assets/BackgroundTwo.png"); */
-        overflow: hidden;
-        min-height: 100vh;
     }
 
     main {
-        height: 100vh;
+        height: 100;
         width: 100vw;
-        background: url(./Assets/Background.png);
         background-size: cover;
     }
 
@@ -361,6 +356,25 @@ ul li {
         width: 1.5em;
     }
 
+    /* ROC CLICKER & PICKAXE*/
+    .pickAndRoc {
+        top: 30%;
+        height: 70vw;
+        width: 75vw;
+        justify-content: center;
+    }
+    .pickaxe{
+        left: 15vw;
+        height: 28vw;
+    }
+    .roc{
+        height: 50vw;
+    }
+    .explose{
+        height: 21vw;
+        margin-top: 10vw;
+        left: 41vw;
+    }
     #menuButton {
         display: flex;
         position: absolute;
