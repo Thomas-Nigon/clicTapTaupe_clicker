@@ -41,8 +41,6 @@ main {
     align-items: center;
 }
 
-
-
 #help {
     display: flex;
     align-self: flex-end;
@@ -55,7 +53,6 @@ main {
     justify-content: center;
 }
 
-
 nav {
     background-color: var(--mainColor);
     display: flex;
@@ -67,7 +64,6 @@ nav {
     margin-top: 1.7em;
     justify-content: space-between;
 }
-
 
 .gameName {
     color: white;
@@ -102,12 +98,11 @@ nav {
 /* ROC CLICKER & PICKAXE*/
 
 .pickAndRoc {
+
     position: relative;
     display: flex;
-    margin-top: 20vw;
-    margin-bottom: 10vw;
-    /* background-color:red; */
-    height: 40vw;
+    top: 26%;
+    height: 35vw;
     width: 66vw;
     justify-content: center;
 
@@ -119,7 +114,7 @@ nav {
     left: 22.5vw;
     margin-left: -5vw;
     transform: rotate(-45deg);
-    /* background: blue; */
+
 }
 
 /* FOR ACTIVE PICKAXE*/
@@ -137,9 +132,9 @@ nav {
 
 .explose {
     position: fixed;
-    height: 10vw;
-    margin-top: 6vw;
-    left: 31vw;
+    height: 12vw;
+    margin-top: 5vw;
+    left: 30vw;
 }
 
 .grid {
@@ -148,7 +143,6 @@ nav {
     grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 1vw;
     grid-row-gap: 2vh;
-
     margin: 2vh 2vh 2vh 2vh;
     width: 0vh;
 }
@@ -260,7 +254,11 @@ nav {
     color: var(--tertiaryColor);
     -webkit-text-stroke-color: black;
     -webkit-text-stroke-width: 1px;
-    font-size: 3vh;
+    font-size: 2rem;
+}
+
+#userGold {
+    font-size: 2rem;
 }
 
 #menuButton {
@@ -268,7 +266,7 @@ nav {
 }
 
 #shopTitle {
-    font-size: 3vh;
+    font-size: 2rem;
     margin-left: 2vw;
     color: white;
     -webkit-text-stroke-color: black;
@@ -277,13 +275,10 @@ nav {
 
 ul {
     list-style-type: none;
-    line-height: 1vh;
 }
 
 li {
-    margin-top: 3vh;
     margin-left: 2vw;
-    font-size: 2vh;
 }
 
 .trésor {
@@ -304,7 +299,7 @@ h3 {
     color: white;
     -webkit-text-stroke-color: black;
     -webkit-text-stroke-width: 0.5px;
-    font-size: 3vh;
+    font-size: 2rem;
     margin-left: 2vw;
 }
 
@@ -336,22 +331,18 @@ ul li {
 }
 
 @media screen and (max-width: 390px) {
-    * {
+    /* * {
         text-shadow: 2px 0 0 black, 0 2px 0 black, -2px 0 0 black, 0 -2px 0 black;
         color: rgba(212, 211, 220, 1);
-    }
+    } */
 
     body {
         margin: 0;
-        /* background-image: url("./Assets/BackgroundTwo.png"); */
-        overflow: hidden;
-        min-height: 100vh;
     }
 
     main {
-        height: 100vh;
+        height: 100;
         width: 100vw;
-        background: url(./Assets/Background.png);
         background-size: cover;
     }
 
@@ -365,185 +356,283 @@ ul li {
         width: 1.5em;
     }
 
-    #menuButton {
-        display: flex;
-        position: absolute;
-        bottom: 80%;
-        left: 40%;
-        height: 26px;
-        width: 20%;
-        background-color: var(--secondaryColor);
-        border-radius: 8px 8px 0 0;
-    }
-
-    .rightMenu {
-        display: flex;
-        justify-content: flex-start;
-        flex-direction: column;
-        padding: 0;
-        height: 66vh;
-        width: 100%;
-        border: solid 4px black;
-        border-radius: 0px 15px 15px 0px;
-        background-color: aqua;
-        position: absolute;
-        top: 90%;
-        left: 0%;
-    }
-
-    .stats {
-        background-color: var(--secondaryColor);
-        border-radius: 15px;
-        height: 33vh;
-    }
-
-    .shop {
-        background-color: red;
-        border-radius: 15px 15px 0 0;
-        margin: 0;
-        height: 33vh;
-        display: flex;
-        flex-direction: row-reverse;
-    }
-
-    .gold {
-        background-color: var(--mainColor);
-        border-radius: 0 15px 0 0;
-        margin: 0;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0;
+    /* ROC CLICKER & PICKAXE*/
+    .pickAndRoc {
+        top: 30%;
+        height: 70vw;
+        width: 75vw;
         justify-content: center;
-        color: var(--tertiaryColor);
-        -webkit-text-stroke-color: black;
-        -webkit-text-stroke-width: 1px;
-        font-size: 20px;
     }
 
-    .stats h2,
-    #shopTitle {
-        display: none;
+    .pickaxe {
+        left: 15vw;
+        height: 28vw;
     }
 
-    h2 img {
-        width: 11vh;
+    .roc {
+        height: 50vw;
     }
 
-    .grid {
-        padding: 15px;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-        width: 67vw;
-        gap: 15px;
-
-
-    }
-
-    #goldTitle {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        -webkit-text-stroke-color: black;
-        -webkit-text-stroke-width: 0.2px;
-        color: var(--tertiaryColor);
-        background-color: var(--mainColor);
-        border-radius: 0 15px 0 0;
-        width: 33vw;
-    }
-
-    /* menu Burger */
-    .sideNav {
-        margin-top: 27vw;
-        margin-left: 56vw;
-        height: 40vw;
-        width: 40vw;
-        /* right: -60vw; */
-        background-color: transparent;
-        position: fixed;
-        top: 4vw;
-        z-index: 2;
-        transition: right 0.5s ease;
-
-    }
-
-    .sideNav a {
-
-        padding: 8px 8px 8px 32px;
-        display: flex;
-        justify-content: flex-start;
-        text-decoration: none;
-        transition: 0.3s;
-        background-color: rgba(212, 211, 220, 1);
-        padding: 0;
-        color: #317AC1;
-    }
-
-    .sideNav ul {
-
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        background-color: rgba(212, 211, 220, 1);
-        box-shadow: 2px 0 0 black, 0 2px 0 black, -2px 0 0 black, 0 -2px 0 black;
-        border-radius: 2vw;
-    }
-
-    .sideNav a:hover {
-        color: rgba(225, 166, 36, 1);
-    }
-
-    .sideNav.active {
-        right: 0;
-    }
-
-    .sideNav.close {
-        position: absolute;
-        top: 0;
-        right: 5vw;
-        font-size: 5vw;
-    }
-
-    .burgerIcone span {
-        display: block;
-        width: 8vw;
-        height: 1vw;
-        background-color: rgba(212, 211, 220, 1);
-        box-shadow: 1px 0 0 black, 0 1px 0 black, -1px 0 0 black, 0 -1px 0 black;
-        margin: 0.8vw 0;
-    }
+    .explose {
+        height: 21vw;
+        margin-top: 10vw;
+        left: 41vw;
 
 
 
-    /* fin menu Burger */
-    #roc {
-        align-items: center;
-    }
+        button {
+            background-color: var(--MenuBGColor);
+            border: black 1px solid;
+            margin: 0;
+            font-size: 7vw;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            border-radius: 0px;
+            font-family: 'bodoni';
+            box-shadow: 1px 0 0 white, 0 1px 0 white, -1px 0 0 white, 0 -1px 0 white;
+        }
 
-    /* bouton help */
-    /* voir les valeurs pq ils prend les mêmes pour le desktop */
+        #menuButton {
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            /* bottom:100%; */
+            left: 40%;
+            height: 26px;
+            width: 20%;
+            font-size: 1.2rem;
+            background-color: var(--secondaryColor);
+            border-radius: 8px 8px 0 0;
+            transition: 0.2s;
+        }
 
-    .rulesActif {
-        border: 5px solid black;
-        background-color: var(--secondaryColor);
-        position: absolute;
-        top: 32vh;
-        z-index: 1;
-        width: 96vw;
-        padding: 5vw;
-        transition: 0.5s;
-        opacity: 1;
-    }
+        #menuButton:hover {
+            transform: scale(1.1);
+        }
 
-    .croix {
-        width: 4vw;
-        position: absolute;
-        margin: -4vw 1vw 0vw 83vw;
-    }
+        .openBtn {
+            bottom: 100%
+        }
 
-}
+        .closedBtn {
+            bottom: 100%
+        }
+
+        .rightMenu {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            padding: 0;
+            height: 80vh;
+            width: 100%;
+            border: solid 0px black;
+            border-radius: 15px 15px 0px 0px;
+            background-color: var(--mainColor);
+            position: absolute;
+            transition: 0.4s;
+        }
+
+        .openMenu {
+            top: 20%
+        }
+
+        .closedMenu {
+            top: 86%
+        }
+
+        .stats {
+            background-color: var(--secondaryColor);
+            border-radius: 15px;
+            height: 35vh;
+            margin-bottom: 1vh;
+        }
+
+        .shop {
+            background-color: var(--mainColor);
+            border-radius: 15px;
+            margin: 1vh 0 2vh 0;
+            height: 43vh;
+            display: flex;
+            width: 100%;
+            flex-direction: row-reverse;
+        }
+
+        .gold {
+            background-color: var(--mainColor);
+            font-size: 1.8rem;
+            border-radius: 0 0 0 0;
+            margin: 0;
+            height: 100%;
+            width: 35vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1vh;
+            justify-content: center;
+            color: var(--tertiaryColor);
+            -webkit-text-stroke-color: black;
+            -webkit-text-stroke-width: 1px;
+        }
+
+        #shopTitle {
+            display: none;
+        }
+
+        h2 img {
+            width: 11vh;
+
+            .trésor {
+                width: 100%;
+                height: auto;
+            }
+
+            .grid {
+                background-color: var(--secondaryColor);
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                border-radius: 15px;
+                gap: 1rem;
+                margin: 0;
+                padding: 1vh;
+                width: 85vw;
+                height: 100%;
+            }
+
+            .div1,
+            .div2,
+            .div3,
+            .div4,
+            .div5,
+            .div6,
+            .div7,
+            .div8,
+            .div9 {
+                width: 100%;
+                height: 100%;
+            }
+
+            .item {
+                width: 100%;
+                height: auto;
+            }
+
+            #goldTitle {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                -webkit-text-stroke-color: black;
+                -webkit-text-stroke-width: 0.2px;
+                color: var(--tertiaryColor);
+                background-color: var(--mainColor);
+                border-radius: 0 15px 0 0;
+                width: 33vw;
+            }
+
+            #infos {
+                color: white;
+                -webkit-text-stroke-color: black;
+                -webkit-text-stroke-width: 0.5px;
+                font-size: 2rem;
+                margin-left: 2vw;
+            }
+
+            ul li {
+                font-size: 1.2rem;
+                -webkit-text-stroke-color: var(--secondaryColor);
+                -webkit-text-stroke-width: 0.5px;
+                list-style: none;
+            }
+
+            /* menu Burger */
+            .sideNav {
+                margin-top: 27vw;
+                margin-left: 56vw;
+                height: 40vw;
+                width: 40vw;
+                /* right: -60vw; */
+                background-color: transparent;
+                position: fixed;
+                top: 4vw;
+                z-index: 2;
+                transition: right 0.5s ease;
+
+            }
+
+            .sideNav a {
+
+                padding: 8px 8px 8px 32px;
+                display: flex;
+                justify-content: flex-start;
+                text-decoration: none;
+                transition: 0.3s;
+                background-color: rgba(212, 211, 220, 1);
+                padding: 0;
+                color: #317AC1;
+            }
+
+            .sideNav ul {
+
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                background-color: rgba(212, 211, 220, 1);
+                box-shadow: 2px 0 0 black, 0 2px 0 black, -2px 0 0 black, 0 -2px 0 black;
+                border-radius: 2vw;
+            }
+
+            .sideNav a:hover {
+                color: rgba(225, 166, 36, 1);
+            }
+
+            .sideNav.active {
+                right: 0;
+            }
+
+            .sideNav.close {
+                position: absolute;
+                top: 0;
+                right: 5vw;
+                font-size: 5vw;
+            }
+
+            .burgerIcone span {
+                display: block;
+                width: 8vw;
+                height: 1vw;
+                background-color: rgba(212, 211, 220, 1);
+                box-shadow: 1px 0 0 black, 0 1px 0 black, -1px 0 0 black, 0 -1px 0 black;
+                margin: 0.8vw 0;
+            }
+
+
+
+            /* fin menu Burger */
+            #roc {
+                align-items: center;
+            }
+
+            /* bouton help */
+            /* voir les valeurs pq ils prend les mêmes pour le desktop */
+
+            .rulesActif {
+                border: 5px solid black;
+                background-color: var(--secondaryColor);
+                position: absolute;
+                top: 32vh;
+                z-index: 1;
+                width: 96vw;
+                padding: 5vw;
+                transition: 0.5s;
+                opacity: 1;
+            }
+
+            .croix {
+                width: 4vw;
+                position: absolute;
+                margin: -4vw 1vw 0vw 83vw;
+            }
+
+        }
