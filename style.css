@@ -327,7 +327,7 @@ ul li {
 .div9 {
     background-color: var(--MenuBGColor);
     border-radius: 15px;
-    height: 8vw;
+    /* height: 8vw; */
     width: 8vw;
 }
 
