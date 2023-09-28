@@ -326,7 +326,7 @@ ul li {
 .div9 {
     background-color: var(--MenuBGColor);
     border-radius: 15px;
-    height: 6vw;
+    height: 8vw;
     width: 8vw;
 }
 
@@ -397,7 +397,8 @@ ul li {
         display: flex;
         justify-content: center;
         position: absolute;
-        /* bottom:100%; */
+        border: none;
+        box-shadow: none;
         left: 40%;
         height: 26px;
         width: 20%;
@@ -434,11 +435,14 @@ ul li {
     }
 
     .openMenu {
-        top: 20%
+        top: 20%;
+        justify-content: center;
+        
     }
 
     .closedMenu {
-        top: 86%
+        top: 86%;
+        justify-content: flex-start;
     }
 
     .stats {
@@ -469,7 +473,6 @@ ul li {
         flex-direction: column;
         align-items: center;
         padding: 1vh;
-        justify-content: center;
         color: var(--tertiaryColor);
         -webkit-text-stroke-color: black;
         -webkit-text-stroke-width: 1px;
@@ -486,6 +489,7 @@ ul li {
     .trésor {
         width: 100%;
         height: auto;
+        margin-top: auto;
     }
 
     .grid {
@@ -511,7 +515,9 @@ ul li {
     .div8,
     .div9 {
         width: 100%;
+        max-width: 10vh;
         height: 100%;
+        max-height: 10vh;
     }
 
     .item {
