@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // FUNCTION OPEN AND CLOSE MENU MOBILE
 const menuBtn = document.getElementById('menuButton')
 const rightMenu = document.querySelector('.rightMenu')
@@ -22,8 +21,6 @@ function openMenu() {
     }
 }
 menuBtn.addEventListener('click', openMenu)
-
-=======
 // animation du bouton Help
 
 const trueRules = document.querySelector("#help")
