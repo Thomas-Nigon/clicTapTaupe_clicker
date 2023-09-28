@@ -44,3 +44,18 @@ closeCroix.addEventListener("click", function () {
 
 
 // fin du bouton help
+
+
+// début de l'autoClick
+const autoClick1 = document.querySelector(".div4");
+const userGold = document.getElementById("userGold");
+
+function
+
+    autoClick1.addEventListener("click", function () {
+
+        setInterval()
+    })
+
+
+// fin de l'autoClick
