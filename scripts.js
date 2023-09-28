@@ -23,6 +23,7 @@ function openMenu() {
 menuBtn.addEventListener('click', openMenu)
 // animation du bouton Help
 
+
 const trueRules = document.querySelector("#help")
 const sectRules = document.querySelector(".rules")
 
@@ -41,7 +42,12 @@ closeCroix.addEventListener("click", function () {
     console.log("hello");
 })
 
+
 // fin du bouton help
+
+
+// début de l'autoClick
+// fin de l'autoClick
 
 //PICKAXE ANIMATION
 
