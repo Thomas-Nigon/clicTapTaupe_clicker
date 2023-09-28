@@ -41,8 +41,6 @@ main {
     align-items: center;
 }
 
-
-
 #help {
     display: flex;
     align-self: flex-end;
@@ -55,7 +53,6 @@ main {
     justify-content: center;
 }
 
-
 nav {
     background-color: var(--mainColor);
     display: flex;
@@ -67,7 +64,6 @@ nav {
     margin-top: 1.7em;
     justify-content: space-between;
 }
-
 
 .gameName {
     color: white;
@@ -102,7 +98,7 @@ nav {
 /* ROC CLICKER & PICKAXE*/
 
 .pickAndRoc {
-    background-color: #E1A624;
+
     position: relative;
     display: flex;
     top: 26%;
@@ -147,7 +143,6 @@ nav {
     grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 1vw;
     grid-row-gap: 2vh;
-
     margin: 2vh 2vh 2vh 2vh;
     width: 0vh;
 }
@@ -220,6 +215,33 @@ nav {
     border-radius: 15px;
 }
 
+.rules {
+    opacity: 0;
+    transform: scale(0);
+    /* pas besoin de scale a 1 sur rules actif car c'est la valeur de base d'une page internet */
+    position: absolute;
+    z-index: 1;
+
+}
+
+.rulesActif {
+    border: 5px solid black;
+    background-color: var(--secondaryColor);
+    position: absolute;
+    top: 12vw;
+    z-index: 1;
+    width: 25vw;
+    padding: 5vw;
+    transition: 0.5s;
+    opacity: 1;
+}
+
+.croix {
+    width: 1vw;
+    position: absolute;
+    margin: -4vw 1vw 0vw 18vw;
+}
+
 .gold {
     background-color: var(--mainColor);
     border-radius: 15px;
@@ -232,7 +254,11 @@ nav {
     color: var(--tertiaryColor);
     -webkit-text-stroke-color: black;
     -webkit-text-stroke-width: 1px;
-    font-size: 3vh;
+    font-size: 2rem;
+}
+
+#userGold {
+    font-size: 2rem;
 }
 
 #menuButton {
@@ -240,7 +266,7 @@ nav {
 }
 
 #shopTitle {
-    font-size: 3vh;
+    font-size: 2rem;
     margin-left: 2vw;
     color: white;
     -webkit-text-stroke-color: black;
@@ -249,13 +275,10 @@ nav {
 
 ul {
     list-style-type: none;
-    line-height: 1vh;
 }
 
 li {
-    margin-top: 3vh;
     margin-left: 2vw;
-    font-size: 2vh;
 }
 
 .trésor {
@@ -276,7 +299,7 @@ h3 {
     color: white;
     -webkit-text-stroke-color: black;
     -webkit-text-stroke-width: 0.5px;
-    font-size: 3vh;
+    font-size: 2rem;
     margin-left: 2vw;
 }
 
@@ -308,10 +331,10 @@ ul li {
 }
 
 @media screen and (max-width: 390px) {
-    * {
+    /* * {
         text-shadow: 2px 0 0 black, 0 2px 0 black, -2px 0 0 black, 0 -2px 0 black;
         color: rgba(212, 211, 220, 1);
-    }
+    } */
 
     body {
         margin: 0;
@@ -354,17 +377,46 @@ ul li {
         height: 21vw;
         margin-top: 10vw;
         left: 41vw;
+
+    }
+
+    button {
+        background-color: var(--MenuBGColor);
+        border: black 1px solid;
+        margin: 0;
+        font-size: 7vw;
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+        font-family: 'bodoni';
+        box-shadow: 1px 0 0 white, 0 1px 0 white, -1px 0 0 white, 0 -1px 0 white;
     }
 
     #menuButton {
         display: flex;
+        justify-content: center;
         position: absolute;
-        bottom: 80%;
+        /* bottom:100%; */
         left: 40%;
         height: 26px;
         width: 20%;
+        font-size: 1.2rem;
         background-color: var(--secondaryColor);
         border-radius: 8px 8px 0 0;
+        transition: 0.2s;
+    }
+
+    #menuButton:hover {
+        transform: scale(1.1);
+    }
+
+    .openBtn {
+        bottom: 100%
+    }
+
+    .closedBtn {
+        bottom: 100%
     }
 
     .rightMenu {
@@ -372,48 +424,57 @@ ul li {
         justify-content: flex-start;
         flex-direction: column;
         padding: 0;
-        height: 66vh;
+        height: 80vh;
         width: 100%;
-        border: solid 4px black;
-        border-radius: 0px 15px 15px 0px;
-        background-color: aqua;
+        border: solid 0px black;
+        border-radius: 15px 15px 0px 0px;
+        background-color: var(--mainColor);
         position: absolute;
-        top: 90%;
-        left: 0%;
+        transition: 0.4s;
+    }
+
+    .openMenu {
+        top: 20%
+    }
+
+    .closedMenu {
+        top: 86%
     }
 
     .stats {
         background-color: var(--secondaryColor);
         border-radius: 15px;
-        height: 33vh;
+        height: 35vh;
+        margin-bottom: 1vh;
     }
 
     .shop {
-        background-color: red;
-        border-radius: 15px 15px 0 0;
-        margin: 0;
-        height: 33vh;
+        background-color: var(--mainColor);
+        border-radius: 15px;
+        margin: 1vh 0 2vh 0;
+        height: 43vh;
         display: flex;
+        width: 100%;
         flex-direction: row-reverse;
     }
 
     .gold {
         background-color: var(--mainColor);
-        border-radius: 0 15px 0 0;
+        font-size: 1.8rem;
+        border-radius: 0 0 0 0;
         margin: 0;
         height: 100%;
+        width: 35vw;
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 0;
+        padding: 1vh;
         justify-content: center;
         color: var(--tertiaryColor);
         -webkit-text-stroke-color: black;
         -webkit-text-stroke-width: 1px;
-        font-size: 20px;
     }
 
-    .stats h2,
     #shopTitle {
         display: none;
     }
@@ -422,17 +483,40 @@ ul li {
         width: 11vh;
     }
 
+    .trésor {
+        width: 100%;
+        height: auto;
+    }
+
     .grid {
-        padding: 15px;
+        background-color: var(--secondaryColor);
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-        width: 67vw;
-        gap: 15px;
+        border-radius: 15px;
+        gap: 1rem;
+        margin: 0;
+        padding: 1vh;
+        width: 85vw;
+        height: 100%;
+    }
 
+    .div1,
+    .div2,
+    .div3,
+    .div4,
+    .div5,
+    .div6,
+    .div7,
+    .div8,
+    .div9 {
+        width: 100%;
+        height: 100%;
+    }
 
+    .item {
+        width: 100%;
+        height: auto;
     }
 
     #goldTitle {
@@ -446,6 +530,21 @@ ul li {
         background-color: var(--mainColor);
         border-radius: 0 15px 0 0;
         width: 33vw;
+    }
+
+    #infos {
+        color: white;
+        -webkit-text-stroke-color: black;
+        -webkit-text-stroke-width: 0.5px;
+        font-size: 2rem;
+        margin-left: 2vw;
+    }
+
+    ul li {
+        font-size: 1.2rem;
+        -webkit-text-stroke-color: var(--secondaryColor);
+        -webkit-text-stroke-width: 0.5px;
+        list-style: none;
     }
 
     /* menu Burger */
@@ -514,6 +613,27 @@ ul li {
     /* fin menu Burger */
     #roc {
         align-items: center;
+    }
+
+    /* bouton help */
+    /* voir les valeurs pq ils prend les mêmes pour le desktop */
+
+    .rulesActif {
+        border: 5px solid black;
+        background-color: var(--secondaryColor);
+        position: absolute;
+        top: 32vh;
+        z-index: 1;
+        width: 96vw;
+        padding: 5vw;
+        transition: 0.5s;
+        opacity: 1;
+    }
+
+    .croix {
+        width: 4vw;
+        position: absolute;
+        margin: -4vw 1vw 0vw 83vw;
     }
 
 }
