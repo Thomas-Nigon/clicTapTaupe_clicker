@@ -102,7 +102,7 @@ nav {
 /* ROC CLICKER & PICKAXE*/
 
 .pickAndRoc {
-   
+    background-color: #E1A624;
     position: relative;
     display: flex;
     top: 26%;
@@ -118,13 +118,13 @@ nav {
     left: 22.5vw;
     margin-left: -5vw;
     transform: rotate(-45deg);
- 
+
 }
 
 /* FOR ACTIVE PICKAXE*/
 .active {
     transform: rotate(0deg);
-    transition: 0.5s;
+    /* transition: 0.1s; */
 }
 
 .roc {
@@ -340,18 +340,22 @@ ul li {
         width: 75vw;
         justify-content: center;
     }
-    .pickaxe{
+
+    .pickaxe {
         left: 15vw;
         height: 28vw;
     }
-    .roc{
+
+    .roc {
         height: 50vw;
     }
-    .explose{
+
+    .explose {
         height: 21vw;
         margin-top: 10vw;
         left: 41vw;
     }
+
     #menuButton {
         display: flex;
         position: absolute;
