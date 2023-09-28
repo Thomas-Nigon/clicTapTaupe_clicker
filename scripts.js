@@ -45,9 +45,29 @@ closeCroix.addEventListener("click", function () {
 
 // fin du bouton help
 
+//PICKAXE ANIMATION
 
-// début de l'autoClick
-const autoClick1 = document.querySelector(".div4");
-const userGold = document.getElementById("userGold");
-let gold = 1
-// fin de l'autoClick
+const stone = document.querySelector('.pickAndRoc');
+const pickaxe = document.querySelector('.pickaxe');
+const explose = document.querySelector('.explose');
+let counterGold = 0;
+
+function incrementGoldClick() {
+    counterGold++;
+    document.querySelector('#userGold').innerHTML = counterGold;
+}
+
+function pickaxeAnimation() {
+    pickaxe.classList.add('active')
+    explose.classList.remove('hidden')
+    // console.log("j'ai clicker le caillou !")
+    setTimeout(function () {
+        pickaxe.classList.remove('active');
+        explose.classList.add('hidden');
+    }, 100);
+    incrementGoldClick();
+}
+stone.addEventListener('click', pickaxeAnimation)
+//FIN PICKAXE ANIMATION
+
+
