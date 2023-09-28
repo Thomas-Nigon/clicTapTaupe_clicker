@@ -102,6 +102,7 @@ nav {
     position: relative;
     display: flex;
     top: 26%;
+    bottom: 15%;
     height: 35vw;
     width: 66vw;
     justify-content: center;
@@ -114,20 +115,19 @@ nav {
     left: 22.5vw;
     margin-left: -5vw;
     transform: rotate(-45deg);
-
 }
 
 /* FOR ACTIVE PICKAXE*/
 .active {
     transform: rotate(0deg);
-    /* transition: 0.1s; */
+    transition: 0.1s;
 }
-
+.hidden{
+    display: none;
+}
 .roc {
     height: 25vw;
     margin: auto;
-    /* background: yellow; */
-
 }
 
 .explose {
