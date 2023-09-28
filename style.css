@@ -98,7 +98,7 @@ nav {
 /* ROC CLICKER & PICKAXE*/
 
 .pickAndRoc {
-   
+
     position: relative;
     display: flex;
     top: 26%;
@@ -114,7 +114,7 @@ nav {
     left: 22.5vw;
     margin-left: -5vw;
     transform: rotate(-45deg);
- 
+
 }
 
 /* FOR ACTIVE PICKAXE*/
@@ -363,18 +363,22 @@ ul li {
         width: 75vw;
         justify-content: center;
     }
-    .pickaxe{
+
+    .pickaxe {
         left: 15vw;
         height: 28vw;
     }
-    .roc{
+
+    .roc {
         height: 50vw;
     }
-    .explose{
+
+    .explose {
         height: 21vw;
         margin-top: 10vw;
         left: 41vw;
     }
+
     #menuButton {
         display: flex;
         position: absolute;
