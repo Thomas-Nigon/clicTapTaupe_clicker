@@ -44,3 +44,7 @@ closeCroix.addEventListener("click", function () {
 
 
 // fin du bouton help
+
+
+// début de l'autoClick
+// fin de l'autoClick

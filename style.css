@@ -44,13 +44,14 @@ main {
 #help {
     display: flex;
     align-self: flex-end;
-    height: 3em;
-    width: 1.5em;
+    height: 2em;
+    width: 2em;
     border-radius: 50%;
     position: relative;
     right: 10%;
     top: 5%;
     justify-content: center;
+    align-items: center;
 }
 
 nav {
@@ -346,9 +347,24 @@ ul li {
         background-size: cover;
     }
 
+    nav {
+        width: 90%;
+    }
+
+    .fondLogo {
+
+        height: 5.5em;
+        width: 5.5em;
+    }
+
+    .Logo {
+        height: 5.5em;
+        width: 4.5em;
+    }
+
     .gameName {
-        font-size: 1em;
-        width: 50%;
+        font-size: 1.6em;
+        width: 70%;
     }
 
     #help {
@@ -381,7 +397,6 @@ ul li {
 
 
     button {
-        background-color: var(--MenuBGColor);
         border: black 1px solid;
         margin: 0;
         font-size: 7vw;
