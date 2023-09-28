@@ -23,6 +23,7 @@ function openMenu() {
 menuBtn.addEventListener('click', openMenu)
 // animation du bouton Help
 
+
 const trueRules = document.querySelector("#help")
 const sectRules = document.querySelector(".rules")
 
@@ -40,5 +41,6 @@ closeCroix.addEventListener("click", function () {
     sectRules.classList.add("rules")
     console.log("hello");
 })
+
 
 // fin du bouton help
