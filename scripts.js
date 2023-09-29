@@ -45,10 +45,6 @@ closeCroix.addEventListener("click", function () {
 
 // fin du bouton help
 
-
-// début de l'autoClick
-// fin de l'autoClick
-
 //PICKAXE ANIMATION
 
 const stone = document.querySelector('.pickAndRoc');
@@ -70,7 +66,7 @@ function pickaxeAnimation() {
     }, 100);
     incrementGoldClick();
 }
-stone.addEventListener('click',pickaxeAnimation)
+stone.addEventListener('click', pickaxeAnimation)
 //FIN PICKAXE ANIMATION
 
 
