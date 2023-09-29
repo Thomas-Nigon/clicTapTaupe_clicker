@@ -330,6 +330,18 @@ ul li {
     width: 8vw;
 }
 
+.boutonUnclick {
+    background-color: rgb(181, 180, 180);
+    color: linen;
+    transition: 1s;
+    opacity: 1;
+    border-radius: 15px;
+}
+
+.achatPossible {
+    border: solid 10px black;
+}
+
 @media screen and (max-width: 390px) {
     /* * {
         text-shadow: 2px 0 0 black, 0 2px 0 black, -2px 0 0 black, 0 -2px 0 black;
