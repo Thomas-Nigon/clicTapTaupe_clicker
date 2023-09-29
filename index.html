@@ -13,36 +13,66 @@
         <main>
             <nav>
                 <Div class="fondLogo">
-
                     <img class="Logo" src="./Assets/LogoCTT.png" alt="Logo ClicTapTaupe">
                 </Div>
                 <h1 class="gameName"> Click Tap Taupe </h1>
             </nav>
-
             <button id="help" title="aides et règles du jeu"> ? </button>
-
+            <section class="rules">
+                <img src="Assets/croix.png" alt="croix" class="croix">
+                <h1 class="titleRules">
+                    Règles :
+                </h1>
+                <p class="rulesInfos">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque quo repellat praesentium dolores est
+                    corrupti quis ducimus dolore, ut voluptas voluptate aliquam officiis commodi doloremque consequatur
+                    odio, et nostrum voluptates.
+                </p>
+            </section>
+            <section class="pickAndRoc">
+                <img class="roc" src="./Assets/ImageRoc.png" alt="roc clicker">
+                <img class="explose hidden" src="./Assets/ImageImpact.png" alt="roc explosion">
+                <img class="pickaxe" src="./Assets/ImagePickaxe.png" alt="pickaxe animate">
+            </section>
         </main>
 
-        <section class="rightMenu">
-            <button id="menuButton">menu</button>
+        <section class="rightMenu closedMenu">
+            <button id="menuButton" class="closedBtn">menu</button>
 
             <aside class="shop">
-                <h2 class="gold">gold : <img src="Assets/ImageTreasure.png" alt="trésor" class="trésor"> </h2>
-                <h2 id="shopTitle">Shop :</h3>
-                    <section class="grid">
-                        <button class="div1"> <img src="./Assets/ImagePickaxe.png" alt="pickage" class="item"> </button>
-                        <button class="div2"><img src="Assets/item2.png" alt="marteau" class="item"> </button>
-                        <button class="div3"> <img src="Assets/item3.png" alt="épée" class="item"> </button>
-                        <button class="div4">4</button>
-                        <button class="div5">5</button>
-                        <button class="div6"> <img src="./Assets/item6.png" alt="Masse" class="item"> </button>
-                        <button class="div7">7</button>
-                        <button class="div8"> <img src="Assets/ImageRoc.png" alt="roc" class="item"> </button>
-                        <button class="div9">9</button>
-                    </section>
+                <h2 class="gold">Gold: <span id="userGold">0</span> <img src="Assets/ImageTreasure.png" alt="trésor"
+                        class="trésor"> </h2>
+                <h2 id="shopTitle">Shop:</h2>
+                <section class="grid">
+                    <button class="div1"> <img src="./Assets/shopIcons/icons8-mining-pickaxe-48.png"
+                            alt="a wooden pickaxe" class="item"> </button>
+                    <button class="div2"><img src="Assets/shopIcons/pickaxe2.png" alt="an iron pickaxe logo"
+                            class="item"> </button>
+                    <button class="div3"> <img src="Assets/shopIcons/sword.png" alt="a flamming sword" class="item">
+                    </button>
+                    <button class="div4"><img src="./Assets/shopIcons/icons8-robotic-arm-40.png" alt="a robotic arm"
+                            class="item"></button>
+                    <button class="div5"><img src="./Assets/shopIcons/jackHammer.png" alt="a jackHammer logo"
+                            class="item"></button>
+                    <button class="div6"> <img src="./Assets/shopIcons/dynamite2.png" alt="I dynamite logo"
+                            class="item"> </button>
+                    <button class="div7"><img src="./Assets/shopIcons/icons8-bonus-64.png"
+                            alt="a hand receiving money logo meaning more benefitfs" class="item"></button>
+                    <button class="div8"> <img src="Assets/shopIcons/icons8-productivity-64.png"
+                            alt="A grinding gear icon meaning productivity increase" class="item"> </button>
+                    <button class="div9"><img src="./Assets/shopIcons/icons8-potion-64.png"
+                            alt="A potion logo with a lightning symbol" class="item"></button>
+                </section>
             </aside>
             <aside class="stats">
-                <h4>Stats :</h4>
+                <h2 id="infos">Stats :</h2>
+                <ul>
+                    <li>DPM :</li>
+                    <li>Gold total :</li>
+                    <li>Chrono</li>
+                    <li>Gold bonus: <span id="goldBonus">0</span>%</li>
+                    <li>productivity bonus <span id="productBonus">0</span>%</li>
+                    <li>Uber potion every: <span id="potionBonus">5</span>minutes</li>
             </aside>
         </section>
     </section>

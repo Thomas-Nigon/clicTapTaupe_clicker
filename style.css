@@ -24,8 +24,8 @@
 }
 
 body {
-    background-color: var(--mainColor);
-    min-height: 100vh;
+    background-color: black;
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -34,8 +34,21 @@ main {
     background-size: cover;
     display: flex;
     height: 100vh;
-    width: 66vw;
+    width: 69vw;
     flex-direction: column;
+    align-items: center;
+}
+
+#help {
+    display: flex;
+    align-self: flex-end;
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+    position: relative;
+    right: 10%;
+    top: 5%;
+    justify-content: center;
     align-items: center;
 }
 
@@ -48,13 +61,17 @@ nav {
     border: solid black;
     align-items: center;
     margin-top: 1.7em;
+    justify-content: space-between;
 }
 
 .gameName {
     color: white;
+    text-shadow: black 10px 2px 10px;
     display: flex;
-    font-size: 1em;
-    background-color: #D4D3DC;
+    font-size: 3em;
+    justify-content: center;
+    margin-right: 10%;
+    width: 70%;
 }
 
 .fondLogo {
@@ -78,22 +95,58 @@ nav {
     bottom: 0.4em;
 }
 
+/* ROC CLICKER & PICKAXE*/
 
-#help {
+.pickAndRoc {
+
+    position: relative;
     display: flex;
-    height: 1.5em;
-    width: 1.5em;
-    border-radius: 50%;
+    top: 26%;
+    bottom: 15%;
+    height: 35vw;
+    width: 66vw;
     justify-content: center;
+
+}
+
+.pickaxe {
+    position: absolute;
+    height: 17vw;
+    left: 22.5vw;
+    margin-left: -5vw;
+    transform: rotate(-45deg);
+}
+
+/* FOR ACTIVE PICKAXE*/
+.active {
+    transform: rotate(0deg);
+    transition: 0.1s;
+}
+
+.hidden {
+    display: none;
+}
+
+.roc {
+    height: 25vw;
+}
+
+.explose {
+    position: fixed;
+    height: 12vw;
+    margin-top: 5vw;
+    left: 30vw;
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 0fr);
     grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 3%;
-    grid-row-gap: 3%;
-    margin: 3% 3% 8% 3%;
+    grid-column-gap: 1vw;
+    grid-row-gap: 2vh;
+    padding: 1vh;
+    width: 100%;
+    margin: 0 1em;
 }
 
 .div1 {
@@ -141,50 +194,96 @@ nav {
 
 .rightMenu {
     display: flex;
-    justify-content: space-around;
-    /*    float: right; */
+    justify-content: space-evenly;
     flex-direction: column;
-    width: 33%;
+    width: 31vw;
     border: solid 4px black;
     border-radius: 0px 15px 15px 0px;
     background-color: var(--mainColor);
+    padding: 10px;
+    height: 100%;
 }
 
 .stats {
-    height: 33vh;
     background-color: var(--secondaryColor);
     border-radius: 15px;
-    margin: 3%;
+    padding-bottom: 2vh;
 }
 
 .shop {
     background-color: var(--secondaryColor);
     border-radius: 15px;
-    margin: 3%;
+}
+
+.rules {
+    opacity: 0;
+    transform: scale(0);
+    /* pas besoin de scale a 1 sur rules actif car c'est la valeur de base d'une page internet */
+    position: absolute;
+    z-index: 1;
+
+}
+
+.rulesActif {
+    border: 5px solid black;
+    background-color: var(--secondaryColor);
+    position: absolute;
+    top: 12vw;
+    z-index: 1;
+    width: 25vw;
+    padding: 5vw;
+    transition: 0.5s;
+    opacity: 1;
+}
+
+.croix {
+    width: 1vw;
+    position: absolute;
+    margin: -4vw 1vw 0vw 18vw;
 }
 
 .gold {
     background-color: var(--mainColor);
     border-radius: 15px;
-    margin: 3%;
+    margin: 1vw;
     height: 10vh;
     display: flex;
     align-items: center;
-    padding: 22px;
+    padding: 1vw;
     justify-content: space-between;
     color: var(--tertiaryColor);
     -webkit-text-stroke-color: black;
     -webkit-text-stroke-width: 1px;
-    font-size: 20px;
+    font-size: 2rem;
+}
+
+#userGold {
+    font-size: 2rem;
 }
 
 #menuButton {
     display: none;
 }
 
+#shopTitle {
+    font-size: 2rem;
+    margin-left: 1.1vw;
+    color: white;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 0.5px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin-left: 2vw;
+}
+
 .trésor {
-    width: 50px;
-    height: 50px;
+    width: 3vw;
+    height: 5vh;
 }
 
 h3 {
@@ -195,17 +294,25 @@ h3 {
     font-size: 20px;
 }
 
-h4 {
-    text-align: center;
+#infos {
+
     color: white;
     -webkit-text-stroke-color: black;
     -webkit-text-stroke-width: 0.5px;
-    font-size: 20px;
+    font-size: 2rem;
+    margin-left: 1.3vw;
+}
+
+ul li {
+    font-size: 1.2rem;
+    -webkit-text-stroke-color: var(--secondaryColor);
+    -webkit-text-stroke-width: 0.5px;
+    list-style: none;
 }
 
 .item {
-    width: 100%;
-    height: 100%;
+    width: 6vw;
+    height: 5vw;
 }
 
 .div1,
@@ -219,139 +326,218 @@ h4 {
 .div9 {
     background-color: var(--MenuBGColor);
     border-radius: 15px;
-    border: 3% 3% 8% 3%;
+    width: 8vw;
 }
 
 @media screen and (max-width: 390px) {
-    * {
+    /* * {
         text-shadow: 2px 0 0 black, 0 2px 0 black, -2px 0 0 black, 0 -2px 0 black;
         color: rgba(212, 211, 220, 1);
-
-    }
+    } */
 
     body {
-        margin: 5px 5px 5px 5px;
-        /* background-image: url("./Assets/BackgroundTwo.png"); */
-        overflow: hidden;
-        min-height: 100vh;
+        margin: 0;
     }
 
     main {
-        min-height: 85vh;
-        /* background-color: red; */
-        background: url(./Assets/Background.png);
-        background-size: cover;
-        display: flex;
+        height: 100;
         width: 100vw;
-        justify-content: center;
+        background-size: cover;
     }
 
     nav {
-        background-color: rgba(56, 68, 84, 1);
-
-        height: 15vh;
-        width: 96vw;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-radius: 2vw;
-        box-shadow: 2px 0 0 black, 0 2px 0 black, -2px 0 0 black, 0 -2px 0 black;
+        width: 90%;
     }
 
-    #logo {
-        width: 20vw;
-        border: black 2px solid;
-        background-color: rgba(212, 211, 220, 1);
-        width: 26vw;
-        height: 26vw;
-        border-radius: 50%;
+    .fondLogo {
+
+        height: 5.5em;
+        width: 5.5em;
     }
 
-    h1 {
-        font-size: 6vw;
-        text-shadow: 2px 0 0 black, 0 2px 0 black, -2.5px 0 0 black, 0 -2.5px 0 black;
-
+    .Logo {
+        height: 5.5em;
+        width: 4.5em;
     }
 
+    .gameName {
+        font-size: 1.4em;
+        width: 70%;
+    }
+
+    #help {
+        height: 1em;
+        width: 1em;
+        font-family: 'Lemon', cursive;
+    }
+
+    /* ROC CLICKER & PICKAXE*/
+    .pickAndRoc {
+        top: 30%;
+        height: 70vw;
+        width: 75vw;
+        justify-content: center;
+    }
+
+    .pickaxe {
+        left: 15vw;
+        height: 28vw;
+    }
+
+    .roc {
+        height: 50vw;
+    }
+
+    .explose {
+        height: 21vw;
+        margin-top: 10vw;
+        left: 41vw;
+    }
 
 
     button {
-
-        background-color: rgba(56, 68, 84, 1);
         border: black 1px solid;
-        margin: 8%;
+        margin: 0;
         font-size: 7vw;
         cursor: pointer;
-        width: 10vw;
-        height: 10vw;
-        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
         font-family: 'bodoni';
         box-shadow: 1px 0 0 white, 0 1px 0 white, -1px 0 0 white, 0 -1px 0 white;
     }
 
-    .rightMenu {
-        display: flex;
-        justify-content: space-around;
-        flex-direction: column;
-        width: 100vw;
-        border: solid 4px black;
-        border-radius: 0px 15px 15px 0px;
-        background-color: var(--mainColor);
-    }
-
-    .stats {
-        height: 33vh;
-        background-color: var(--secondaryColor);
-        border-radius: 15px;
-        margin: 3%;
-    }
-
-    .shop {
-        background-color: var(--secondaryColor);
-        border-radius: 15px 0 0 0;
-        margin: 0;
-        height: 33vh;
-        display: flex;
-        flex-direction: row-reverse;
-        position: absolute;
-        top: 50%;
-        left: 0%;
-    }
-
-    .gold {
-        margin: 0;
-        height: 100%;
-    }
-
-    .stats h4,
-    #shopTitle {
-        display: none;
-    }
-
     #menuButton {
+        display: flex;
+        justify-content: center;
         position: absolute;
-        bottom: 50%;
+        border: none;
+        box-shadow: none;
         left: 40%;
         height: 26px;
         width: 20%;
+        font-size: 1.2rem;
         background-color: var(--secondaryColor);
         border-radius: 8px 8px 0 0;
+        transition: 0.2s;
+    }
+
+    #menuButton:hover {
+        transform: scale(1.1);
+    }
+
+    .openBtn {
+        bottom: 100%
+    }
+
+    .closedBtn {
+        bottom: 100%
+    }
+
+    .rightMenu {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        height: 80vh;
+        width: 100%;
+        border: solid 0px black;
+        border-radius: 15px 15px 0px 0px;
+        background-color: var(--mainColor);
+        position: absolute;
+        transition: 0.4s;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .openMenu {
+        top: 20%;
+        justify-content: center;
+
+    }
+
+    .closedMenu {
+        top: 86%;
+        justify-content: flex-start;
+    }
+
+    .stats {
+        background-color: var(--secondaryColor);
+        border-radius: 15px;
+        height: 35vh;
+        margin-bottom: 1vh;
+    }
+
+    .shop {
+        background-color: var(--mainColor);
+        border-radius: 15px;
+        margin: 1vh 0 2vh 0;
+        height: 43vh;
+        display: flex;
+        width: 100%;
+        flex-direction: row-reverse;
+    }
+
+    .gold {
+        background-color: var(--mainColor);
+        font-size: 1.8rem;
+        border-radius: 0 0 0 0;
+        margin: 0;
+        height: 100%;
+        width: 35vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1vh;
+        color: var(--tertiaryColor);
+        -webkit-text-stroke-color: black;
+        -webkit-text-stroke-width: 1px;
+    }
+
+    #shopTitle {
+        display: none;
     }
 
     h2 img {
         width: 11vh;
     }
 
+    .trésor {
+        width: 100%;
+        height: auto;
+        margin-top: auto;
+    }
+
     .grid {
-        padding: 15px;
+        background-color: var(--secondaryColor);
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-        width: 67vw;
-        gap: 15px;
+        border-radius: 15px;
+        gap: 1rem;
+        margin: 0;
+        padding: 1vh;
+        width: 85vw;
+        height: 100%;
+    }
 
+    .div1,
+    .div2,
+    .div3,
+    .div4,
+    .div5,
+    .div6,
+    .div7,
+    .div8,
+    .div9 {
+        width: 100%;
+        max-width: 10vh;
+        height: 100%;
+        max-height: 10vh;
+    }
+
+    .item {
+        width: 100%;
+        height: auto;
     }
 
     #goldTitle {
@@ -365,6 +551,21 @@ h4 {
         background-color: var(--mainColor);
         border-radius: 0 15px 0 0;
         width: 33vw;
+    }
+
+    #infos {
+        color: white;
+        -webkit-text-stroke-color: black;
+        -webkit-text-stroke-width: 0.5px;
+        font-size: 2rem;
+        margin-left: 2vw;
+    }
+
+    ul li {
+        font-size: 1.2rem;
+        -webkit-text-stroke-color: var(--secondaryColor);
+        -webkit-text-stroke-width: 0.5px;
+        list-style: none;
     }
 
     /* menu Burger */
@@ -433,6 +634,27 @@ h4 {
     /* fin menu Burger */
     #roc {
         align-items: center;
+    }
+
+    /* bouton help */
+    /* voir les valeurs pq ils prend les mêmes pour le desktop */
+
+    .rulesActif {
+        border: 5px solid black;
+        background-color: var(--secondaryColor);
+        position: absolute;
+        top: 32vh;
+        z-index: 1;
+        width: 96vw;
+        padding: 5vw;
+        transition: 0.5s;
+        opacity: 1;
+    }
+
+    .croix {
+        width: 4vw;
+        position: absolute;
+        margin: -4vw 1vw 0vw 83vw;
     }
 
 }
