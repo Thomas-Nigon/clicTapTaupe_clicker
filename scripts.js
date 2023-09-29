@@ -51,11 +51,31 @@ const stone = document.querySelector('.pickAndRoc');
 const pickaxe = document.querySelector('.pickaxe');
 const explose = document.querySelector('.explose');
 let counterGold = 0;
+const coinGold = document.querySelector(".coingold")
+// GOLD ANIMATION
+
+  function onAnimation() {
+    console.log("coucou");
+    coinGold.classList.remove('hidden')
+    coinGold.classList.add('on')
+  setTimeout(function () {
+    coinGold.classList.remove('on');
+    coinGold.classList.add('hidden');
+  }, 1000);
+  }
+
+// FIN GOLD ANIMATION
+
+// GOLD COUNTERS
 
 function incrementGoldClick() {
     counterGold++;
     document.querySelector('#userGold').innerHTML = counterGold;
+    document.querySelector('#goldBonus').innerHTML = counterGold;
 }
+
+// FIN
+
 
 function pickaxeAnimation() {
     pickaxe.classList.add('active')
@@ -65,8 +85,8 @@ function pickaxeAnimation() {
         explose.classList.add('hidden');
     }, 100);
     incrementGoldClick();
+    onAnimation();
 }
 stone.addEventListener('click', pickaxeAnimation)
 //FIN PICKAXE ANIMATION
-
 
