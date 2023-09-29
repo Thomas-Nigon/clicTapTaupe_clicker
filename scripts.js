@@ -70,4 +70,20 @@ function pickaxeAnimation() {
 stone.addEventListener('click', pickaxeAnimation)
 //FIN PICKAXE ANIMATION
 
+const userGold = document.getElementById('userGold')
+const item4 = document.querySelector('.div4')
+const item5 = document.querySelector('.div5')
+const item6 = document.querySelector('.div6')
+let i = 0
+let gold = i
+function addition() {
+    gold = gold + 1;
+    document.querySelector('#userGold').innerHTML = gold;
+}
+function automatisation() {
+    setInterval(addition, 1000)
+}
+item4.addEventListener('click', automatisation)
+
+
 
