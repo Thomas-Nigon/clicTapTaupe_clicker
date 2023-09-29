@@ -64,7 +64,6 @@ function incrementGoldClick() {
 function pickaxeAnimation() {
     pickaxe.classList.add('active')
     explose.classList.remove('hidden')
-    // console.log("j'ai clicker le caillou !")
     setTimeout(function () {
         pickaxe.classList.remove('active');
         explose.classList.add('hidden');

@@ -23,10 +23,12 @@
 
 }
 
+
 body {
     background-color: var(--mainColor);
     min-height: 100vh;
     overflow: hidden;
+ 
 }
 
 main {
@@ -99,7 +101,7 @@ nav {
 /* ROC CLICKER & PICKAXE*/
 
 .pickAndRoc {
-
+    cursor: url(./Assets/pickaxeCursor.png), auto;
     position: relative;
     display: flex;
     top: 26%;
@@ -107,7 +109,7 @@ nav {
     height: 35vw;
     width: 66vw;
     justify-content: center;
-
+   
 }
 
 .pickaxe {
