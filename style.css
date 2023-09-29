@@ -159,6 +159,7 @@ button {
 .grid {
     background-color: var(--secondaryColor);
     display: grid;
+    border-radius: 15px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 1vh;
