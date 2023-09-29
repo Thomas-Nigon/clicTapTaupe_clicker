@@ -24,33 +24,32 @@
 }
 
 body {
-    background-color: var(--mainColor);
-    min-height: 100vh;
+    background-color: black;
+    height: 100vh;
     overflow: hidden;
 }
 
 main {
     background: url(./Assets/BackgroundDesktop.png);
     background-size: cover;
-    background-repeat: no-repeat;
     display: flex;
     height: 100vh;
     width: 69vw;
     flex-direction: column;
-    flex-wrap: nowrap;
     align-items: center;
 }
 
 #help {
     display: flex;
     align-self: flex-end;
-    height: 3em;
-    width: 1.5em;
+    height: 2em;
+    width: 2em;
     border-radius: 50%;
     position: relative;
     right: 10%;
     top: 5%;
     justify-content: center;
+    align-items: center;
 }
 
 nav {
@@ -67,8 +66,9 @@ nav {
 
 .gameName {
     color: white;
+    text-shadow: black 10px 2px 10px;
     display: flex;
-    font-size: 2em;
+    font-size: 3em;
     justify-content: center;
     margin-right: 10%;
     width: 70%;
@@ -102,6 +102,7 @@ nav {
     position: relative;
     display: flex;
     top: 26%;
+    bottom: 15%;
     height: 35vw;
     width: 66vw;
     justify-content: center;
@@ -114,20 +115,20 @@ nav {
     left: 22.5vw;
     margin-left: -5vw;
     transform: rotate(-45deg);
-
 }
 
 /* FOR ACTIVE PICKAXE*/
 .active {
     transform: rotate(0deg);
-    transition: 0.5s;
+    transition: 0.1s;
+}
+
+.hidden {
+    display: none;
 }
 
 .roc {
     height: 25vw;
-    margin: auto;
-    /* background: yellow; */
-
 }
 
 .explose {
@@ -139,12 +140,13 @@ nav {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 0fr);
     grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 1vw;
     grid-row-gap: 2vh;
-    margin: 2vh 2vh 2vh 2vh;
-    width: 0vh;
+    padding: 1vh;
+    width: 100%;
+    margin: 0 1em;
 }
 
 .div1 {
@@ -192,16 +194,14 @@ nav {
 
 .rightMenu {
     display: flex;
-    justify-content: space-around;
-    /*    float: right; */
+    justify-content: space-evenly;
     flex-direction: column;
     width: 31vw;
     border: solid 4px black;
     border-radius: 0px 15px 15px 0px;
     background-color: var(--mainColor);
-    padding-left: 1vw;
-    padding-right: 1vw;
-    height: 100vh;
+    padding: 10px;
+    height: 100%;
 }
 
 .stats {
@@ -267,7 +267,7 @@ nav {
 
 #shopTitle {
     font-size: 2rem;
-    margin-left: 2vw;
+    margin-left: 1.1vw;
     color: white;
     -webkit-text-stroke-color: black;
     -webkit-text-stroke-width: 0.5px;
@@ -300,7 +300,7 @@ h3 {
     -webkit-text-stroke-color: black;
     -webkit-text-stroke-width: 0.5px;
     font-size: 2rem;
-    margin-left: 2vw;
+    margin-left: 1.3vw;
 }
 
 ul li {
@@ -326,7 +326,6 @@ ul li {
 .div9 {
     background-color: var(--MenuBGColor);
     border-radius: 15px;
-    height: 6vw;
     width: 8vw;
 }
 
@@ -358,14 +357,30 @@ ul li {
         background-size: cover;
     }
 
+    nav {
+        width: 90%;
+    }
+
+    .fondLogo {
+
+        height: 5.5em;
+        width: 5.5em;
+    }
+
+    .Logo {
+        height: 5.5em;
+        width: 4.5em;
+    }
+
     .gameName {
-        font-size: 1em;
-        width: 50%;
+        font-size: 1.4em;
+        width: 70%;
     }
 
     #help {
-        height: 1.5em;
-        width: 1.5em;
+        height: 1em;
+        width: 1em;
+        font-family: 'Lemon', cursive;
     }
 
     /* ROC CLICKER & PICKAXE*/
@@ -389,11 +404,10 @@ ul li {
         height: 21vw;
         margin-top: 10vw;
         left: 41vw;
-
     }
 
+
     button {
-        background-color: var(--MenuBGColor);
         border: black 1px solid;
         margin: 0;
         font-size: 7vw;
@@ -409,7 +423,8 @@ ul li {
         display: flex;
         justify-content: center;
         position: absolute;
-        /* bottom:100%; */
+        border: none;
+        box-shadow: none;
         left: 40%;
         height: 26px;
         width: 20%;
@@ -435,7 +450,6 @@ ul li {
         display: flex;
         justify-content: flex-start;
         flex-direction: column;
-        padding: 0;
         height: 80vh;
         width: 100%;
         border: solid 0px black;
@@ -443,14 +457,19 @@ ul li {
         background-color: var(--mainColor);
         position: absolute;
         transition: 0.4s;
+        padding-top: 5px;
+        padding-bottom: 5px;
     }
 
     .openMenu {
-        top: 20%
+        top: 20%;
+        justify-content: center;
+
     }
 
     .closedMenu {
-        top: 86%
+        top: 86%;
+        justify-content: flex-start;
     }
 
     .stats {
@@ -481,7 +500,6 @@ ul li {
         flex-direction: column;
         align-items: center;
         padding: 1vh;
-        justify-content: center;
         color: var(--tertiaryColor);
         -webkit-text-stroke-color: black;
         -webkit-text-stroke-width: 1px;
@@ -498,6 +516,7 @@ ul li {
     .trésor {
         width: 100%;
         height: auto;
+        margin-top: auto;
     }
 
     .grid {
@@ -523,7 +542,9 @@ ul li {
     .div8,
     .div9 {
         width: 100%;
+        max-width: 10vh;
         height: 100%;
+        max-height: 10vh;
     }
 
     .item {

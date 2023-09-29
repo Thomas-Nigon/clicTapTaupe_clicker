@@ -23,6 +23,7 @@ function openMenu() {
 menuBtn.addEventListener('click', openMenu)
 // animation du bouton Help
 
+
 const trueRules = document.querySelector("#help")
 const sectRules = document.querySelector(".rules")
 
@@ -41,7 +42,36 @@ closeCroix.addEventListener("click", function () {
     console.log("hello");
 });
 
+
 // fin du bouton help
+
+//PICKAXE ANIMATION
+
+const stone = document.querySelector('.pickAndRoc');
+const pickaxe = document.querySelector('.pickaxe');
+const explose = document.querySelector('.explose');
+let counterGold = 0;
+
+function incrementGoldClick() {
+    counterGold++;
+    document.querySelector('#userGold').innerHTML = counterGold;
+}
+
+function pickaxeAnimation() {
+    pickaxe.classList.add('active')
+    explose.classList.remove('hidden')
+    // console.log("j'ai clicker le caillou !")
+    setTimeout(function () {
+        pickaxe.classList.remove('active');
+        explose.classList.add('hidden');
+    }, 100);
+    incrementGoldClick();
+}
+stone.addEventListener('click', pickaxeAnimation)
+//FIN PICKAXE ANIMATION
+
+
+
 
 
 // desactivation des bouton quand pas asser de gold
