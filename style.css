@@ -157,14 +157,15 @@ button {
     box-shadow: 1px 0 0 white, 0 1px 0 white, -1px 0 0 white, 0 -1px 0 white;
 }
 .grid {
+    background-color: var(--secondaryColor);
     display: grid;
-    grid-template-columns: repeat(3, 0fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 1vw;
-    grid-row-gap: 2vh;
+    gap: 1vh;
     padding: 1vh;
     width: 100%;
-    margin: 0 1em;
+    max-width: 35vh;
+    margin: 0 auto;
 }
 
 .div1 {
@@ -212,7 +213,6 @@ button {
 
 .rightMenu {
     display: flex;
-    justify-content: space-evenly;
     flex-direction: column;
     width: 31vw;
     border: solid 4px black;
@@ -226,6 +226,7 @@ button {
     background-color: var(--secondaryColor);
     border-radius: 15px;
     padding-bottom: 2vh;
+    margin-top: auto;
 }
 
 .shop {
@@ -296,29 +297,27 @@ ul {
 
 li {
     margin-left: 2vw;
-    font-size: clamp(0.5rem, vw, 2rem);
+    font-size: clamp(0.5rem, 1.5vw, 2rem);
     -webkit-text-stroke-color: var(--secondaryColor);
     -webkit-text-stroke-width: 0.5px;
     list-style: none;
 }
 
 .trésor {
-    /* width: 3vw;
-    height: 5vh; */
-    width: 30%;
-    height: auto;
+    height: 80%;
+    width: auto;
+    max-height: 50px;
 }
 
 #infos {
-
     color: white;
     -webkit-text-stroke-color: black;
     -webkit-text-stroke-width: 0.5px;
     margin-left: 1.3vw;
 }
 .item {
-    width: 6vw;
-    height: 5vw;
+    width: 100%;
+    height: 100%;
 }
 
 .div1,
@@ -332,10 +331,9 @@ li {
 .div9 {
     background-color: var(--MenuBGColor);
     border-radius: 15px;
-    width: 8vw;
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 500px) {
 
     body {
         margin: 0;
@@ -422,7 +420,6 @@ li {
 
     .rightMenu {
         display: flex;
-        justify-content: flex-start;
         flex-direction: column;
         height: 80vh;
         width: 100%;
@@ -482,9 +479,8 @@ li {
         display: none;
     }
 
-    h2 img {
-        width: 100%;
-        height: auto;
+    h2 {
+        font-size: clamp(1.2rem,6vw, 3rem);
     }
 
     .trésor {
@@ -493,34 +489,12 @@ li {
         margin-top: auto;
     }
 
-    .grid {
-        background-color: var(--secondaryColor);
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        border-radius: 15px;
-        gap: 1rem;
-        margin: 0;
-        padding: 1vh;
-        width: 85vw;
-        height: 100%;
+   .grid {
+    max-width: 500px;
     }
-
-    .div1,
-    .div2,
-    .div3,
-    .div4,
-    .div5,
-    .div6,
-    .div7,
-    .div8,
-    .div9 {
-        width: 100%;
-        max-width: 10vh;
-        height: 100%;
-        max-height: 10vh;
-    }
-
+.trésor{
+    max-height: 90px;
+}
     .item {
         width: 100%;
         height: auto;
@@ -550,6 +524,7 @@ li {
         -webkit-text-stroke-color: var(--secondaryColor);
         -webkit-text-stroke-width: 0.5px;
         list-style: none;
+        font-size: clamp(0.5rem, 4vw, 2rem);
     }
 
     /* menu Burger */
