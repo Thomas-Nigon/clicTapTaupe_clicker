@@ -23,6 +23,7 @@ function openMenu() {
 menuBtn.addEventListener('click', openMenu)
 // animation du bouton Help
 
+
 const trueRules = document.querySelector("#help")
 const sectRules = document.querySelector(".rules")
 
@@ -67,5 +68,6 @@ function pickaxeAnimation() {
 }
 stone.addEventListener('click',pickaxeAnimation)
 //FIN PICKAXE ANIMATION
+
 
 
