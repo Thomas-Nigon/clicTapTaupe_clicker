@@ -40,6 +40,12 @@ main {
     flex-direction: column;
     align-items: center;
 }
+h1{
+    font-size: clamp(0.5rem, 4vw, 3rem);
+}
+h2{
+    font-size: clamp(1.2rem, 4vw, 3rem);
+}
 
 #help {
     display: flex;
@@ -70,7 +76,6 @@ nav {
     color: white;
     text-shadow: black 10px 2px 10px;
     display: flex;
-    font-size: 3em;
     justify-content: center;
     margin-right: 10%;
     width: 70%;
@@ -115,6 +120,8 @@ nav {
     height: 17vw;
     left: 22.5vw;
     margin-left: -5vw;
+ /*    transform-origin: -70%; */
+/*     transform: rotate(90deg); */
     transform: rotate(-45deg);
     transform-origin: -70%;
 }
@@ -150,15 +157,28 @@ nav {
     display: none;
 }
 
+
+
+button {
+    border: black 1px solid;
+    margin: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
+    box-shadow: 1px 0 0 white, 0 1px 0 white, -1px 0 0 white, 0 -1px 0 white;
+}
 .grid {
+    background-color: var(--secondaryColor);
     display: grid;
-    grid-template-columns: repeat(3, 0fr);
+    border-radius: 15px;
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 1vw;
-    grid-row-gap: 2vh;
+    gap: 1vh;
     padding: 1vh;
     width: 100%;
-    margin: 0 1em;
+    max-width: 35vh;
+    margin: 0 auto;
 }
 
 .div1 {
@@ -206,7 +226,6 @@ nav {
 
 .rightMenu {
     display: flex;
-    justify-content: space-evenly;
     flex-direction: column;
     width: 31vw;
     border: solid 4px black;
@@ -220,6 +239,7 @@ nav {
     background-color: var(--secondaryColor);
     border-radius: 15px;
     padding-bottom: 2vh;
+    margin-top: auto;
 }
 
 .shop {
@@ -266,11 +286,11 @@ nav {
     color: var(--tertiaryColor);
     -webkit-text-stroke-color: black;
     -webkit-text-stroke-width: 1px;
-    font-size: 2rem;
+
 }
 
 #userGold {
-    font-size: 2rem;
+    font-size: clamp(1rem, 4vw, 2rem);
 }
 
 #menuButton {
@@ -278,7 +298,6 @@ nav {
 }
 
 #shopTitle {
-    font-size: 2rem;
     margin-left: 1.1vw;
     color: white;
     -webkit-text-stroke-color: black;
@@ -291,40 +310,27 @@ ul {
 
 li {
     margin-left: 2vw;
-}
-
-.trésor {
-    width: 3vw;
-    height: 5vh;
-}
-
-h3 {
-    text-align: center;
-    color: white;
-    -webkit-text-stroke-color: black;
-    -webkit-text-stroke-width: 0.5px;
-    font-size: 20px;
-}
-
-#infos {
-
-    color: white;
-    -webkit-text-stroke-color: black;
-    -webkit-text-stroke-width: 0.5px;
-    font-size: 2rem;
-    margin-left: 1.3vw;
-}
-
-ul li {
-    font-size: 1.2rem;
+    font-size: clamp(0.5rem, 1.5vw, 2rem);
     -webkit-text-stroke-color: var(--secondaryColor);
     -webkit-text-stroke-width: 0.5px;
     list-style: none;
 }
 
+.trésor {
+    height: 80%;
+    width: auto;
+    max-height: 50px;
+}
+
+#infos {
+    color: white;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 0.5px;
+    margin-left: 1.3vw;
+}
 .item {
-    width: 6vw;
-    height: 5vw;
+    width: 100%;
+    height: 100%;
 }
 
 .div1,
@@ -338,14 +344,9 @@ ul li {
 .div9 {
     background-color: var(--MenuBGColor);
     border-radius: 15px;
-    width: 8vw;
 }
 
-@media screen and (max-width: 390px) {
-    /* * {
-        text-shadow: 2px 0 0 black, 0 2px 0 black, -2px 0 0 black, 0 -2px 0 black;
-        color: rgba(212, 211, 220, 1);
-    } */
+@media screen and (max-width: 500px) {
 
     body {
         margin: 0;
@@ -372,15 +373,13 @@ ul li {
         width: 4.5em;
     }
 
-    .gameName {
-        font-size: 1.4em;
+  .gameName {
         width: 70%;
     }
 
     #help {
         height: 1em;
         width: 1em;
-        font-family: 'Lemon', cursive;
     }
 
     /* ROC CLICKER & PICKAXE*/
@@ -405,20 +404,6 @@ ul li {
         margin-top: 10vw;
         left: 41vw;
     }
-
-
-    button {
-        border: black 1px solid;
-        margin: 0;
-        font-size: 7vw;
-        cursor: pointer;
-        width: 100%;
-        height: 100%;
-        border-radius: 0px;
-        font-family: 'bodoni';
-        box-shadow: 1px 0 0 white, 0 1px 0 white, -1px 0 0 white, 0 -1px 0 white;
-    }
-
     #menuButton {
         display: flex;
         justify-content: center;
@@ -428,7 +413,7 @@ ul li {
         left: 40%;
         height: 26px;
         width: 20%;
-        font-size: 1.2rem;
+        font-size: clamp(1rem, 4vw, 2rem);
         background-color: var(--secondaryColor);
         border-radius: 8px 8px 0 0;
         transition: 0.2s;
@@ -448,7 +433,6 @@ ul li {
 
     .rightMenu {
         display: flex;
-        justify-content: flex-start;
         flex-direction: column;
         height: 80vh;
         width: 100%;
@@ -491,7 +475,6 @@ ul li {
 
     .gold {
         background-color: var(--mainColor);
-        font-size: 1.8rem;
         border-radius: 0 0 0 0;
         margin: 0;
         height: 100%;
@@ -509,8 +492,8 @@ ul li {
         display: none;
     }
 
-    h2 img {
-        width: 11vh;
+    h2 {
+        font-size: clamp(1.2rem,6vw, 3rem);
     }
 
     .trésor {
@@ -519,34 +502,12 @@ ul li {
         margin-top: auto;
     }
 
-    .grid {
-        background-color: var(--secondaryColor);
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        border-radius: 15px;
-        gap: 1rem;
-        margin: 0;
-        padding: 1vh;
-        width: 85vw;
-        height: 100%;
+   .grid {
+    max-width: 500px;
     }
-
-    .div1,
-    .div2,
-    .div3,
-    .div4,
-    .div5,
-    .div6,
-    .div7,
-    .div8,
-    .div9 {
-        width: 100%;
-        max-width: 10vh;
-        height: 100%;
-        max-height: 10vh;
-    }
-
+.trésor{
+    max-height: 90px;
+}
     .item {
         width: 100%;
         height: auto;
@@ -569,15 +530,14 @@ ul li {
         color: white;
         -webkit-text-stroke-color: black;
         -webkit-text-stroke-width: 0.5px;
-        font-size: 2rem;
         margin-left: 2vw;
     }
 
     ul li {
-        font-size: 1.2rem;
         -webkit-text-stroke-color: var(--secondaryColor);
         -webkit-text-stroke-width: 0.5px;
         list-style: none;
+        font-size: clamp(0.5rem, 4vw, 2rem);
     }
 
     /* menu Burger */
@@ -629,7 +589,6 @@ ul li {
         position: absolute;
         top: 0;
         right: 5vw;
-        font-size: 5vw;
     }
 
     .burgerIcone span {
