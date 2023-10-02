@@ -23,10 +23,12 @@
 
 }
 
+
 body {
     background-color: black;
     height: 100vh;
     overflow: hidden;
+ 
 }
 
 main {
@@ -105,7 +107,7 @@ nav {
 /* ROC CLICKER & PICKAXE*/
 
 .pickAndRoc {
-
+    /* cursor: url(./Assets/pickaxeCursor.png), auto; */
     position: relative;
     display: flex;
     top: 26%;
@@ -113,7 +115,6 @@ nav {
     height: 35vw;
     width: 66vw;
     justify-content: center;
-
 }
 
 .pickaxe {
@@ -124,27 +125,38 @@ nav {
     /*    transform-origin: -70%; */
     /*     transform: rotate(90deg); */
     transform: rotate(-45deg);
+    transform-origin: -70%;
 }
-
-/* FOR ACTIVE PICKAXE*/
-.active {
-    transform: rotate(0deg);
-    transition: 0.1s;
+.coingold{
+    position: fixed;
+    height: 15%;
+    width: auto;   
 }
-
-.hidden {
-    display: none;
-}
-
 .roc {
     height: 25vw;
 }
-
 .explose {
     position: fixed;
     height: 12vw;
     margin-top: 5vw;
     left: 30vw;
+}
+/* FOR ACTIVE PICKAXE AND GOLD*/
+
+/* PICK */
+.active {
+    transform: rotate(0deg);
+    transition: 0.1s;
+}
+/* active gold */
+.on {
+    width: 64px;
+    animation: bounce 1s forwards;
+    transform-origin: center bottom;
+}
+/* EXPLOSE AND GOLD */
+.hidden {
+    display: none;
 }
 
 
