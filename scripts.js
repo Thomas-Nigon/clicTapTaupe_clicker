@@ -74,16 +74,12 @@ const userGold = document.getElementById('userGold')
 const item4 = document.querySelector('.div4')
 const item5 = document.querySelector('.div5')
 const item6 = document.querySelector('.div6')
-let i = 0
-let gold = i
-function addition() {
-    gold = gold + 1;
+
+
+let gold = 0
+function addition(nb) {
+    setInterval(() => {
+    gold = gold + nb;
     document.querySelector('#userGold').innerHTML = gold;
+}, 1000)
 }
-function automatisation() {
-    setInterval(addition, 1000)
-}
-item4.addEventListener('click', automatisation)
-
-
-
