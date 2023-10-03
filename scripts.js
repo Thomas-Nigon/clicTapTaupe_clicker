@@ -49,28 +49,60 @@ closeCroix.addEventListener("click", function () {
 
 const stone = document.querySelector('.pickAndRoc');
 const pickaxe = document.querySelector('.pickaxe');
-const explose = document.querySelector('.explose')
+const explose = document.querySelector('.explose');
+let counterGold = 0;
+const coinGold = document.querySelector(".coingold")
+// GOLD ANIMATION
+
+  function onAnimation() {
+    console.log("coucou");
+    coinGold.classList.remove('hidden')
+    coinGold.classList.add('on')
+  setTimeout(function () {
+    coinGold.classList.remove('on');
+    coinGold.classList.add('hidden');
+  }, 1000);
+  }
+
+// FIN GOLD ANIMATION
+
+// GOLD COUNTERS
 
 function incrementGoldClick() {
-    itemTableau[0].userGold = itemTableau[0].userGold + itemTableau[0].dammage
-    document.querySelector('#userGold').innerHTML = itemTableau[0].userGold;
-    itemDispo();
-    bonusDispo();
+    counterGold++;
+    document.querySelector('#userGold').innerHTML = counterGold + gold;
+    document.querySelector('#goldBonus').innerHTML = counterGold;
 }
+
+// FIN
+
 
 function pickaxeAnimation() {
     pickaxe.classList.add('active')
     explose.classList.remove('hidden')
-    // console.log("j'ai clicker le caillou !")
     setTimeout(function () {
         pickaxe.classList.remove('active');
         explose.classList.add('hidden');
     }, 100);
     incrementGoldClick();
+    onAnimation();
 }
 stone.addEventListener('click', pickaxeAnimation,)
 //FIN PICKAXE ANIMATION
-// desactivation des bouton quand pas asser de gold
+
+const userGold = document.getElementById('userGold')
+const item4 = document.querySelector('.div4')
+const item5 = document.querySelector('.div5')
+const item6 = document.querySelector('.div6')
+
+
+let gold = 0
+function addition(nb) {
+    setInterval(() => {
+    gold = gold + nb;
+    document.querySelector('#userGold').innerHTML = counterGold + gold;
+}, 1000)
+}
 
 // bouton bonus
 const Bonus1 = document.querySelector(".div4")

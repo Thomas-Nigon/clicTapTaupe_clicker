@@ -1,0 +1,17 @@
+*{
+    background-color: aqua;
+}
+
+#div1{
+    width: 300px;
+    height: 300px;
+    background-color: beige;
+}
+
+ul{
+    background-color: lightgreen;
+    width: 50%;
+}
+li{
+    background-color: red;
+}
