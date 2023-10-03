@@ -54,15 +54,15 @@ let counterGold = 0;
 const coinGold = document.querySelector(".coingold")
 // GOLD ANIMATION
 
-  function onAnimation() {
+function onAnimation() {
     console.log("coucou");
     coinGold.classList.remove('hidden')
     coinGold.classList.add('on')
-  setTimeout(function () {
-    coinGold.classList.remove('on');
-    coinGold.classList.add('hidden');
-  }, 1000);
-  }
+    setTimeout(function () {
+        coinGold.classList.remove('on');
+        coinGold.classList.add('hidden');
+    }, 1000);
+}
 
 // FIN GOLD ANIMATION
 
@@ -70,7 +70,7 @@ const coinGold = document.querySelector(".coingold")
 
 function incrementGoldClick() {
     counterGold++;
-    document.querySelector('#userGold').innerHTML = counterGold;
+    document.querySelector('#userGold').innerHTML = counterGold + gold;
     document.querySelector('#goldBonus').innerHTML = counterGold;
 }
 
@@ -94,16 +94,12 @@ const userGold = document.getElementById('userGold')
 const item4 = document.querySelector('.div4')
 const item5 = document.querySelector('.div5')
 const item6 = document.querySelector('.div6')
-let i = 0
-let gold = i
-function addition() {
-    gold = gold + 1;
-    document.querySelector('#userGold').innerHTML = gold;
+
+
+let gold = 0
+function addition(nb) {
+    setInterval(() => {
+        gold = gold + nb;
+        document.querySelector('#userGold').innerHTML = counterGold + gold;
+    }, 1000)
 }
-function automatisation() {
-    setInterval(addition, 1000)
-}
-item4.addEventListener('click', automatisation)
-
-
-
