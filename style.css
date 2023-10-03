@@ -12,6 +12,7 @@
     /* light brown */
     --lightBrown: #AD956B;
 
+
 }
 
 * {
@@ -324,21 +325,29 @@ ul li {
 .div7,
 .div8,
 .div9 {
-    background-color: var(--MenuBGColor);
-    border-radius: 15px;
-    width: 8vw;
-}
 
-.boutonUnclick {
     background-color: rgb(181, 180, 180);
     color: linen;
     transition: 1s;
     opacity: 1;
     border-radius: 15px;
+    width: 8vw;
+
 }
 
-.achatPossible {
-    border: solid 10px black;
+.achatItemPossible {
+
+    background-color: var(--MenuBGColor);
+    border-radius: 15px;
+    width: 8vw;
+    border: dashed 3px black;
+
+}
+
+.achatBonusPossible {
+    background-color: var(--MenuBGColor);
+    border-radius: 15px;
+    width: 8vw;
 }
 
 @media screen and (max-width: 390px) {
