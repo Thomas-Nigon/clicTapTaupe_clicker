@@ -54,7 +54,7 @@ let counterGold = 0;
 
 function incrementGoldClick() {
     counterGold++;
-    document.querySelector('#userGold').innerHTML = counterGold;
+    document.querySelector('#userGold').innerHTML = counterGold + gold;
 }
 
 function pickaxeAnimation() {
@@ -80,6 +80,6 @@ let gold = 0
 function addition(nb) {
     setInterval(() => {
     gold = gold + nb;
-    document.querySelector('#userGold').innerHTML = gold;
+    document.querySelector('#userGold').innerHTML = counterGold + gold;
 }, 1000)
 }
