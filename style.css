@@ -362,15 +362,12 @@ p{
     transition: 1s;
     opacity: 1;
     border-radius: 15px;
-    width: 8vw;
-
 }
 
 .achatItemPossible {
 
     background-color: var(--MenuBGColor);
     border-radius: 15px;
-    width: 8vw;
     border: dashed 3px black;
 
 }
