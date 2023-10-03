@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bounceAnimation.css" />
     <title>ClickTapTaupe</title>
 </head>
 
@@ -33,6 +34,7 @@
                 <img class="roc" src="./Assets/ImageRoc.png" alt="roc clicker">
                 <img class="explose hidden" src="./Assets/ImageImpact.png" alt="roc explosion">
                 <img class="pickaxe" src="./Assets/ImagePickaxe.png" alt="pickaxe animate">
+                 <img class="coingold hidde" src="./Assets/coinGold.png" alt="a piece of gold">  
             </section>
         </main>
 
@@ -44,24 +46,35 @@
                         class="trésor"> </h2>
                 <h2 id="shopTitle">Shop:</h2>
                 <section class="grid">
-                    <button class="div1"> <img src="./Assets/shopIcons/icons8-mining-pickaxe-48.png"
-                            alt="a wooden pickaxe" class="item"> </button>
-                    <button class="div2"  ><img src="Assets/shopIcons/pickaxe2.png" alt="an iron pickaxe logo"
-                            class="item"> </button>
-                    <button class="div3"> <img src="Assets/shopIcons/sword.png" alt="a flamming sword" class="item">
+                    <button class="div1">
+                        <p> <span class="itemPrice">100</span>G</p><img src="./Assets/shopIcons/icons8-mining-pickaxe-48.png"
+                            alt="a wooden pickaxe" class="item">
                     </button>
-                    <button class="div4" onclick="addition(1)" value= 1><img src="./Assets/shopIcons/icons8-robotic-arm-40.png" alt="a robotic arm"
-                            class="item"></button>
-                    <button class="div5" onclick="addition(5)" value="5"><img src="./Assets/shopIcons/jackHammer.png" alt="a jackHammer logo"
-                            class="item"></button>
-                    <button class="div6" onclick="addition(10)" value="10"> <img src="./Assets/shopIcons/dynamite2.png" alt="I dynamite logo"
-                            class="item"> </button>
-                    <button class="div7"><img src="./Assets/shopIcons/icons8-bonus-64.png"
+                    <button class="div2">
+                        <p><span class="itemPrice">200</span>G</p> <img src="Assets/shopIcons/pickaxe2.png"
+                            alt="an iron pickaxe logo" class="item">
+                    </button>
+                    <button class="div3"><span class="itemPrice">300</span><img src="Assets/shopIcons/sword.png"
+                            alt="a flamming sword" class="item">
+                    </button>
+                    <button class="div4" onclick="addition(1)" ><span class="itemPrice">400</span><img
+                            src="./Assets/shopIcons/icons8-robotic-arm-40.png" alt="a robotic arm" class="item">
+                    </button>
+                    <button class="div5" onclick="addition(5)" ><span class="itemPrice">500</span><img src="./Assets/shopIcons/jackHammer.png"
+                            alt="a jackHammer logo" class="item">
+                    </button>
+                    <button class="div6"onclick="addition(10)" ><span class="itemPrice">600</span><img src="./Assets/shopIcons/dynamite2.png"
+                            alt="I dynamite logo" class="item">
+                    </button>
+                    <button class="div7"><span class="itemPrice">700</span><img
+                            src="./Assets/shopIcons/icons8-bonus-64.png"
                             alt="a hand receiving money logo meaning more benefitfs" class="item"></button>
-                    <button class="div8"> <img src="Assets/shopIcons/icons8-productivity-64.png"
-                            alt="A grinding gear icon meaning productivity increase" class="item"> </button>
-                    <button class="div9"><img src="./Assets/shopIcons/icons8-potion-64.png"
-                            alt="A potion logo with a lightning symbol" class="item"></button>
+                    <button class="div8"><span class="itemPrice">800</span><img
+                            src="Assets/shopIcons/icons8-productivity-64.png"
+                            alt="A grinding gear icon meaning productivity increase" class="item"></button>
+                    <button class="div9"><span class="itemPrice">900</span><img
+                            src="./Assets/shopIcons/icons8-potion-64.png" alt="A potion logo with a lightning symbol"
+                            class="item"></button>
                 </section>
             </aside>
             <aside class="stats">
