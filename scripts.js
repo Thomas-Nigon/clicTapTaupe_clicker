@@ -125,7 +125,7 @@ let bonusTableau = [
 function bonusDispo() {
     for (let i = 0; i < bonusTableau.length; i++) {
 
-        if (bonusTableau[i].price <= itemTableau[0].userGold) {
+        if (bonusTableau[i].price <= counterGold) {
             bonusTableau[i].balise.classList.add("achatBonusPossible")
         }
     }
@@ -148,7 +148,7 @@ let itemTableau = [
 // ITEM DISPO
 function itemDispo() {
     for (let i = 0; i < itemTableau.length; i++) {
-        if (itemTableau[i].price <= itemTableau[0].userGold) {
+        if (itemTableau[i].price <= counterGold) {
             itemTableau[i].balise.classList.add("achatItemPossible")
         }
     }
