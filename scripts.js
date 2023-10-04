@@ -24,6 +24,7 @@ const Bonus6 = document.querySelector(".div9")
 
 let item1 = {
     damage: 2,
+    autoDamage: 0,
     price: 100,
     basePrice: 100,
     balise: Item1,
@@ -56,7 +57,7 @@ let item4 = {
 };
 
 let item5 = {
-    damage: 1,
+    damage: 5,
     basePrice: 500,
     price: 500,
     balise: Bonus2,
@@ -64,7 +65,7 @@ let item5 = {
     itemCount: 0,
 };
 let item6 = {
-    damage: 1,
+    damage: 10,
     basePrice: 1000,
     price: 1000,
     balise: Bonus3,
@@ -139,6 +140,7 @@ function decrementationGold (a, b, item) {
     user.golds = a - b ;
     userGold.innerHTML = user.golds;
     calcPrice(item);
+       
     }
 }
 
@@ -177,6 +179,12 @@ function addition(nb) {
 }, 1000)
 }
 
+function additionOk (golds, price,itemDamage){
+    if (golds >= price){
+        addition(itemDamage)
+    }
+}
+
 // UPGRADE PRICE
 function calcPrice (item) {
     return item.price = item.price * item.multiplicator
@@ -197,57 +205,52 @@ function bonusDispo() {
 }
 const achat = document.querySelectorAll('button');
 
+function switchPickAxeOk (golds, price, balise, item){
+    if (golds >= price){
+        balise.disabled = true;
+        balise.style.backgroundColor = "#E1A624"
+        switchPickAxe(item)
+}
+}
+
 function switchPickAxe(item) {
-    console.log('enter function switchPickAxe')
     user.tool = item.damage
     console.log('degats pioche:', user.tool)
 }
 achat.forEach((button, index) => button.addEventListener('click', () => {
        switch (button.name) {
         case 'item1':
-            console.log('jai clické bt1');
-            switchPickAxe(item1)
-            console.log(user.golds)
-            decrementationGold(user.golds, item1.price, item1)
-            console.log(user.golds)
+            switchPickAxeOk(user.golds, item1.price, item1.balise, item1)
+            decrementationGold(user.golds, item1.price, item1)            
             const textItem1 = document.getElementById('item1')
             textItem1.innerHTML = item1.price
-
             break;
         case 'item2':
-            console.log('jai clické bt2');
-            switchPickAxe(item2)
+            switchPickAxeOk(user.golds, item2.price, item2.balise, item2)
             decrementationGold(user.golds, item2.price, item2)
             const textItem2 = document.getElementById('item2')
             textItem2.innerHTML = item2.price
             break;
         case 'item3':
-            switchPickAxe(item3)
+            switchPickAxeOk(user.golds, item3.price, item3.balise, item3)
             decrementationGold(user.golds, item3.price, item3)
             const textItem3 = document.getElementById('item3')
-            textItem3.innerHTML = item3.price
-            console.log('jai clické bt3');
+            textItem3.innerHTML = item3.price            
             break;
         case 'item4':
-            console.log(item4.price)
-            console.log('auto click')
-            addition(1)
+            additionOk(user.golds, item4.price, item4.damage)
             decrementationGold(user.golds, item4.price, item4)
             const textItem4 = document.getElementById('item4')
-            textItem4.innerHTML = item4.price
-            console.log(item4.price)
-            
+            textItem4.innerHTML = item4.price            
             break; 
         case 'item5':
-            console.log('auto click')
-            addition(5)
+            additionOk(user.golds, item5.price, item5.damage)
             decrementationGold(user.golds, item5.price, item5)
             const textItem5 = document.getElementById('item5')
             textItem5.innerHTML = item5.price
             break; 
         case 'item6':
-            console.log('auto click')
-            addition(10)
+            additionOk(user.golds, item6.price, item6.damage)
             decrementationGold(user.golds, item6.price, item6)
             const textItem6 = document.getElementById('item6')
             textItem6.innerHTML = item6.price
@@ -258,30 +261,26 @@ achat.forEach((button, index) => button.addEventListener('click', () => {
 ))
 
 
-// clique total
+// TOTAL CLICS
 let DPM = 0;
 const DPA = document.querySelector(".clickTotal")
-
 function counterClick(){
 DPA.innerHTML = `clique Total : ${DPM}` ;
 }
-// fin clique total
 
 
-
-// tout les gold
+//  GOLD MAX
 const toutGold = document.querySelector(".goldTotaux");
 function totalGold(){
   toutGold.innerHTML =  `Gold Total : ${goldMax}`;
 }
-// fin tout les gold
 
-// Chrono
+
+// CHRONO
 const timer = document.querySelector(".chrono");
 let second = 0;
 let minute = 0;
 timer.innerHTML = second;
-
 
 setInterval(Chronomètre,1000);
 function Chronomètre(){
@@ -296,6 +295,3 @@ function Chronomètre(){
       timer.innerHTML = `${minute} min${second}s`
   }
 };
-
-
-//Fin Chrono
