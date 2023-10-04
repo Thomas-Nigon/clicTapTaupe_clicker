@@ -134,9 +134,7 @@ closeCroix.addEventListener("click", function () {
 function incrementGoldClick() {
     user.golds += user.tool;
     // user.golds = counterGold + autoGold;
-    userGold.innerHTML = user.golds;
-    
-    bonusDispo();    
+    userGold.innerHTML = user.golds; 
 }
 
 function decrementationGold (a, b, item) {
@@ -165,19 +163,15 @@ function pickaxeAnimation() {
     onAnimation();
 }
 function refreshUserGold() {
-    user.golds = counterGold + autoGold;
-    userGold.innerHTML = user.golds;    
-    // document.querySelector('#goldBonus').innerHTML = counterGold;
     bonusDispo(); 
 }
-// setInterval(refreshUserGold, 10)
+setInterval(refreshUserGold, 10)
 stone.addEventListener('click', pickaxeAnimation,)
 
 // FUNCTION AUTOCLICK
 function addition(nb) {
     setInterval(() => {
     user.golds += nb;
-    // user.golds = counterGold + autoGold;
     userGold.innerHTML = user.golds;
 }, 1000)
 }
@@ -187,29 +181,20 @@ function calcPrice (item) {
     return item.price = item.price * item.multiplicator
 }
 
-
-// BONUS BUTTON
-
-bonusTableau2 = [item1, item2, item3, item4, item5, item6]
+itemList = [item1, item2, item3, item4, item5, item6]
 
 // BONUSDISPO
 function bonusDispo() {
-    for (let i = 0; i < bonusTableau2.length; i++) {
-        if (bonusTableau2[i].price <= user.golds) {
-            bonusTableau2[i].balise.classList.add("achatBonusPossible")
-        }
+    for (let i = 0; i < itemList.length; i++) {
+        if (itemList[i].price <= user.golds) {
+            itemList[i].balise.classList.add("achatBonusPossible")
+        } else{
+            itemList[i].balise.classList.remove("achatBonusPossible")
     }
+}
 }
 const achat = document.querySelectorAll('button');
 
-// function updatePrice(item) {
-//     console.log('enter function update price')
-//     calcPrice(item);
-//     console.log('item price:', item.price)
-//     item.itemCount = item.itemCount + 1
-//     console.log('item count:', item.itemCount)
-//     console.log('new item price:', item.price)
-//     }
 function switchPickAxe(item) {
     console.log('enter function switchPickAxe')
     user.tool = item.damage
