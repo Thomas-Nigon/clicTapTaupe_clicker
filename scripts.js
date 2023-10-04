@@ -174,56 +174,56 @@ function addition(nb) {
     userGold.innerHTML = user.golds;
 }, 1000)
 }
-  // clique total
-  let DPM = 0;
-  const DPA = document.querySelector(".clickTotal")
+//   // clique total
+//   let DPM = 0;
+//   const DPA = document.querySelector(".clickTotal")
 
-function counterClick(){
-DPA.innerHTML = `clique Total : ${DPM}` ;
-}
-// fin clique total
-
-
-
-// tout les gold
-setInterval(totalGold,100)
-const toutGold = document.querySelector(".goldTotaux");
-let allGold =0;
-function totalGold()
-{
-    toutGold.innerHTML =  `Gold Total : ${counterGold + autoGold}`;
-}
-// fin tout les gold
-
-//gold bonus
-const Goldautomatic = document.querySelector(".goldAuto")
-setInterval(automaticGold,100);
-function automaticGold(){
-Goldautomatic.innerHTML = `Gold automatic Total : ${autoGold}`    
-}
-
-// fin gold bonus
-
-// Chrono
-const timer = document.querySelector(".Chrono");
-let second = 0;
-let minute = 0;
-timer.innerHTML = second;
+// function counterClick(){
+// DPA.innerHTML = `clique Total : ${DPM}` ;
+// }
+// // fin clique total
 
 
-setInterval(Chronomètre,1000);
-function Chronomètre(){
 
-     if (second < 60 ){
-        second++;
-        timer.innerHTML = `Chrono : ${minute}: ${second}`;
-    }
-    else{
-        minute++
-        second = 0;
-        timer.innerHTML = `Chrono : ${minute}:${second}`
-    }
-};
+// // tout les gold
+// setInterval(totalGold,100)
+// const toutGold = document.querySelector(".goldTotaux");
+// let allGold =0;
+// function totalGold()
+// {
+//     toutGold.innerHTML =  `Gold Total : ${counterGold + autoGold}`;
+// }
+// // fin tout les gold
+
+// //gold bonus
+// const Goldautomatic = document.querySelector(".goldAuto")
+// setInterval(automaticGold,100);
+// function automaticGold(){
+// Goldautomatic.innerHTML = `Gold automatic Total : ${autoGold}`    
+// }
+
+// // fin gold bonus
+
+// // Chrono
+// const timer = document.querySelector(".Chrono");
+// let second = 0;
+// let minute = 0;
+// timer.innerHTML = second;
+
+
+// setInterval(Chronomètre,1000);
+// function Chronomètre(){
+
+//      if (second < 60 ){
+//         second++;
+//         timer.innerHTML = `Chrono : ${minute}: ${second}`;
+//     }
+//     else{
+//         minute++
+//         second = 0;
+//         timer.innerHTML = `Chrono : ${minute}:${second}`
+//     }
+// };
 
 
 //Fin Chrono
