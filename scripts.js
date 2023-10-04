@@ -108,18 +108,6 @@ closeCroix.addEventListener("click", function () {
     coinGold.classList.add('hidden');
   }, 1000);
   }
-
-
-// GOLD COUNTERS
-function incrementGoldClick() {
-    counterGold += 1;
-    userGold.innerHTML = counterGold + autoGold;
-    document.querySelector('#goldBonus').innerHTML = counterGold;
-    // itemDispo();
-    bonusDispo();    
-}
-
-
 //PICKAXE ANIMATION
 const stone = document.querySelector('.pickAndRoc');
 const pickaxe = document.querySelector('.pickaxe');
@@ -139,7 +127,6 @@ function pickaxeAnimation() {
 function refreshUserGold() {
     counterGold;
     userGold.innerHTML = counterGold + autoGold;
-    document.querySelector('#goldBonus').innerHTML = counterGold;
     bonusDispo(); 
 }
 
@@ -156,6 +143,72 @@ function addition(nb) {
     autoGold += nb;
     document.querySelector('#userGold').innerHTML = counterGold + autoGold;
 }, 1000)
+}
+  // clique total
+  let DPM = 0;
+  const DPA = document.querySelector(".clickTotal")
+
+function counterClick(){
+DPA.innerHTML = `clique Total : ${DPM}` ;
+}
+// fin clique total
+
+
+
+// tout les gold
+setInterval(totalGold,100)
+const toutGold = document.querySelector(".goldTotaux");
+let allGold =0;
+function totalGold()
+{
+    toutGold.innerHTML =  `Gold Total : ${counterGold + autoGold}`;
+}
+// fin tout les gold
+
+//gold bonus
+const Goldautomatic = document.querySelector(".goldAuto")
+setInterval(automaticGold,100);
+function automaticGold(){
+Goldautomatic.innerHTML = `Gold automatic Total : ${autoGold}`    
+}
+
+// fin gold bonus
+
+// Chrono
+const timer = document.querySelector(".Chrono");
+let second = 0;
+let minute = 0;
+timer.innerHTML = second;
+
+
+setInterval(Chronomètre,1000);
+function Chronomètre(){
+
+     if (second < 60 ){
+        second++;
+        timer.innerHTML = `Chrono : ${minute}: ${second}`;
+    }
+    else{
+        minute++
+        second = 0;
+        timer.innerHTML = `Chrono : ${minute}:${second}`
+    }
+};
+
+
+//Fin Chrono
+
+
+
+// GOLD COUNTERS
+function incrementGoldClick() {
+    counterGold += 1;
+    userGold.innerHTML = counterGold + autoGold;
+    // itemDispo();
+    bonusDispo();
+    DPM ++;
+    counterClick();
+    totalGold();
 }
 
 
