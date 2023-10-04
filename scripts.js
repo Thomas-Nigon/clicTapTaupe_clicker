@@ -55,7 +55,6 @@ const coinGold = document.querySelector(".coingold")
 // GOLD ANIMATION
 
 function onAnimation() {
-    console.log("coucou");
     coinGold.classList.remove('hidden')
     coinGold.classList.add('on')
     setTimeout(function () {
@@ -69,7 +68,7 @@ function onAnimation() {
 // GOLD COUNTERS
 
 function incrementGoldClick() {
-    counterGold++;
+    counterGold += 1;
     document.querySelector('#userGold').innerHTML = counterGold + gold;
     document.querySelector('#goldBonus').innerHTML = counterGold;
 }
@@ -90,16 +89,21 @@ function pickaxeAnimation() {
 stone.addEventListener('click', pickaxeAnimation)
 //FIN PICKAXE ANIMATION
 
-const userGold = document.getElementById('userGold')
+const userGold = document.querySelector('#userGold')
 const item4 = document.querySelector('.div4')
 const item5 = document.querySelector('.div5')
 const item6 = document.querySelector('.div6')
 
+function deducItem(value) {
+counterGold = counterGold - value;
+userGold.innerHTML = counterGold - value;
+}console.log
 
 let gold = 0
 function addition(nb) {
     setInterval(() => {
         gold = gold + nb;
-        document.querySelector('#userGold').innerHTML = counterGold + gold;
+        document.querySelector('#userGold').innerHTML = counterGold + gold ;
     }, 1000)
+    
 }
