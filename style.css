@@ -15,10 +15,6 @@
 
 }
 
-.toto{
-    background-color: yellow;
-}
-
 * {
     font-family: 'Lemon', cursive;
     font-size: 16px;
@@ -289,6 +285,7 @@ button {
     margin:0vw 1vw 0vw 47vw;
 }
 
+
 .gold {
     background-color: var(--mainColor);
     border-radius: 15px;
@@ -393,6 +390,9 @@ li {
     background-color: var(--MenuBGColor);
     border-radius: 15px;
 }
+.chrono{
+    font-size: clamp(0.5rem, 1.5vw, 2rem)
+}
 
 @media screen and (max-width: 500px) {
 
@@ -408,6 +408,10 @@ li {
 
     nav {
         width: 90%;
+    }
+
+    h1{
+        font-size: clamp(0.5rem, 6vw, 3rem);
     }
 
     .fondLogo {
@@ -590,6 +594,10 @@ li {
         list-style: none;
         font-size: clamp(0.5rem, 4vw, 2rem);
     }
+    .chrono{
+        font-size: clamp(0.5rem, 4vw, 2rem)
+    }
+    
 
     /* menu Burger */
     .sideNav {
@@ -672,7 +680,6 @@ li {
         transition: 0.5s;
         opacity: 1;
     }
-
 
     .croix {
         width: 4vw;

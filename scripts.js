@@ -1,14 +1,10 @@
-let counterGold = 0;
-let autoGold = 0;
-let myGold = counterGold + autoGold;
-
 let user = {
     name: "toto",
-    golds: counterGold + autoGold,
+    golds: 0,
     tool: 1,
     machines: 0,
 }
-
+let goldMax = 0;
 // user.golds = ;
 
 const userGold = document.getElementById('userGold');
@@ -28,32 +24,32 @@ const Bonus6 = document.querySelector(".div9")
 
 let item1 = {
     damage: 2,
-    price: 10,
-    basePrice: 10,
+    price: 100,
+    basePrice: 100,
     balise: Item1,
     multiplicator: 1,
     itemCount: 0,
 };
 let item2 = {
     damage: 3,
-    basePrice: 10,
-    price: 10,
+    basePrice: 500,
+    price: 500,
     balise: Item2,
     multiplicator: 1,
     itemCount: 0,
 };
 let item3 = {
     damage: 4,
-    basePrice: 10,
-    price: 10,
+    basePrice: 1000,
+    price: 1000,
     balise: Item3,
     multiplicator: 1,
     itemCount: 0,
 };
 let item4 = {
     damage: 1,
-    basePrice: 10,
-    price: 10,
+    basePrice: 50,
+    price: 50,
     balise: Bonus1,
     multiplicator: 2,
     itemCount: 1,
@@ -61,16 +57,16 @@ let item4 = {
 
 let item5 = {
     damage: 1,
-    basePrice: 10,
-    price: 9,
+    basePrice: 500,
+    price: 500,
     balise: Bonus2,
     multiplicator: 2,
     itemCount: 0,
 };
 let item6 = {
     damage: 1,
-    basePrice: 10,
-    price: 10,
+    basePrice: 1000,
+    price: 1000,
     balise: Bonus3,
     multiplicator: 2,
     itemCount: 0,
@@ -133,7 +129,9 @@ closeCroix.addEventListener("click", function () {
 // GOLD COUNTERS
 function incrementGoldClick() {
     user.golds += user.tool;
+    // user.golds = counterGold + autoGold;
     userGold.innerHTML = user.golds; 
+    goldMax += user.tool;
 }
 
 function decrementationGold (a, b, item) {
@@ -160,9 +158,12 @@ function pickaxeAnimation() {
     }, 100);
     incrementGoldClick();
     onAnimation();
+    DPM++;
+    counterClick();
 }
 function refreshUserGold() {
-       bonusDispo(); 
+    bonusDispo();
+    totalGold();
 }
 setInterval(refreshUserGold, 10)
 stone.addEventListener('click', pickaxeAnimation,)
@@ -171,80 +172,16 @@ stone.addEventListener('click', pickaxeAnimation,)
 function addition(nb) {
     setInterval(() => {
     user.golds += nb;
-    userGold.innerHTML = user.golds;
+    goldMax += nb;
+    userGold.innerHTML = user.golds ;
 }, 1000)
-}
-//   // clique total
-//   let DPM = 0;
-//   const DPA = document.querySelector(".clickTotal")
-
-// function counterClick(){
-// DPA.innerHTML = `clique Total : ${DPM}` ;
-// }
-// // fin clique total
-
-
-
-// // tout les gold
-// setInterval(totalGold,100)
-// const toutGold = document.querySelector(".goldTotaux");
-// let allGold =0;
-// function totalGold()
-// {
-//     toutGold.innerHTML =  `Gold Total : ${counterGold + autoGold}`;
-// }
-// // fin tout les gold
-
-// //gold bonus
-// const Goldautomatic = document.querySelector(".goldAuto")
-// setInterval(automaticGold,100);
-// function automaticGold(){
-// Goldautomatic.innerHTML = `Gold automatic Total : ${autoGold}`    
-// }
-
-// // fin gold bonus
-
-// // Chrono
-// const timer = document.querySelector(".Chrono");
-// let second = 0;
-// let minute = 0;
-// timer.innerHTML = second;
-
-
-// setInterval(Chronomètre,1000);
-// function Chronomètre(){
-
-//      if (second < 60 ){
-//         second++;
-//         timer.innerHTML = `Chrono : ${minute}: ${second}`;
-//     }
-//     else{
-//         minute++
-//         second = 0;
-//         timer.innerHTML = `Chrono : ${minute}:${second}`
-//     }
-// };
-
-
-//Fin Chrono
-
-
-
-// GOLD COUNTERS
-function incrementGoldClick() {
-    counterGold += 1;
-    userGold.innerHTML = counterGold + autoGold;
-    // itemDispo();
-    bonusDispo();
-    DPM ++;
-    counterClick();
-    totalGold();
 }
 
 // UPGRADE PRICE
 function calcPrice (item) {
     return item.price = item.price * item.multiplicator
 }
+
 
 itemList = [item1, item2, item3, item4, item5, item6]
 
@@ -319,3 +256,46 @@ achat.forEach((button, index) => button.addEventListener('click', () => {
 
     }       
 ))
+
+
+// clique total
+let DPM = 0;
+const DPA = document.querySelector(".clickTotal")
+
+function counterClick(){
+DPA.innerHTML = `clique Total : ${DPM}` ;
+}
+// fin clique total
+
+
+
+// tout les gold
+const toutGold = document.querySelector(".goldTotaux");
+function totalGold(){
+  toutGold.innerHTML =  `Gold Total : ${goldMax}`;
+}
+// fin tout les gold
+
+// Chrono
+const timer = document.querySelector(".chrono");
+let second = 0;
+let minute = 0;
+timer.innerHTML = second;
+
+
+setInterval(Chronomètre,1000);
+function Chronomètre(){
+
+   if (second < 60 ){
+      second++;
+      timer.innerHTML = `${minute} min ${second}s`;
+  }
+  else{
+      minute++
+      second = 0;
+      timer.innerHTML = `${minute} min${second}s`
+  }
+};
+
+
+//Fin Chrono
