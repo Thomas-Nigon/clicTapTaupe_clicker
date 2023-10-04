@@ -15,6 +15,10 @@
 
 }
 
+.toto{
+    background-color: yellow;
+}
+
 * {
     font-family: 'Lemon', cursive;
     font-size: 16px;
