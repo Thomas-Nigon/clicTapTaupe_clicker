@@ -1,8 +1,12 @@
-let price = 10;
+let price = 20;
 let userGold = 20;
-function soustraction () {
-    if (userGold > price){
-        userGold = userGold - price;
+function soustraction (a, b) {
+    if (a >= b){
+       return a = a - b;
+    } else {
+        console.log(userGold)
     }
 }
-soustraction()
+console.log(soustraction(userGold, price))
+
+
