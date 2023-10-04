@@ -15,10 +15,6 @@
 
 }
 
-.toto{
-    background-color: yellow;
-}
-
 * {
     font-family: 'Lemon', cursive;
     font-size: 16px;
@@ -258,9 +254,13 @@ button {
 .rules {
     opacity: 0;
     transform: scale(0);
+    transition: 1s;
+    top: 12vw;
     /* pas besoin de scale a 1 sur rules actif car c'est la valeur de base d'une page internet */
     position: absolute;
     z-index: 1;
+    width: 50vw;
+    padding: 1vw;
 
 }
 
@@ -270,17 +270,21 @@ button {
     position: absolute;
     top: 12vw;
     z-index: 1;
-    width: 25vw;
-    padding: 5vw;
-    transition: 0.5s;
+    width: 50vw;
+    padding: 1vw;
+    transition: 1s;
     opacity: 1;
+}
+.rulesInfos {
+    line-height: 3vh;
 }
 
 .croix {
     width: 1vw;
     position: absolute;
-    margin: -4vw 1vw 0vw 18vw;
+    margin:0vw 1vw 0vw 47vw;
 }
+
 
 .gold {
     background-color: var(--mainColor);
@@ -386,6 +390,9 @@ li {
     background-color: var(--MenuBGColor);
     border-radius: 15px;
 }
+.chrono{
+    font-size: clamp(0.5rem, 1.5vw, 2rem)
+}
 
 @media screen and (max-width: 500px) {
 
@@ -401,6 +408,10 @@ li {
 
     nav {
         width: 90%;
+    }
+
+    h1{
+        font-size: clamp(0.5rem, 6vw, 3rem);
     }
 
     .fondLogo {
@@ -583,6 +594,10 @@ li {
         list-style: none;
         font-size: clamp(0.5rem, 4vw, 2rem);
     }
+    .chrono{
+        font-size: clamp(0.5rem, 4vw, 2rem)
+    }
+    
 
     /* menu Burger */
     .sideNav {
