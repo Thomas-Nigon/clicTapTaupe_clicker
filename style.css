@@ -258,9 +258,13 @@ button {
 .rules {
     opacity: 0;
     transform: scale(0);
+    transition: 1s;
+    top: 12vw;
     /* pas besoin de scale a 1 sur rules actif car c'est la valeur de base d'une page internet */
     position: absolute;
     z-index: 1;
+    width: 50vw;
+    padding: 1vw;
 
 }
 
@@ -270,16 +274,19 @@ button {
     position: absolute;
     top: 12vw;
     z-index: 1;
-    width: 25vw;
-    padding: 5vw;
-    transition: 0.5s;
+    width: 50vw;
+    padding: 1vw;
+    transition: 1s;
     opacity: 1;
+}
+.rulesInfos {
+    line-height: 3vh;
 }
 
 .croix {
     width: 1vw;
     position: absolute;
-    margin: -4vw 1vw 0vw 18vw;
+    margin:0vw 1vw 0vw 47vw;
 }
 
 .gold {
@@ -665,6 +672,7 @@ li {
         transition: 0.5s;
         opacity: 1;
     }
+
 
     .croix {
         width: 4vw;

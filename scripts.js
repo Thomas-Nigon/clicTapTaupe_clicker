@@ -133,7 +133,6 @@ closeCroix.addEventListener("click", function () {
 // GOLD COUNTERS
 function incrementGoldClick() {
     user.golds += user.tool;
-    // user.golds = counterGold + autoGold;
     userGold.innerHTML = user.golds; 
 }
 
@@ -163,7 +162,7 @@ function pickaxeAnimation() {
     onAnimation();
 }
 function refreshUserGold() {
-    bonusDispo(); 
+       bonusDispo(); 
 }
 setInterval(refreshUserGold, 10)
 stone.addEventListener('click', pickaxeAnimation,)
@@ -174,6 +173,72 @@ function addition(nb) {
     user.golds += nb;
     userGold.innerHTML = user.golds;
 }, 1000)
+}
+  // clique total
+  let DPM = 0;
+  const DPA = document.querySelector(".clickTotal")
+
+function counterClick(){
+DPA.innerHTML = `clique Total : ${DPM}` ;
+}
+// fin clique total
+
+
+
+// tout les gold
+setInterval(totalGold,100)
+const toutGold = document.querySelector(".goldTotaux");
+let allGold =0;
+function totalGold()
+{
+    toutGold.innerHTML =  `Gold Total : ${counterGold + autoGold}`;
+}
+// fin tout les gold
+
+//gold bonus
+const Goldautomatic = document.querySelector(".goldAuto")
+setInterval(automaticGold,100);
+function automaticGold(){
+Goldautomatic.innerHTML = `Gold automatic Total : ${autoGold}`    
+}
+
+// fin gold bonus
+
+// Chrono
+const timer = document.querySelector(".Chrono");
+let second = 0;
+let minute = 0;
+timer.innerHTML = second;
+
+
+setInterval(Chronomètre,1000);
+function Chronomètre(){
+
+     if (second < 60 ){
+        second++;
+        timer.innerHTML = `Chrono : ${minute}: ${second}`;
+    }
+    else{
+        minute++
+        second = 0;
+        timer.innerHTML = `Chrono : ${minute}:${second}`
+    }
+};
+
+
+//Fin Chrono
+
+
+
+// GOLD COUNTERS
+function incrementGoldClick() {
+    counterGold += 1;
+    userGold.innerHTML = counterGold + autoGold;
+    // itemDispo();
+    bonusDispo();
+    DPM ++;
+    counterClick();
+    totalGold();
 }
 
 // UPGRADE PRICE
