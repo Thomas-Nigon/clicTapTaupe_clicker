@@ -87,7 +87,7 @@ function pickaxeAnimation() {
     incrementGoldClick();
     onAnimation();
 }
-stone.addEventListener('click', pickaxeAnimation,)
+stone.addEventListener('click', pickaxeAnimation)
 //FIN PICKAXE ANIMATION
 
 const userGold = document.getElementById('userGold')
@@ -154,25 +154,5 @@ function itemDispo() {
     }
 }
 
-// FIN ITEM ET BONUS DISPO
-
-// // bouton cliquable
-
-// function switchpickAxe1(){
-//     itemTableau[0].dammage = itemTableau[1].dammage
-// }
-
-// Item1.addEventListener("click",switchpickAxe1)
-
-// function switchpickAxe2(){
-//     itemTableau[0].dammage = itemTableau[2].dammage
-// }
-
-// Item2.addEventListener("click",switchpickAxe2)
 
 
-// function switchpickAxe3(){
-//     itemTableau[0].dammage = itemTableau[3].dammage
-// }
-
-// Item3.addEventListener("click",switchpickAxe3)

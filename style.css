@@ -266,16 +266,19 @@ button {
     position: absolute;
     top: 12vw;
     z-index: 1;
-    width: 25vw;
-    padding: 5vw;
+    width: 50vw;
+    padding: 1vw;
     transition: 0.5s;
     opacity: 1;
+}
+.rulesInfos {
+    line-height: 3vh;
 }
 
 .croix {
     width: 1vw;
     position: absolute;
-    margin: -4vw 1vw 0vw 18vw;
+    margin:0vw 1vw 0vw 47vw;
 }
 
 .gold {
@@ -658,6 +661,7 @@ p{
         transition: 0.5s;
         opacity: 1;
     }
+
 
     .croix {
         width: 4vw;
