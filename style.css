@@ -338,8 +338,12 @@ li {
     -webkit-text-stroke-width: 0.5px;
     margin-left: 1.3vw;
 }
-p{
-    background-color: red;
+
+.priceTag{
+   background-color: var(--mainColor);
+    border: 2px solid var(--tertiaryColor);
+    color: var(--tertiaryColor);
+    border-radius: 15px;
 }
 .item {
     width: 100%;
@@ -347,8 +351,10 @@ p{
 }
 
 .itemPrice {
-    background-color: red;
-    position: sticky;
+    border-radius: 15px;
+    background-color: var(--mainColor);
+    color: var(--secondaryColor);
+    position:sticky;
 }
 
 .div1,
