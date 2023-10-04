@@ -339,7 +339,7 @@ li {
    background-color: var(--mainColor);
     border: 2px solid var(--tertiaryColor);
     color: var(--tertiaryColor);
-    border-radius: 5px;
+    border-radius: 15px;
 }
 .item {
     width: 100%;
@@ -347,6 +347,7 @@ li {
 }
 
 .itemPrice {
+    border-radius: 15px;
     background-color: var(--mainColor);
     color: var(--secondaryColor);
     position:sticky;
