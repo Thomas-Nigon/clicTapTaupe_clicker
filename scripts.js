@@ -17,12 +17,21 @@ const Bonus3 = document.querySelector(".div6")
 const Bonus4 = document.querySelector(".div7")
 const Bonus5 = document.querySelector(".div8")
 const Bonus6 = document.querySelector(".div9")
+const achat = document.querySelectorAll('button');
+const soldOut = document.querySelector(".soldOut");
+const pickaxe1 = document.getElementById("pickaxe1");
+const pickaxe2 = document.getElementById("pickaxe2");
+const pickaxe3 = document.getElementById("pickaxe3");
+const sold1 = document.getElementById("sold1");
+const sold2 = document.getElementById("sold2");
+const sold3 = document.getElementById("sold3");
 
 
 
 //DECLARATION DES ITEMS
 
 let item1 = {
+    pickaxe: pickaxe1,
     damage: 2,
     autoDamage: 0,
     price: 100,
@@ -30,22 +39,27 @@ let item1 = {
     balise: Item1,
     multiplicator: 1,
     itemCount: 0,
+    sold: sold1,
 };
 let item2 = {
+    pickaxe: pickaxe2,
     damage: 3,
     basePrice: 500,
     price: 500,
     balise: Item2,
     multiplicator: 1,
     itemCount: 0,
+    sold: sold2,
 };
 let item3 = {
+    pickaxe: pickaxe3,
     damage: 4,
     basePrice: 1000,
     price: 1000,
     balise: Item3,
     multiplicator: 1,
     itemCount: 0,
+    sold: sold3,
 };
 let item4 = {
     damage: 1,
@@ -80,16 +94,13 @@ const rightMenu = document.querySelector('.rightMenu')
 let open = false;
 
 function openMenu() {
-    console.log('entering open menu')
     if (open === true) {
-        console.log('open is true')
         rightMenu.classList.remove('openMenu')
         rightMenu.classList.add('closedMenu')
         menuBtn.classList.remove('openBtn')
         menuBtn.classList.add('closedBtn')
         open = false
     } else {
-        console.log('open is false')
         rightMenu.classList.remove('closedMenu')
         rightMenu.classList.add('openMenu')
         menuBtn.classList.remove('closedBtn')
@@ -98,7 +109,6 @@ function openMenu() {
     }
 }
 menuBtn.addEventListener('click', openMenu);
-
 
 // ANIMATION DU BOUTON HELP
 const trueRules = document.querySelector("#help");
@@ -130,7 +140,6 @@ closeCroix.addEventListener("click", function () {
 // GOLD COUNTERS
 function incrementGoldClick() {
     user.golds += user.tool;
-    // user.golds = counterGold + autoGold;
     userGold.innerHTML = user.golds; 
     goldMax += user.tool;
 }
@@ -190,7 +199,6 @@ function calcPrice (item) {
     return item.price = item.price * item.multiplicator
 }
 
-
 itemList = [item1, item2, item3, item4, item5, item6]
 
 // BONUSDISPO
@@ -203,36 +211,39 @@ function bonusDispo() {
     }
 }
 }
-const achat = document.querySelectorAll('button');
+function soldOutPickaxe (sold, pickaxe){
+    pickaxe.classList.add("hidden")
+    sold.classList.remove("hidden")
+}
 
-function switchPickAxeOk (golds, price, balise, item){
+function switchPickAxeOk (golds, price, balise, item, pickaxe, sold){
     if (golds >= price){
         balise.disabled = true;
         balise.style.backgroundColor = "#E1A624"
+        soldOutPickaxe(sold, pickaxe)
         switchPickAxe(item)
 }
 }
 
 function switchPickAxe(item) {
     user.tool = item.damage
-    console.log('degats pioche:', user.tool)
 }
 achat.forEach((button, index) => button.addEventListener('click', () => {
        switch (button.name) {
         case 'item1':
-            switchPickAxeOk(user.golds, item1.price, item1.balise, item1)
+            switchPickAxeOk(user.golds, item1.price, item1.balise, item1, item1.pickaxe, item1.sold)
             decrementationGold(user.golds, item1.price, item1)            
             const textItem1 = document.getElementById('item1')
             textItem1.innerHTML = item1.price
             break;
         case 'item2':
-            switchPickAxeOk(user.golds, item2.price, item2.balise, item2)
+            switchPickAxeOk(user.golds, item2.price, item2.balise, item2, item2.pickaxe, item2.sold)
             decrementationGold(user.golds, item2.price, item2)
             const textItem2 = document.getElementById('item2')
             textItem2.innerHTML = item2.price
             break;
         case 'item3':
-            switchPickAxeOk(user.golds, item3.price, item3.balise, item3)
+            switchPickAxeOk(user.golds, item3.price, item3.balise, item3, item3.pickaxe, item3.sold)
             decrementationGold(user.golds, item3.price, item3)
             const textItem3 = document.getElementById('item3')
             textItem3.innerHTML = item3.price            
@@ -260,19 +271,18 @@ achat.forEach((button, index) => button.addEventListener('click', () => {
     }       
 ))
 
-
 // TOTAL CLICS
 let DPM = 0;
 const DPA = document.querySelector(".clickTotal")
 function counterClick(){
-DPA.innerHTML = `clique Total : ${DPM}` ;
+DPA.innerHTML = `Total clics : ${DPM}` ;
 }
 
 
 //  GOLD MAX
 const toutGold = document.querySelector(".goldTotaux");
 function totalGold(){
-  toutGold.innerHTML =  `Gold Total : ${goldMax}`;
+  toutGold.innerHTML =  `Total Golds : ${goldMax}`;
 }
 
 

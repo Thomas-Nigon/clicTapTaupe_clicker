@@ -41,10 +41,10 @@ Item 3 : 4 Gold.</br>
                 </p>
             </section>
             <section class="pickAndRoc">
-                <img class="roc" src="./Assets/ImageRoc.png" alt="roc clicker">
-                <img class="explose hidden" src="./Assets/ImageImpact.png" alt="roc explosion">
-                <img class="pickaxe" src="./Assets/ImagePickaxe.png" alt="pickaxe animate">
-                 <img class="coingold hidden" src="./Assets/coinGold.png" alt="a piece of gold">  
+                <img draggable="false" class="roc" src="./Assets/ImageRoc.png" alt="roc clicker">
+                <img draggable="false" class="explose hidden" src="./Assets/ImageImpact.png" alt="roc explosion">
+                <img draggable="false" class="pickaxe" src="./Assets/ImagePickaxe.png" alt="pickaxe animate">
+                 <img draggable="false" class="coingold hidden" src="./Assets/coinGold.png" alt="a piece of gold">  
             </section>
         </main>
 
@@ -57,16 +57,18 @@ Item 3 : 4 Gold.</br>
                 <h2 id="shopTitle">Shop:</h2>
                 <section class="grid">
                     <button name="item1" class="div1">
-                        <p class="priceTag"> <span class="itemPrice" id="item1">100</span>G</p><img src="./Assets/shopIcons/icons8-mining-pickaxe-48.png"
-                            alt="a wooden pickaxe" class="item">
+                        <p class="priceTag"> <span class="itemPrice" id="item1">100</span>G</p>
+                        <img src="./Assets/shopIcons/icons8-mining-pickaxe-48.png" alt="a wooden pickaxe" class="item" id="pickaxe1">
+                        <img src="./Assets/soldOut.png" alt="image d'un panneau sold out" class="soldOut hidden" id="sold1">
                     </button>
                     <button name="item2" class="div2">
-                        <p class="priceTag"><span class="itemPrice" id="item2">500</span>G</p> <img src="Assets/shopIcons/pickaxe2.png"
-                            alt="an iron pickaxe logo" class="item">
+                        <p class="priceTag"><span class="itemPrice" id="item2">500</span>G</p> 
+                        <img src="Assets/shopIcons/pickaxe2.png" alt="an iron pickaxe logo" class="item" id="pickaxe2">
+                        <img src="./Assets/soldOut.png" alt="image d'un panneau sold out" class="soldOut hidden" id="sold2">
                     </button>
                     <button name="item3" class="div3">
                         <p class="priceTag"><span class="itemPrice" id="item3">1000</span>G</p><img src="Assets/shopIcons/sword.png"
-                            alt="a flamming sword" class="item">
+                            alt="a flamming sword" class="item" id="pickaxe3"><img src="./Assets/soldOut.png" alt="image d'un panneau sold out" class="soldOut hidden" id="sold3">
                     </button>
                     <button name="item4" class="div4"  >
                         <p class="priceTag"><span class="itemPrice" id="item4">50</span>G</p><img src="./Assets/shopIcons/icons8-robotic-arm-40.png" alt="a robotic arm" class="item">
