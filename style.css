@@ -21,7 +21,11 @@
     margin: 0px;
     padding: 0;
     box-sizing: border-box;
-
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
 
 
@@ -29,7 +33,7 @@ body {
     background-color: black;
     height: 100vh;
     overflow: hidden;
- 
+
 }
 
 main {
@@ -128,20 +132,25 @@ nav {
     transform: rotate(-45deg);
     transform-origin: -70%;
 }
-.coingold{
+
+.coingold {
     position: fixed;
     height: 15%;
-    width: auto;   
+    width: auto;
 }
+
 .roc {
     height: 25vw;
+
 }
+
 .explose {
     position: fixed;
     height: 12vw;
     margin-top: 5vw;
     left: 30vw;
 }
+
 /* FOR ACTIVE PICKAXE AND GOLD*/
 
 /* PICK */
@@ -149,12 +158,14 @@ nav {
     transform: rotate(0deg);
     transition: 0.1s;
 }
+
 /* active gold */
 .on {
     width: 64px;
     animation: bounce 1s forwards;
     transform-origin: center bottom;
 }
+
 /* EXPLOSE AND GOLD */
 .hidden {
     display: none;
@@ -275,6 +286,7 @@ button {
     transition: 1s;
     opacity: 1;
 }
+
 .rulesInfos {
     line-height: 3vh;
 }
@@ -282,7 +294,7 @@ button {
 .croix {
     width: 1vw;
     position: absolute;
-    margin:0vw 1vw 0vw 47vw;
+    margin: 0vw 1vw 0vw 47vw;
 }
 
 
@@ -343,12 +355,13 @@ li {
     margin-left: 1.3vw;
 }
 
-.priceTag{
-   background-color: var(--mainColor);
+.priceTag {
+    background-color: var(--mainColor);
     border: 2px solid var(--tertiaryColor);
     color: var(--tertiaryColor);
     border-radius: 15px;
 }
+
 .item {
     width: 100%;
     height: 80%;
@@ -358,7 +371,7 @@ li {
     border-radius: 15px;
     background-color: var(--mainColor);
     color: var(--secondaryColor);
-    position:sticky;
+    position: sticky;
 }
 
 .div1,
@@ -390,7 +403,8 @@ li {
     background-color: var(--MenuBGColor);
     border-radius: 15px;
 }
-.chrono{
+
+.chrono {
     font-size: clamp(0.5rem, 1.5vw, 2rem)
 }
 
@@ -410,7 +424,7 @@ li {
         width: 90%;
     }
 
-    h1{
+    h1 {
         font-size: clamp(0.5rem, 6vw, 3rem);
     }
 
@@ -594,10 +608,11 @@ li {
         list-style: none;
         font-size: clamp(0.5rem, 4vw, 2rem);
     }
-    .chrono{
+
+    .chrono {
         font-size: clamp(0.5rem, 4vw, 2rem)
     }
-    
+
 
     /* menu Burger */
     .sideNav {
