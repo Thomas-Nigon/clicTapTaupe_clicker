@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bounceAnimation.css" />
     <title>ClickTapTaupe</title>
 </head>
 
@@ -15,7 +16,7 @@
                 <Div class="fondLogo">
                     <img class="Logo" src="./Assets/LogoCTT.png" alt="Logo ClicTapTaupe">
                 </Div>
-                <h1 class="gameName"> Click Tap Taupe </h1>
+                <h1 class="gameName"> ClickTapTaupe </h1>
             </nav>
             <button id="help" title="aides et règles du jeu"> ? </button>
             <section class="rules">
@@ -24,15 +25,26 @@
                     Règles :
                 </h1>
                 <p class="rulesInfos">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque quo repellat praesentium dolores est
-                    corrupti quis ducimus dolore, ut voluptas voluptate aliquam officiis commodi doloremque consequatur
-                    odio, et nostrum voluptates.
+                    Votre but est d'amasser un maximum de gold en cliquant sur le rocher pour débloquer de nouvelles armes et de puissant Bonus. </br>
+
+- Les Armes changent le nombre de gold que vous générez à chaque clic.</br>
+
+	Vous commencez sur une base de 1 Gold, les Items se débloquent lorsque vous avez amassés le montant requis.</br>
+
+Item 1 : 2 Gold.</br>
+
+Item 2 : 3 Gold.</br>
+
+Item 3 : 4 Gold.</br>
+
+- Les bonus vous générent des clics automatiques.</br>
                 </p>
             </section>
             <section class="pickAndRoc">
-                <img class="roc" src="./Assets/ImageRoc.png" alt="roc clicker">
-                <img class="explose hidden" src="./Assets/ImageImpact.png" alt="roc explosion">
-                <img class="pickaxe" src="./Assets/ImagePickaxe.png" alt="pickaxe animate">
+                <img draggable="false" class="roc" src="./Assets/ImageRoc.png" alt="roc clicker">
+                <img draggable="false" class="explose hidden" src="./Assets/ImageImpact.png" alt="roc explosion">
+                <img draggable="false" class="pickaxe" src="./Assets/ImagePickaxe.png" alt="pickaxe animate">
+                 <img draggable="false" class="coingold hidden" src="./Assets/coinGold.png" alt="a piece of gold">  
             </section>
         </main>
 
@@ -44,35 +56,51 @@
                         class="trésor"> </h2>
                 <h2 id="shopTitle">Shop:</h2>
                 <section class="grid">
-                    <button class="div1"> <img src="./Assets/shopIcons/icons8-mining-pickaxe-48.png"
-                            alt="a wooden pickaxe" class="item"> </button>
-                    <button class="div2"><img src="Assets/shopIcons/pickaxe2.png" alt="an iron pickaxe logo"
-                            class="item"> </button>
-                    <button class="div3"> <img src="Assets/shopIcons/sword.png" alt="a flamming sword" class="item">
+                    <button name="item1" class="div1">
+                        <p class="priceTag"> <span class="itemPrice" id="item1">100</span>G</p>
+                        <img src="./Assets/shopIcons/icons8-mining-pickaxe-48.png" alt="a wooden pickaxe" class="item" id="pickaxe1">
+                        <img src="./Assets/soldOut.png" alt="image d'un panneau sold out" class="soldOut hidden" id="sold1">
                     </button>
-                    <button class="div4"><img src="./Assets/shopIcons/icons8-robotic-arm-40.png" alt="a robotic arm"
-                            class="item"></button>
-                    <button class="div5"><img src="./Assets/shopIcons/jackHammer.png" alt="a jackHammer logo"
-                            class="item"></button>
-                    <button class="div6"> <img src="./Assets/shopIcons/dynamite2.png" alt="I dynamite logo"
-                            class="item"> </button>
-                    <button class="div7"><img src="./Assets/shopIcons/icons8-bonus-64.png"
+                    <button name="item2" class="div2">
+                        <p class="priceTag"><span class="itemPrice" id="item2">500</span>G</p> 
+                        <img src="Assets/shopIcons/pickaxe2.png" alt="an iron pickaxe logo" class="item" id="pickaxe2">
+                        <img src="./Assets/soldOut.png" alt="image d'un panneau sold out" class="soldOut hidden" id="sold2">
+                    </button>
+                    <button name="item3" class="div3">
+                        <p class="priceTag"><span class="itemPrice" id="item3">1000</span>G</p><img src="Assets/shopIcons/sword.png"
+                            alt="a flamming sword" class="item" id="pickaxe3"><img src="./Assets/soldOut.png" alt="image d'un panneau sold out" class="soldOut hidden" id="sold3">
+                    </button>
+                    <button name="item4" class="div4"  >
+                        <p class="priceTag"><span class="itemPrice" id="item4">50</span>G</p><img src="./Assets/shopIcons/icons8-robotic-arm-40.png" alt="a robotic arm" class="item">
+                    </button>
+                    <button name="item5" class="div5" >
+                        <p class="priceTag"><span class="itemPrice" id="item5">500</span>G</p><img src="./Assets/shopIcons/jackHammer.png"
+                            alt="a jackHammer logo" class="item">
+                    </button>
+                    <button name="item6" class="div6">
+                        <p class="priceTag"><span class="itemPrice" id="item6">1000</span>G</p><img src="./Assets/shopIcons/dynamite2.png"
+                            alt="I dynamite logo" class="item">
+                    </button>
+                    <button name="item7" class="div7">
+                        <p class="priceTag"><span class="itemPrice" id="item7">9999</span>G</p><img
+                            src="./Assets/shopIcons/icons8-bonus-64.png"
                             alt="a hand receiving money logo meaning more benefitfs" class="item"></button>
-                    <button class="div8"> <img src="Assets/shopIcons/icons8-productivity-64.png"
-                            alt="A grinding gear icon meaning productivity increase" class="item"> </button>
-                    <button class="div9"><img src="./Assets/shopIcons/icons8-potion-64.png"
-                            alt="A potion logo with a lightning symbol" class="item"></button>
+                    <button name="item8" class="div8">
+                        <p class="priceTag"><span class="itemPrice" id="item8">9999</span>G</p><img
+                            src="Assets/shopIcons/icons8-productivity-64.png"
+                            alt="A grinding gear icon meaning productivity increase" class="item"></button>
+                    <button name="item9" class="div9">
+                        <p class="priceTag"><span class="itemPrice" id="item9">9999</span>G</p><img
+                            src="./Assets/shopIcons/icons8-potion-64.png" alt="A potion logo with a lightning symbol"
+                            class="item"></button>
                 </section>
             </aside>
             <aside class="stats">
                 <h2 id="infos">Stats :</h2>
                 <ul>
-                    <li>DPM :</li>
-                    <li>Gold total :</li>
-                    <li>Chrono</li>
-                    <li>Gold bonus: <span id="goldBonus">0</span>%</li>
-                    <li>productivity bonus <span id="productBonus">0</span>%</li>
-                    <li>Uber potion every: <span id="potionBonus">5</span>minutes</li>
+                    <li class="clickTotal">Total clics : 0</li>
+                    <li class="goldTotaux">Total Golds : 0</li>
+                    <li >Chrono : <span class="chrono">0 min 0 s</span></li>
             </aside>
         </section>
     </section>
@@ -82,24 +110,3 @@
 
 
 </html>
-
-
-
-<!-- menu Burger 
-            <div id="mySidenav" class="sideNav">
-                <a id="closeButton" href="#" class="close"></a>
-                <ul>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Stats</a></li>
-                <li><a href="#">*</a></li>
-                <li><a href="#">*</a></li>
-                </ul>
-            </div>
-            <a href="#" id="openButton">
-            <span class="burgerIcone">
-                <span></span>
-                <span></span>
-                <span></span>
-            </span>
-            </a>
-fin menu Burger -->
