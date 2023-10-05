@@ -282,7 +282,7 @@ DPA.innerHTML = `Total clics : ${DPM}` ;
 //  GOLD MAX
 const toutGold = document.querySelector(".goldTotaux");
 function totalGold(){
-  toutGold.innerHTML =  `Gold Total : ${goldMax}`;
+  toutGold.innerHTML =  `Total golds : ${goldMax}`;
 }
 
 
