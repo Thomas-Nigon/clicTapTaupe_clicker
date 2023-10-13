@@ -3,10 +3,9 @@ Wild code school Project 1 - cookie clicker like
 
 Hello you,
 
-Here lies our first project for Wild Code School. 
-This is ClicTapTaupe, a clicker like the famous Cookie Clicker you can fin at this adress : https://orteil.dashnet.org/cookieclicker/
-
-We hope you will enjoy our game we did in less than two weeks in the begining of the formation.
+Here is our first project for the Wild Code School.
+ It's called ClicTapTaupe, a clicker game similar to the famous Cookie Clicker that you can find at this address: https://orteil.dashnet.org/cookieclicker/ 
+We hope you'll enjoy our game, which we created in less than two weeks at the beginning of the training.
 
 Enjoy,
 
