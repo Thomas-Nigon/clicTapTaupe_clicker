@@ -11,8 +11,6 @@
     --MenuBGColor: #317AC1;
     /* light brown */
     --lightBrown: #AD956B;
-
-
 }
 
 * {
@@ -29,12 +27,10 @@
 
 }
 
-
 body {
     background-color: black;
     height: 100vh;
     overflow: hidden;
- 
 }
 
 main {
@@ -113,7 +109,6 @@ nav {
 /* ROC CLICKER & PICKAXE*/
 
 .pickAndRoc {
-    /* cursor: url(./Assets/pickaxeCursor.png), auto; */
     position: relative;
     display: flex;
     top: 26%;
@@ -128,25 +123,27 @@ nav {
     height: 17vw;
     left: 22.5vw;
     margin-left: -5vw;
-    /*    transform-origin: -70%; */
-    /*     transform: rotate(90deg); */
     transform: rotate(-45deg);
     transform-origin: -70%;
 }
-.coingold{
+
+.coingold {
     position: fixed;
     height: 15%;
-    width: auto;   
+    width: auto;
 }
+
 .roc {
     height: 25vw;
 }
+
 .explose {
     position: fixed;
     height: 12vw;
     margin-top: 5vw;
     left: 30vw;
 }
+
 /* FOR ACTIVE PICKAXE AND GOLD*/
 
 /* PICK */
@@ -154,18 +151,18 @@ nav {
     transform: rotate(0deg);
     transition: 0.1s;
 }
+
 /* active gold */
 .on {
     width: 64px;
     animation: bounce 1s forwards;
     transform-origin: center bottom;
 }
+
 /* EXPLOSE AND GOLD */
 .hidden {
     display: none;
 }
-
-
 
 button {
     border: black 1px solid;
@@ -261,12 +258,10 @@ button {
     transform: scale(0);
     transition: 1s;
     top: 12vw;
-    /* pas besoin de scale a 1 sur rules actif car c'est la valeur de base d'une page internet */
     position: absolute;
     z-index: 1;
     width: 50vw;
     padding: 1vw;
-
 }
 
 .rulesActif {
@@ -280,6 +275,7 @@ button {
     transition: 1s;
     opacity: 1;
 }
+
 .rulesInfos {
     line-height: 3vh;
 }
@@ -287,9 +283,8 @@ button {
 .croix {
     width: 1vw;
     position: absolute;
-    margin:0vw 1vw 0vw 47vw;
+    margin: 0vw 1vw 0vw 47vw;
 }
-
 
 .gold {
     background-color: var(--mainColor);
@@ -303,7 +298,6 @@ button {
     color: var(--tertiaryColor);
     -webkit-text-stroke-color: black;
     -webkit-text-stroke-width: 1px;
-
 }
 
 #userGold {
@@ -321,8 +315,6 @@ button {
     -webkit-text-stroke-width: 0.5px;
 }
 
-
-
 ul {
     list-style-type: none;
 }
@@ -338,7 +330,6 @@ li {
 .trésor {
     height: clamp(20px, 5vh, 50px);
     width: auto;
-    /*  max-height: 50px; */
 }
 
 #infos {
@@ -348,12 +339,13 @@ li {
     margin-left: 1.3vw;
 }
 
-.priceTag{
-   background-color: var(--mainColor);
+.priceTag {
+    background-color: var(--mainColor);
     border: 2px solid var(--tertiaryColor);
     color: var(--tertiaryColor);
     border-radius: 15px;
 }
+
 .item {
     width: 100%;
     height: 80%;
@@ -363,7 +355,7 @@ li {
     border-radius: 15px;
     background-color: var(--mainColor);
     color: var(--secondaryColor);
-    position:sticky;
+    position: sticky;
 }
 
 .div1,
@@ -384,18 +376,17 @@ li {
 }
 
 .achatItemPossible {
-
     background-color: var(--MenuBGColor);
     border-radius: 15px;
     border: dashed 3px black;
-
 }
 
 .achatBonusPossible {
     background-color: var(--MenuBGColor);
     border-radius: 15px;
 }
-.chrono{
+
+.chrono {
     font-size: clamp(0.5rem, 1.5vw, 2rem)
 }
 
@@ -415,7 +406,7 @@ li {
         width: 90%;
     }
 
-    h1{
+    h1 {
         font-size: clamp(0.5rem, 6vw, 3rem);
     }
 
@@ -599,10 +590,10 @@ li {
         list-style: none;
         font-size: clamp(0.5rem, 4vw, 2rem);
     }
-    .chrono{
+
+    .chrono {
         font-size: clamp(0.5rem, 4vw, 2rem)
     }
-    
 
     /* menu Burger */
     .sideNav {
@@ -610,7 +601,6 @@ li {
         margin-left: 56vw;
         height: 40vw;
         width: 40vw;
-        /* right: -60vw; */
         background-color: transparent;
         position: fixed;
         top: 4vw;
@@ -620,7 +610,6 @@ li {
     }
 
     .sideNav a {
-
         padding: 8px 8px 8px 32px;
         display: flex;
         justify-content: flex-start;
@@ -632,7 +621,6 @@ li {
     }
 
     .sideNav ul {
-
         list-style-type: none;
         padding: 0;
         margin: 0;
@@ -664,15 +652,12 @@ li {
         margin: 0.8vw 0;
     }
 
-
-
     /* fin menu Burger */
     #roc {
         align-items: center;
     }
 
     /* bouton help */
-    /* voir les valeurs pq ils prend les mêmes pour le desktop */
 
     .rulesActif {
         border: 5px solid black;
@@ -691,5 +676,4 @@ li {
         position: absolute;
         margin: -4vw 1vw 0vw 83vw;
     }
-
 }

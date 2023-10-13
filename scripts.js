@@ -5,7 +5,6 @@ let user = {
     machines: 0,
 }
 let goldMax = 0;
-// user.golds = ;
 
 const userGold = document.getElementById('userGold');
 const Item1 = document.querySelector(".div1");
@@ -26,10 +25,7 @@ const sold1 = document.getElementById("sold1");
 const sold2 = document.getElementById("sold2");
 const sold3 = document.getElementById("sold3");
 
-
-
 //DECLARATION DES ITEMS
-
 let item1 = {
     pickaxe: pickaxe1,
     damage: 2,
@@ -125,34 +121,31 @@ closeCroix.addEventListener("click", function () {
     sectRules.classList.add("rules")
 });
 
-
 // GOLD ANIMATION
-  function onAnimation() {
+function onAnimation() {
     coinGold.classList.remove('hidden')
     coinGold.classList.add('on')
-  setTimeout(function () {
-    coinGold.classList.remove('on');
-    coinGold.classList.add('hidden');
-  }, 1000);
-  }
-
+    setTimeout(function () {
+        coinGold.classList.remove('on');
+        coinGold.classList.add('hidden');
+    }, 1000);
+}
 
 // GOLD COUNTERS
 function incrementGoldClick() {
     user.golds += user.tool;
-    userGold.innerHTML = user.golds; 
+    userGold.innerHTML = user.golds;
     goldMax += user.tool;
 }
 
-function decrementationGold (a, b, item) {
-    if (a >= b){
-    user.golds = a - b ;
-    userGold.innerHTML = user.golds;
-    calcPrice(item);
-       
+function decrementationGold(a, b, item) {
+    if (a >= b) {
+        user.golds = a - b;
+        userGold.innerHTML = user.golds;
+        calcPrice(item);
+
     }
 }
-
 
 //PICKAXE ANIMATION
 const stone = document.querySelector('.pickAndRoc');
@@ -182,20 +175,20 @@ stone.addEventListener('click', pickaxeAnimation,)
 // FUNCTION AUTOCLICK
 function addition(nb) {
     setInterval(() => {
-    user.golds += nb;
-    goldMax += nb;
-    userGold.innerHTML = user.golds ;
-}, 1000)
+        user.golds += nb;
+        goldMax += nb;
+        userGold.innerHTML = user.golds;
+    }, 1000)
 }
 
-function additionOk (golds, price,itemDamage){
-    if (golds >= price){
+function additionOk(golds, price, itemDamage) {
+    if (golds >= price) {
         addition(itemDamage)
     }
 }
 
 // UPGRADE PRICE
-function calcPrice (item) {
+function calcPrice(item) {
     return item.price = item.price * item.multiplicator
 }
 
@@ -206,33 +199,33 @@ function bonusDispo() {
     for (let i = 0; i < itemList.length; i++) {
         if (itemList[i].price <= user.golds) {
             itemList[i].balise.classList.add("achatBonusPossible")
-        } else{
+        } else {
             itemList[i].balise.classList.remove("achatBonusPossible")
+        }
     }
 }
-}
-function soldOutPickaxe (sold, pickaxe){
+function soldOutPickaxe(sold, pickaxe) {
     pickaxe.classList.add("hidden")
     sold.classList.remove("hidden")
 }
 
-function switchPickAxeOk (golds, price, balise, item, pickaxe, sold){
-    if (golds >= price){
+function switchPickAxeOk(golds, price, balise, item, pickaxe, sold) {
+    if (golds >= price) {
         balise.disabled = true;
         balise.style.backgroundColor = "#E1A624"
         soldOutPickaxe(sold, pickaxe)
         switchPickAxe(item)
-}
+    }
 }
 
 function switchPickAxe(item) {
     user.tool = item.damage
 }
 achat.forEach((button, index) => button.addEventListener('click', () => {
-       switch (button.name) {
+    switch (button.name) {
         case 'item1':
             switchPickAxeOk(user.golds, item1.price, item1.balise, item1, item1.pickaxe, item1.sold)
-            decrementationGold(user.golds, item1.price, item1)            
+            decrementationGold(user.golds, item1.price, item1)
             const textItem1 = document.getElementById('item1')
             textItem1.innerHTML = item1.price
             break;
@@ -246,45 +239,43 @@ achat.forEach((button, index) => button.addEventListener('click', () => {
             switchPickAxeOk(user.golds, item3.price, item3.balise, item3, item3.pickaxe, item3.sold)
             decrementationGold(user.golds, item3.price, item3)
             const textItem3 = document.getElementById('item3')
-            textItem3.innerHTML = item3.price            
+            textItem3.innerHTML = item3.price
             break;
         case 'item4':
             additionOk(user.golds, item4.price, item4.damage)
             decrementationGold(user.golds, item4.price, item4)
             const textItem4 = document.getElementById('item4')
-            textItem4.innerHTML = item4.price            
-            break; 
+            textItem4.innerHTML = item4.price
+            break;
         case 'item5':
             additionOk(user.golds, item5.price, item5.damage)
             decrementationGold(user.golds, item5.price, item5)
             const textItem5 = document.getElementById('item5')
             textItem5.innerHTML = item5.price
-            break; 
+            break;
         case 'item6':
             additionOk(user.golds, item6.price, item6.damage)
             decrementationGold(user.golds, item6.price, item6)
             const textItem6 = document.getElementById('item6')
             textItem6.innerHTML = item6.price
-            break; 
-        }
+            break;
+    }
 
-    }       
+}
 ))
 
 // TOTAL CLICS
 let DPM = 0;
 const DPA = document.querySelector(".clickTotal")
-function counterClick(){
-DPA.innerHTML = `Total clics : ${DPM}` ;
+function counterClick() {
+    DPA.innerHTML = `Total clics : ${DPM}`;
 }
-
 
 //  GOLD MAX
 const toutGold = document.querySelector(".goldTotaux");
-function totalGold(){
-  toutGold.innerHTML =  `Total Golds : ${goldMax}`;
+function totalGold() {
+    toutGold.innerHTML = `Total Golds : ${goldMax}`;
 }
-
 
 // CHRONO
 const timer = document.querySelector(".chrono");
@@ -292,16 +283,16 @@ let second = 0;
 let minute = 0;
 timer.innerHTML = second;
 
-setInterval(Chronomètre,1000);
-function Chronomètre(){
+setInterval(Chronomètre, 1000);
+function Chronomètre() {
 
-   if (second < 60 ){
-      second++;
-      timer.innerHTML = `${minute} min ${second}s`;
-  }
-  else{
-      minute++
-      second = 0;
-      timer.innerHTML = `${minute} min${second}s`
-  }
+    if (second < 60) {
+        second++;
+        timer.innerHTML = `${minute} min ${second}s`;
+    }
+    else {
+        minute++
+        second = 0;
+        timer.innerHTML = `${minute} min${second}s`
+    }
 };
